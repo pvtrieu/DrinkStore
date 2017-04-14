@@ -58,11 +58,23 @@
     <Compile Include="Designer\CustomTextBox.Designer.cs">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Designer\ExpandButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Designer\ExpandButton.Designer.cs">
+      <DependentUpon>ExpandButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Designer\LineSeparator.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Designer\LineSeparator.Designer.cs">
       <DependentUpon>LineSeparator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designer\MinimizeButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Designer\MinimizeButton.Designer.cs">
+      <DependentUpon>MinimizeButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\frmMain.cs">
       <SubType>Form</SubType>
@@ -80,6 +92,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Designer\CloseButton.resx">
       <DependentUpon>CloseButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designer\ExpandButton.resx">
+      <DependentUpon>ExpandButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designer\MinimizeButton.resx">
+      <DependentUpon>MinimizeButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

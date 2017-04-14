@@ -7,34 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DrinkStore.Presentation;
 
 namespace DrinkStore.Designer
 {
-    public partial class CloseButton : UserControl
+    public partial class MinimizeButton : UserControl
     {
-        Form myForm = frmMain.ActiveForm;
-
-        public CloseButton()
+        public MinimizeButton()
         {
             InitializeComponent();
         }
 
-        
-
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
-            (sender as PictureBox).Image = Properties.Resources.close2;
+            (sender as PictureBox).Image = Properties.Resources.min2;
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
-            (sender as PictureBox).Image = Properties.Resources.close;
+            (sender as PictureBox).Image = Properties.Resources.min;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ((Form)this.TopLevelControl).Close();
+            ((Form)this.TopLevelControl).WindowState = FormWindowState.Minimized;
         }
     }
 }

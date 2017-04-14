@@ -34,18 +34,16 @@
             this.btnProduct = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.lblLogo = new System.Windows.Forms.Label();
-            this.pnlTop = new System.Windows.Forms.Panel();
-            this.pnlBody = new System.Windows.Forms.Panel();
-            this.picMinimize = new System.Windows.Forms.PictureBox();
-            this.picExpand = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlTop = new System.Windows.Forms.Panel();
+            this.expandButton1 = new DrinkStore.Designer.ExpandButton();
+            this.minimizeButton1 = new DrinkStore.Designer.MinimizeButton();
             this.closeButton1 = new DrinkStore.Designer.CloseButton();
+            this.pnlBody = new System.Windows.Forms.Panel();
             this.pnlSide.SuspendLayout();
             this.pnlLogo.SuspendLayout();
-            this.pnlTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picExpand)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSide
@@ -117,49 +115,6 @@
             this.lblLogo.TabIndex = 1;
             this.lblLogo.Text = "Drink Store";
             // 
-            // pnlTop
-            // 
-            this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.pnlTop.Controls.Add(this.closeButton1);
-            this.pnlTop.Controls.Add(this.picMinimize);
-            this.pnlTop.Controls.Add(this.picExpand);
-            this.pnlTop.Controls.Add(this.pnlLogo);
-            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(800, 50);
-            this.pnlTop.TabIndex = 1;
-            // 
-            // pnlBody
-            // 
-            this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBody.Location = new System.Drawing.Point(250, 50);
-            this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(550, 450);
-            this.pnlBody.TabIndex = 2;
-            // 
-            // picMinimize
-            // 
-            this.picMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMinimize.Image = global::DrinkStore.Properties.Resources.min;
-            this.picMinimize.Location = new System.Drawing.Point(704, 13);
-            this.picMinimize.Name = "picMinimize";
-            this.picMinimize.Size = new System.Drawing.Size(24, 24);
-            this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picMinimize.TabIndex = 3;
-            this.picMinimize.TabStop = false;
-            // 
-            // picExpand
-            // 
-            this.picExpand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picExpand.Image = global::DrinkStore.Properties.Resources.expand;
-            this.picExpand.Location = new System.Drawing.Point(734, 13);
-            this.picExpand.Name = "picExpand";
-            this.picExpand.Size = new System.Drawing.Size(24, 24);
-            this.picExpand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picExpand.TabIndex = 3;
-            this.picExpand.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -170,13 +125,51 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // pnlTop
+            // 
+            this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.pnlTop.Controls.Add(this.expandButton1);
+            this.pnlTop.Controls.Add(this.minimizeButton1);
+            this.pnlTop.Controls.Add(this.closeButton1);
+            this.pnlTop.Controls.Add(this.pnlLogo);
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(800, 50);
+            this.pnlTop.TabIndex = 1;
+            // 
+            // expandButton1
+            // 
+            this.expandButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.expandButton1.Location = new System.Drawing.Point(734, 12);
+            this.expandButton1.Name = "expandButton1";
+            this.expandButton1.Size = new System.Drawing.Size(24, 24);
+            this.expandButton1.TabIndex = 0;
+            // 
+            // minimizeButton1
+            // 
+            this.minimizeButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimizeButton1.Location = new System.Drawing.Point(704, 12);
+            this.minimizeButton1.Name = "minimizeButton1";
+            this.minimizeButton1.Size = new System.Drawing.Size(24, 24);
+            this.minimizeButton1.TabIndex = 4;
+            // 
             // closeButton1
             // 
+            this.closeButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeButton1.AutoSize = true;
             this.closeButton1.Location = new System.Drawing.Point(764, 12);
             this.closeButton1.Name = "closeButton1";
             this.closeButton1.Size = new System.Drawing.Size(27, 27);
             this.closeButton1.TabIndex = 0;
+            // 
+            // pnlBody
+            // 
+            this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBody.Location = new System.Drawing.Point(250, 50);
+            this.pnlBody.Name = "pnlBody";
+            this.pnlBody.Size = new System.Drawing.Size(550, 450);
+            this.pnlBody.TabIndex = 2;
             // 
             // frmMain
             // 
@@ -190,15 +183,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMain";
             this.Text = "frmMain";
-            this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnlSide.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             this.pnlLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picExpand)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,9 +202,9 @@
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Button btnProduct;
         private System.Windows.Forms.Button btnOrder;
-        private System.Windows.Forms.PictureBox picMinimize;
-        private System.Windows.Forms.PictureBox picExpand;
         private System.Windows.Forms.Panel pnlBody;
         private Designer.CloseButton closeButton1;
+        private Designer.MinimizeButton minimizeButton1;
+        private Designer.ExpandButton expandButton1;
     }
 }
