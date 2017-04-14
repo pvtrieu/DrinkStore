@@ -10,16 +10,13 @@ using System.Windows.Forms;
 
 namespace DrinkStore.Presentation
 {
-    public partial class frmMain : Form
+    public partial class frmProduct : Form
     {
-        public frmMain()
+        public frmProduct()
         {
             InitializeComponent();
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

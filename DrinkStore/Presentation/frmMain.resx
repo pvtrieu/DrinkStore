@@ -117,26 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="close2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\error2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="expand" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\expand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="expand2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\expand2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="min" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="min2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minus2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4QAAAOEBcBgcLgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAK/SURBVFhHxZfP
+        axNBFMf3pn+C3r16MIsHQTDgoWR7UKiIP2qSQv0FrShI6y9EqxKhB0FasnooFFoU8RC86KXSQqmbFmr8
+        iUZoSxM3LQkKGyLenvN2d4bN7ks6a9Pm8IHdNzPf92V35s2MAgBS7In179gXi8ciWlxnzDDykc541Qaf
+        nZiOfbAvpUFBBr2oHd27VS2RZuIWAySxcAyOpTS9kEEkGk3ujMQS95lYzScehhpqoBaVAyGD+7XkLjbY
+        8IltBgM1qVyBgKol96pavECIbArURG1/vroXdLkVyTmo7f8S4sH+5w0++48VE8z1Xzb5pSLcSo2I90oh
+        C5A7DX/enoXqu3sifvhkX0DHxfDOCWHAnXDUgFYbAMxVZwCXC2toONv/x8CZK3fhSO8AHDp+kdKs8SXq
+        GHDWOdXRRsrAdB9Y2WERn134CtPGZ5hb/A5d528ENDGnbQCrFgs0LTLNDJSLOWagGyrLBpTMgojzXzAy
+        noGBVDqgybAwt+KWV6qDoJkBpFz8VPeOeA0M0gYAcyvsAWs72YHDDZRz7+H3xFOYH7oJVuYZmKVKIDFH
+        xgBDRwO4iVCNAm7g7+MhgMsnBJWFbCAxR9LADBrAnYxqFDQ2YAQScyQN5BV3O6UaBVtmgOUOZQAT1sZH
+        barPx6D0cz2QmCNvIMQvCIP8LwgxCcMQZhJKL8MwTGamYOzFG5ia+wg9Vx+Qugw9dCGS5dpDHfpvP4JT
+        l+6A2pkgde1CJFOK5z98I5M0Yml1DQ4c7SW1PDilWGYzGkyNwnJhjUzmZ9Usw/CTSVLHi9iMbAMbbMfI
+        wa5zcOzC9Q2J0tuvn/rtGPEfSNITr+Dl69mWgFpe7cCBBPEfyXDpLH5ZaQm+ZUgfyZC2Hko5bT2Wc9Al
+        G9SeiwnHnhPOxNz+q5kXXC5undjey6kfrFpu2W7h9RyUf/GmxBFREXNwAAAAAElFTkSuQmCC
+</value>
   </data>
 </root>
