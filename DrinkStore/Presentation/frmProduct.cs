@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DrinkStore.Presentation
+namespace DrinkStore.Designer
 {
     public partial class frmProduct : Form
     {
@@ -17,6 +17,11 @@ namespace DrinkStore.Presentation
             InitializeComponent();
         }
 
-        
+        private void frmProduct_Load(object sender, EventArgs e)
+        {
+
+        }
+
+     
     }
 }

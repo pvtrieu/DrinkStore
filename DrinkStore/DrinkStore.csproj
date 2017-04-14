@@ -46,34 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Designer\CloseButton.cs">
+    <Compile Include="CustomControl\CloseButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Designer\CloseButton.Designer.cs">
+    <Compile Include="CustomControl\CloseButton.Designer.cs">
       <DependentUpon>CloseButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="Designer\CustomTextBox.cs">
+    <Compile Include="CustomControl\ExpandButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Designer\CustomTextBox.Designer.cs">
-      <DependentUpon>CustomTextBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Designer\ExpandButton.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Designer\ExpandButton.Designer.cs">
+    <Compile Include="CustomControl\ExpandButton.Designer.cs">
       <DependentUpon>ExpandButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="Designer\LineSeparator.cs">
+    <Compile Include="CustomControl\LineSeparator.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Designer\LineSeparator.Designer.cs">
+    <Compile Include="CustomControl\LineSeparator.Designer.cs">
       <DependentUpon>LineSeparator.cs</DependentUpon>
     </Compile>
-    <Compile Include="Designer\MinimizeButton.cs">
+    <Compile Include="CustomControl\MinimizeButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Designer\MinimizeButton.Designer.cs">
+    <Compile Include="CustomControl\MinimizeButton.Designer.cs">
       <DependentUpon>MinimizeButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\frmMain.cs">
@@ -90,13 +84,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Designer\CloseButton.resx">
+    <EmbeddedResource Include="CustomControl\CloseButton.resx">
       <DependentUpon>CloseButton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Designer\ExpandButton.resx">
+    <EmbeddedResource Include="CustomControl\ExpandButton.resx">
       <DependentUpon>ExpandButton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Designer\MinimizeButton.resx">
+    <EmbeddedResource Include="CustomControl\MinimizeButton.resx">
       <DependentUpon>MinimizeButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmMain.resx">

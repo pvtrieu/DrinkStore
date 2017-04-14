@@ -1,4 +1,4 @@
-﻿namespace DrinkStore.Presentation
+﻿namespace DrinkStore.Designer
 {
     partial class frmMain
     {
@@ -29,75 +29,69 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.pnlSide = new System.Windows.Forms.Panel();
-            this.btnOrder = new System.Windows.Forms.Button();
-            this.btnProduct = new System.Windows.Forms.Button();
+            this.pnlTop = new System.Windows.Forms.Panel();
+            this.expandButton1 = new DrinkStore.Designer.ExpandButton();
+            this.closeButton1 = new DrinkStore.Designer.CloseButton();
+            this.minimizeButton1 = new DrinkStore.Designer.MinimizeButton();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.lblLogo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlTop = new System.Windows.Forms.Panel();
-            this.expandButton1 = new DrinkStore.Designer.ExpandButton();
-            this.minimizeButton1 = new DrinkStore.Designer.MinimizeButton();
-            this.closeButton1 = new DrinkStore.Designer.CloseButton();
+            this.pnlSide = new System.Windows.Forms.Panel();
+            this.btnProduct = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
             this.pnlBody = new System.Windows.Forms.Panel();
-            this.pnlSide.SuspendLayout();
+            this.pnlTop.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnlTop.SuspendLayout();
+            this.pnlSide.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlSide
+            // pnlTop
             // 
-            this.pnlSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.pnlSide.Controls.Add(this.btnOrder);
-            this.pnlSide.Controls.Add(this.btnProduct);
-            this.pnlSide.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlSide.Location = new System.Drawing.Point(0, 50);
-            this.pnlSide.Name = "pnlSide";
-            this.pnlSide.Size = new System.Drawing.Size(250, 450);
-            this.pnlSide.TabIndex = 0;
+            this.pnlTop.BackColor = System.Drawing.Color.White;
+            this.pnlTop.Controls.Add(this.minimizeButton1);
+            this.pnlTop.Controls.Add(this.pnlLogo);
+            this.pnlTop.Controls.Add(this.closeButton1);
+            this.pnlTop.Controls.Add(this.expandButton1);
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(800, 50);
+            this.pnlTop.TabIndex = 5;
+            this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
+            this.pnlTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
+            this.pnlTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseUp);
             // 
-            // btnOrder
+            // expandButton1
             // 
-            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.btnOrder.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOrder.FlatAppearance.BorderSize = 0;
-            this.btnOrder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnOrder.Location = new System.Drawing.Point(0, 35);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnOrder.Size = new System.Drawing.Size(250, 35);
-            this.btnOrder.TabIndex = 2;
-            this.btnOrder.Text = "Order";
-            this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrder.UseVisualStyleBackColor = false;
+            this.expandButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.expandButton1.Location = new System.Drawing.Point(736, 12);
+            this.expandButton1.Name = "expandButton1";
+            this.expandButton1.Size = new System.Drawing.Size(24, 24);
+            this.expandButton1.TabIndex = 0;
             // 
-            // btnProduct
+            // closeButton1
             // 
-            this.btnProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.btnProduct.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProduct.FlatAppearance.BorderSize = 0;
-            this.btnProduct.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnProduct.Location = new System.Drawing.Point(0, 0);
-            this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnProduct.Size = new System.Drawing.Size(250, 35);
-            this.btnProduct.TabIndex = 1;
-            this.btnProduct.Text = "Product";
-            this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduct.UseVisualStyleBackColor = false;
+            this.closeButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeButton1.AutoSize = true;
+            this.closeButton1.Location = new System.Drawing.Point(766, 12);
+            this.closeButton1.Name = "closeButton1";
+            this.closeButton1.Size = new System.Drawing.Size(27, 27);
+            this.closeButton1.TabIndex = 0;
+            // 
+            // minimizeButton1
+            // 
+            this.minimizeButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimizeButton1.Location = new System.Drawing.Point(706, 12);
+            this.minimizeButton1.Name = "minimizeButton1";
+            this.minimizeButton1.Size = new System.Drawing.Size(24, 24);
+            this.minimizeButton1.TabIndex = 4;
             // 
             // pnlLogo
             // 
             this.pnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(45)))));
-            this.pnlLogo.Controls.Add(this.lblLogo);
             this.pnlLogo.Controls.Add(this.pictureBox1);
+            this.pnlLogo.Controls.Add(this.lblLogo);
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
@@ -125,43 +119,52 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pnlTop
+            // pnlSide
             // 
-            this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.pnlTop.Controls.Add(this.expandButton1);
-            this.pnlTop.Controls.Add(this.minimizeButton1);
-            this.pnlTop.Controls.Add(this.closeButton1);
-            this.pnlTop.Controls.Add(this.pnlLogo);
-            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(800, 50);
-            this.pnlTop.TabIndex = 1;
+            this.pnlSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.pnlSide.Controls.Add(this.btnOrder);
+            this.pnlSide.Controls.Add(this.btnProduct);
+            this.pnlSide.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlSide.Location = new System.Drawing.Point(0, 50);
+            this.pnlSide.Name = "pnlSide";
+            this.pnlSide.Size = new System.Drawing.Size(250, 450);
+            this.pnlSide.TabIndex = 0;
             // 
-            // expandButton1
+            // btnProduct
             // 
-            this.expandButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.expandButton1.Location = new System.Drawing.Point(734, 12);
-            this.expandButton1.Name = "expandButton1";
-            this.expandButton1.Size = new System.Drawing.Size(24, 24);
-            this.expandButton1.TabIndex = 0;
+            this.btnProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnProduct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProduct.FlatAppearance.BorderSize = 0;
+            this.btnProduct.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.btnProduct.Location = new System.Drawing.Point(0, 0);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnProduct.Size = new System.Drawing.Size(250, 35);
+            this.btnProduct.TabIndex = 1;
+            this.btnProduct.Text = "Product";
+            this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProduct.UseVisualStyleBackColor = false;
             // 
-            // minimizeButton1
+            // btnOrder
             // 
-            this.minimizeButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimizeButton1.Location = new System.Drawing.Point(704, 12);
-            this.minimizeButton1.Name = "minimizeButton1";
-            this.minimizeButton1.Size = new System.Drawing.Size(24, 24);
-            this.minimizeButton1.TabIndex = 4;
-            // 
-            // closeButton1
-            // 
-            this.closeButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeButton1.AutoSize = true;
-            this.closeButton1.Location = new System.Drawing.Point(764, 12);
-            this.closeButton1.Name = "closeButton1";
-            this.closeButton1.Size = new System.Drawing.Size(27, 27);
-            this.closeButton1.TabIndex = 0;
+            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnOrder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.btnOrder.Location = new System.Drawing.Point(0, 35);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnOrder.Size = new System.Drawing.Size(250, 35);
+            this.btnOrder.TabIndex = 2;
+            this.btnOrder.Text = "Order";
+            this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrder.UseVisualStyleBackColor = false;
             // 
             // pnlBody
             // 
@@ -183,28 +186,29 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMain";
             this.Text = "frmMain";
-            this.pnlSide.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.frmMain_Load);
+            this.pnlTop.ResumeLayout(false);
+            this.pnlTop.PerformLayout();
             this.pnlLogo.ResumeLayout(false);
             this.pnlLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnlTop.ResumeLayout(false);
-            this.pnlTop.PerformLayout();
+            this.pnlSide.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlSide;
-        private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Panel pnlTop;
+        private MinimizeButton minimizeButton1;
+        private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblLogo;
-        private System.Windows.Forms.Button btnProduct;
+        private CloseButton closeButton1;
+        private ExpandButton expandButton1;
+        private System.Windows.Forms.Panel pnlSide;
         private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Button btnProduct;
         private System.Windows.Forms.Panel pnlBody;
-        private Designer.CloseButton closeButton1;
-        private Designer.MinimizeButton minimizeButton1;
-        private Designer.ExpandButton expandButton1;
     }
 }

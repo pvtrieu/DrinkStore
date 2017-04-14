@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DrinkStore.Presentation;
+using DrinkStore.Designer;
 
 namespace DrinkStore.Designer
 {
     public partial class CloseButton : UserControl
     {
-        Form myForm = frmMain.ActiveForm;
+        
 
         public CloseButton()
         {
