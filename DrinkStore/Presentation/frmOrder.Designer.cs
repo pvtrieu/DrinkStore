@@ -268,9 +268,9 @@
             this.lblProPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
             this.lblProPrice.Location = new System.Drawing.Point(20, 194);
             this.lblProPrice.Name = "lblProPrice";
-            this.lblProPrice.Size = new System.Drawing.Size(50, 17);
+            this.lblProPrice.Size = new System.Drawing.Size(91, 17);
             this.lblProPrice.TabIndex = 34;
-            this.lblProPrice.Text = "Price:";
+            this.lblProPrice.Text = "Total price:";
             // 
             // txtCask
             // 
