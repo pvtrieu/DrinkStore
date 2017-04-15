@@ -41,18 +41,13 @@
             this.lblSell = new System.Windows.Forms.Label();
             this.lblBase = new System.Windows.Forms.Label();
             this.txtBottle = new System.Windows.Forms.TextBox();
-            this.txtBase = new System.Windows.Forms.TextBox();
-            this.txtSell = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.txtPcask = new System.Windows.Forms.TextBox();
+            this.txtPbottle = new System.Windows.Forms.TextBox();
+            this.btnNew = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnImg = new System.Windows.Forms.Button();
             this.pnlData = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblProCat = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnUndo = new System.Windows.Forms.Button();
-            this.lineSeparator2 = new DrinkStore.Designer.LineSeparator();
-            this.lineSeparator1 = new DrinkStore.Designer.LineSeparator();
+            this.grdProduct = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,10 +55,15 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblProCat = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.lineSeparator2 = new DrinkStore.Designer.LineSeparator();
+            this.lineSeparator1 = new DrinkStore.Designer.LineSeparator();
             this.pnlProductImg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProImg)).BeginInit();
             this.pnlData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -171,9 +171,9 @@
             this.lblSell.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
             this.lblSell.Location = new System.Drawing.Point(443, 169);
             this.lblSell.Name = "lblSell";
-            this.lblSell.Size = new System.Drawing.Size(24, 13);
+            this.lblSell.Size = new System.Drawing.Size(52, 13);
             this.lblSell.TabIndex = 14;
-            this.lblSell.Text = "Sell";
+            this.lblSell.Text = "Per bottle";
             // 
             // lblBase
             // 
@@ -181,9 +181,9 @@
             this.lblBase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
             this.lblBase.Location = new System.Drawing.Point(299, 169);
             this.lblBase.Name = "lblBase";
-            this.lblBase.Size = new System.Drawing.Size(31, 13);
+            this.lblBase.Size = new System.Drawing.Size(49, 13);
             this.lblBase.TabIndex = 13;
-            this.lblBase.Text = "Base";
+            this.lblBase.Text = "Per cask";
             // 
             // txtBottle
             // 
@@ -192,33 +192,33 @@
             this.txtBottle.Size = new System.Drawing.Size(135, 20);
             this.txtBottle.TabIndex = 16;
             // 
-            // txtBase
+            // txtPcask
             // 
-            this.txtBase.Location = new System.Drawing.Point(302, 185);
-            this.txtBase.Name = "txtBase";
-            this.txtBase.Size = new System.Drawing.Size(135, 20);
-            this.txtBase.TabIndex = 17;
+            this.txtPcask.Location = new System.Drawing.Point(302, 185);
+            this.txtPcask.Name = "txtPcask";
+            this.txtPcask.Size = new System.Drawing.Size(135, 20);
+            this.txtPcask.TabIndex = 17;
             // 
-            // txtSell
+            // txtPbottle
             // 
-            this.txtSell.Location = new System.Drawing.Point(446, 185);
-            this.txtSell.Name = "txtSell";
-            this.txtSell.Size = new System.Drawing.Size(135, 20);
-            this.txtSell.TabIndex = 18;
+            this.txtPbottle.Location = new System.Drawing.Point(446, 185);
+            this.txtPbottle.Name = "txtPbottle";
+            this.txtPbottle.Size = new System.Drawing.Size(135, 20);
+            this.txtPbottle.TabIndex = 18;
             // 
-            // btnAdd
+            // btnNew
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnAdd.Location = new System.Drawing.Point(302, 226);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(80, 26);
-            this.btnAdd.TabIndex = 19;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
+            this.btnNew.FlatAppearance.BorderSize = 0;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.btnNew.Location = new System.Drawing.Point(302, 226);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(80, 26);
+            this.btnNew.TabIndex = 19;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = false;
             // 
             // btnSave
             // 
@@ -253,18 +253,18 @@
             this.pnlData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlData.Controls.Add(this.dataGridView1);
-            this.pnlData.Location = new System.Drawing.Point(21, 326);
+            this.pnlData.Controls.Add(this.grdProduct);
+            this.pnlData.Location = new System.Drawing.Point(21, 288);
             this.pnlData.Name = "pnlData";
-            this.pnlData.Size = new System.Drawing.Size(560, 262);
+            this.pnlData.Size = new System.Drawing.Size(560, 300);
             this.pnlData.TabIndex = 23;
             // 
-            // dataGridView1
+            // grdProduct
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grdProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdProduct.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.grdProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -272,70 +272,11 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(560, 262);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // lblProCat
-            // 
-            this.lblProCat.AutoSize = true;
-            this.lblProCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProCat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProCat.Location = new System.Drawing.Point(190, 97);
-            this.lblProCat.Name = "lblProCat";
-            this.lblProCat.Size = new System.Drawing.Size(78, 17);
-            this.lblProCat.TabIndex = 24;
-            this.lblProCat.Text = "Category:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(302, 97);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(279, 21);
-            this.comboBox1.TabIndex = 25;
-            // 
-            // btnUndo
-            // 
-            this.btnUndo.BackColor = System.Drawing.Color.Red;
-            this.btnUndo.FlatAppearance.BorderSize = 0;
-            this.btnUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUndo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUndo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnUndo.Location = new System.Drawing.Point(498, 226);
-            this.btnUndo.Name = "btnUndo";
-            this.btnUndo.Size = new System.Drawing.Size(80, 26);
-            this.btnUndo.TabIndex = 26;
-            this.btnUndo.Text = "Undo";
-            this.btnUndo.UseVisualStyleBackColor = false;
-            // 
-            // lineSeparator2
-            // 
-            this.lineSeparator2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lineSeparator2.AutoSize = true;
-            this.lineSeparator2.Location = new System.Drawing.Point(21, 270);
-            this.lineSeparator2.MaximumSize = new System.Drawing.Size(2000, 2);
-            this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
-            this.lineSeparator2.Name = "lineSeparator2";
-            this.lineSeparator2.Size = new System.Drawing.Size(560, 2);
-            this.lineSeparator2.TabIndex = 20;
-            // 
-            // lineSeparator1
-            // 
-            this.lineSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lineSeparator1.AutoSize = true;
-            this.lineSeparator1.Location = new System.Drawing.Point(21, 38);
-            this.lineSeparator1.MaximumSize = new System.Drawing.Size(2000, 2);
-            this.lineSeparator1.MinimumSize = new System.Drawing.Size(0, 2);
-            this.lineSeparator1.Name = "lineSeparator1";
-            this.lineSeparator1.Size = new System.Drawing.Size(560, 2);
-            this.lineSeparator1.TabIndex = 1;
+            this.grdProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdProduct.Location = new System.Drawing.Point(0, 0);
+            this.grdProduct.Name = "grdProduct";
+            this.grdProduct.Size = new System.Drawing.Size(560, 300);
+            this.grdProduct.TabIndex = 0;
             // 
             // Column1
             // 
@@ -364,13 +305,72 @@
             // 
             // Column6
             // 
-            this.Column6.HeaderText = "Base";
+            this.Column6.HeaderText = "P. Cask";
             this.Column6.Name = "Column6";
             // 
             // Column7
             // 
-            this.Column7.HeaderText = "Sell";
+            this.Column7.HeaderText = "P. Bottle";
             this.Column7.Name = "Column7";
+            // 
+            // lblProCat
+            // 
+            this.lblProCat.AutoSize = true;
+            this.lblProCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProCat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.lblProCat.Location = new System.Drawing.Point(190, 97);
+            this.lblProCat.Name = "lblProCat";
+            this.lblProCat.Size = new System.Drawing.Size(78, 17);
+            this.lblProCat.TabIndex = 24;
+            this.lblProCat.Text = "Category:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(302, 97);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(279, 21);
+            this.comboBox1.TabIndex = 25;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Red;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.btnCancel.Location = new System.Drawing.Point(498, 226);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(80, 26);
+            this.btnCancel.TabIndex = 26;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            // 
+            // lineSeparator2
+            // 
+            this.lineSeparator2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineSeparator2.AutoSize = true;
+            this.lineSeparator2.Location = new System.Drawing.Point(21, 270);
+            this.lineSeparator2.MaximumSize = new System.Drawing.Size(2000, 2);
+            this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
+            this.lineSeparator2.Name = "lineSeparator2";
+            this.lineSeparator2.Size = new System.Drawing.Size(560, 2);
+            this.lineSeparator2.TabIndex = 20;
+            // 
+            // lineSeparator1
+            // 
+            this.lineSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineSeparator1.AutoSize = true;
+            this.lineSeparator1.Location = new System.Drawing.Point(21, 38);
+            this.lineSeparator1.MaximumSize = new System.Drawing.Size(2000, 2);
+            this.lineSeparator1.MinimumSize = new System.Drawing.Size(0, 2);
+            this.lineSeparator1.Name = "lineSeparator1";
+            this.lineSeparator1.Size = new System.Drawing.Size(560, 2);
+            this.lineSeparator1.TabIndex = 1;
             // 
             // frmProduct
             // 
@@ -378,16 +378,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(600, 600);
-            this.Controls.Add(this.btnUndo);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lblProCat);
             this.Controls.Add(this.pnlData);
             this.Controls.Add(this.btnImg);
             this.Controls.Add(this.lineSeparator2);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.txtSell);
-            this.Controls.Add(this.txtBase);
+            this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.txtPbottle);
+            this.Controls.Add(this.txtPcask);
             this.Controls.Add(this.txtBottle);
             this.Controls.Add(this.lblSell);
             this.Controls.Add(this.lblBase);
@@ -408,7 +408,7 @@
             this.pnlProductImg.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picProImg)).EndInit();
             this.pnlData.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -430,17 +430,17 @@
         private System.Windows.Forms.Label lblSell;
         private System.Windows.Forms.Label lblBase;
         private System.Windows.Forms.TextBox txtBottle;
-        private System.Windows.Forms.TextBox txtBase;
-        private System.Windows.Forms.TextBox txtSell;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.TextBox txtPcask;
+        private System.Windows.Forms.TextBox txtPbottle;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnSave;
         private Designer.LineSeparator lineSeparator2;
         private System.Windows.Forms.Button btnImg;
         private System.Windows.Forms.Panel pnlData;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grdProduct;
         private System.Windows.Forms.Label lblProCat;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button btnUndo;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
