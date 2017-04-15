@@ -43,16 +43,23 @@
             this.txtBottle = new System.Windows.Forms.TextBox();
             this.txtBase = new System.Windows.Forms.TextBox();
             this.txtSell = new System.Windows.Forms.TextBox();
-            this.btnAddNew = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnImg = new System.Windows.Forms.Button();
             this.pnlData = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblProCat = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnUndo = new System.Windows.Forms.Button();
+            this.lineSeparator2 = new DrinkStore.Designer.LineSeparator();
+            this.lineSeparator1 = new DrinkStore.Designer.LineSeparator();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lineSeparator2 = new DrinkStore.Designer.LineSeparator();
-            this.lineSeparator1 = new DrinkStore.Designer.LineSeparator();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlProductImg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProImg)).BeginInit();
             this.pnlData.SuspendLayout();
@@ -79,15 +86,15 @@
             this.pnlProductImg.Controls.Add(this.picProImg);
             this.pnlProductImg.Location = new System.Drawing.Point(20, 55);
             this.pnlProductImg.Name = "pnlProductImg";
-            this.pnlProductImg.Size = new System.Drawing.Size(100, 100);
+            this.pnlProductImg.Size = new System.Drawing.Size(150, 150);
             this.pnlProductImg.TabIndex = 2;
             // 
             // picProImg
             // 
-            this.picProImg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picProImg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picProImg.Location = new System.Drawing.Point(0, 0);
             this.picProImg.Name = "picProImg";
-            this.picProImg.Size = new System.Drawing.Size(100, 100);
+            this.picProImg.Size = new System.Drawing.Size(150, 150);
             this.picProImg.TabIndex = 0;
             this.picProImg.TabStop = false;
             // 
@@ -96,7 +103,7 @@
             this.lblProTitle.AutoSize = true;
             this.lblProTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProTitle.Location = new System.Drawing.Point(141, 55);
+            this.lblProTitle.Location = new System.Drawing.Point(190, 55);
             this.lblProTitle.Name = "lblProTitle";
             this.lblProTitle.Size = new System.Drawing.Size(45, 17);
             this.lblProTitle.TabIndex = 3;
@@ -104,9 +111,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(225, 54);
+            this.textBox1.Location = new System.Drawing.Point(302, 55);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 20);
+            this.textBox1.Size = new System.Drawing.Size(279, 20);
             this.textBox1.TabIndex = 4;
             // 
             // lblProQuant
@@ -114,7 +121,7 @@
             this.lblProQuant.AutoSize = true;
             this.lblProQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProQuant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProQuant.Location = new System.Drawing.Point(141, 96);
+            this.lblProQuant.Location = new System.Drawing.Point(190, 142);
             this.lblProQuant.Name = "lblProQuant";
             this.lblProQuant.Size = new System.Drawing.Size(74, 17);
             this.lblProQuant.TabIndex = 5;
@@ -122,7 +129,7 @@
             // 
             // txtCask
             // 
-            this.txtCask.Location = new System.Drawing.Point(225, 96);
+            this.txtCask.Location = new System.Drawing.Point(302, 142);
             this.txtCask.Name = "txtCask";
             this.txtCask.Size = new System.Drawing.Size(135, 20);
             this.txtCask.TabIndex = 7;
@@ -132,7 +139,7 @@
             this.lblProPrice.AutoSize = true;
             this.lblProPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProPrice.Location = new System.Drawing.Point(141, 138);
+            this.lblProPrice.Location = new System.Drawing.Point(190, 188);
             this.lblProPrice.Name = "lblProPrice";
             this.lblProPrice.Size = new System.Drawing.Size(50, 17);
             this.lblProPrice.TabIndex = 8;
@@ -142,7 +149,7 @@
             // 
             this.lblCask.AutoSize = true;
             this.lblCask.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblCask.Location = new System.Drawing.Point(277, 80);
+            this.lblCask.Location = new System.Drawing.Point(299, 126);
             this.lblCask.Name = "lblCask";
             this.lblCask.Size = new System.Drawing.Size(31, 13);
             this.lblCask.TabIndex = 9;
@@ -152,7 +159,7 @@
             // 
             this.lblBottle.AutoSize = true;
             this.lblBottle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblBottle.Location = new System.Drawing.Point(444, 80);
+            this.lblBottle.Location = new System.Drawing.Point(443, 126);
             this.lblBottle.Name = "lblBottle";
             this.lblBottle.Size = new System.Drawing.Size(34, 13);
             this.lblBottle.TabIndex = 10;
@@ -162,7 +169,7 @@
             // 
             this.lblSell.AutoSize = true;
             this.lblSell.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblSell.Location = new System.Drawing.Point(444, 119);
+            this.lblSell.Location = new System.Drawing.Point(443, 169);
             this.lblSell.Name = "lblSell";
             this.lblSell.Size = new System.Drawing.Size(24, 13);
             this.lblSell.TabIndex = 14;
@@ -172,7 +179,7 @@
             // 
             this.lblBase.AutoSize = true;
             this.lblBase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblBase.Location = new System.Drawing.Point(277, 119);
+            this.lblBase.Location = new System.Drawing.Point(299, 169);
             this.lblBase.Name = "lblBase";
             this.lblBase.Size = new System.Drawing.Size(31, 13);
             this.lblBase.TabIndex = 13;
@@ -180,38 +187,38 @@
             // 
             // txtBottle
             // 
-            this.txtBottle.Location = new System.Drawing.Point(395, 96);
+            this.txtBottle.Location = new System.Drawing.Point(446, 142);
             this.txtBottle.Name = "txtBottle";
             this.txtBottle.Size = new System.Drawing.Size(135, 20);
             this.txtBottle.TabIndex = 16;
             // 
             // txtBase
             // 
-            this.txtBase.Location = new System.Drawing.Point(225, 138);
+            this.txtBase.Location = new System.Drawing.Point(302, 185);
             this.txtBase.Name = "txtBase";
             this.txtBase.Size = new System.Drawing.Size(135, 20);
             this.txtBase.TabIndex = 17;
             // 
             // txtSell
             // 
-            this.txtSell.Location = new System.Drawing.Point(395, 135);
+            this.txtSell.Location = new System.Drawing.Point(446, 185);
             this.txtSell.Name = "txtSell";
             this.txtSell.Size = new System.Drawing.Size(135, 20);
             this.txtSell.TabIndex = 18;
             // 
-            // btnAddNew
+            // btnAdd
             // 
-            this.btnAddNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
-            this.btnAddNew.FlatAppearance.BorderSize = 0;
-            this.btnAddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnAddNew.Location = new System.Drawing.Point(225, 174);
-            this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(135, 26);
-            this.btnAddNew.TabIndex = 19;
-            this.btnAddNew.Text = "Add New";
-            this.btnAddNew.UseVisualStyleBackColor = false;
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.btnAdd.Location = new System.Drawing.Point(302, 226);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(80, 26);
+            this.btnAdd.TabIndex = 19;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // btnSave
             // 
@@ -220,23 +227,23 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnSave.Location = new System.Drawing.Point(393, 174);
+            this.btnSave.Location = new System.Drawing.Point(399, 226);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(137, 26);
+            this.btnSave.Size = new System.Drawing.Size(80, 26);
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             // 
             // btnImg
             // 
-            this.btnImg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
+            this.btnImg.BackColor = System.Drawing.Color.Red;
             this.btnImg.FlatAppearance.BorderSize = 0;
             this.btnImg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnImg.Location = new System.Drawing.Point(21, 174);
+            this.btnImg.Location = new System.Drawing.Point(21, 226);
             this.btnImg.Name = "btnImg";
-            this.btnImg.Size = new System.Drawing.Size(99, 26);
+            this.btnImg.Size = new System.Drawing.Size(149, 26);
             this.btnImg.TabIndex = 22;
             this.btnImg.Text = "Add Image";
             this.btnImg.UseVisualStyleBackColor = false;
@@ -247,40 +254,62 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlData.Controls.Add(this.dataGridView1);
-            this.pnlData.Location = new System.Drawing.Point(21, 233);
+            this.pnlData.Location = new System.Drawing.Point(21, 326);
             this.pnlData.Name = "pnlData";
-            this.pnlData.Size = new System.Drawing.Size(510, 205);
+            this.pnlData.Size = new System.Drawing.Size(560, 262);
             this.pnlData.TabIndex = 23;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3});
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(507, 205);
+            this.dataGridView1.Size = new System.Drawing.Size(560, 262);
             this.dataGridView1.TabIndex = 0;
             // 
-            // Column1
+            // lblProCat
             // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
+            this.lblProCat.AutoSize = true;
+            this.lblProCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProCat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.lblProCat.Location = new System.Drawing.Point(190, 97);
+            this.lblProCat.Name = "lblProCat";
+            this.lblProCat.Size = new System.Drawing.Size(78, 17);
+            this.lblProCat.TabIndex = 24;
+            this.lblProCat.Text = "Category:";
             // 
-            // Column2
+            // comboBox1
             // 
-            this.Column2.HeaderText = "Column2";
-            this.Column2.Name = "Column2";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(302, 97);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(279, 21);
+            this.comboBox1.TabIndex = 25;
             // 
-            // Column3
+            // btnUndo
             // 
-            this.Column3.HeaderText = "Column3";
-            this.Column3.Name = "Column3";
+            this.btnUndo.BackColor = System.Drawing.Color.Red;
+            this.btnUndo.FlatAppearance.BorderSize = 0;
+            this.btnUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUndo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUndo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.btnUndo.Location = new System.Drawing.Point(498, 226);
+            this.btnUndo.Name = "btnUndo";
+            this.btnUndo.Size = new System.Drawing.Size(80, 26);
+            this.btnUndo.TabIndex = 26;
+            this.btnUndo.Text = "Undo";
+            this.btnUndo.UseVisualStyleBackColor = false;
             // 
             // lineSeparator2
             // 
@@ -288,11 +317,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lineSeparator2.AutoSize = true;
-            this.lineSeparator2.Location = new System.Drawing.Point(21, 214);
+            this.lineSeparator2.Location = new System.Drawing.Point(21, 270);
             this.lineSeparator2.MaximumSize = new System.Drawing.Size(2000, 2);
             this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
             this.lineSeparator2.Name = "lineSeparator2";
-            this.lineSeparator2.Size = new System.Drawing.Size(510, 2);
+            this.lineSeparator2.Size = new System.Drawing.Size(560, 2);
             this.lineSeparator2.TabIndex = 20;
             // 
             // lineSeparator1
@@ -301,23 +330,62 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lineSeparator1.AutoSize = true;
-            this.lineSeparator1.Location = new System.Drawing.Point(20, 39);
+            this.lineSeparator1.Location = new System.Drawing.Point(21, 38);
             this.lineSeparator1.MaximumSize = new System.Drawing.Size(2000, 2);
             this.lineSeparator1.MinimumSize = new System.Drawing.Size(0, 2);
             this.lineSeparator1.Name = "lineSeparator1";
-            this.lineSeparator1.Size = new System.Drawing.Size(510, 2);
+            this.lineSeparator1.Size = new System.Drawing.Size(560, 2);
             this.lineSeparator1.TabIndex = 1;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Title";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Category";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Cask";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Bottle";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Base";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Sell";
+            this.Column7.Name = "Column7";
             // 
             // frmProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(550, 450);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(600, 600);
+            this.Controls.Add(this.btnUndo);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.lblProCat);
             this.Controls.Add(this.pnlData);
             this.Controls.Add(this.btnImg);
             this.Controls.Add(this.lineSeparator2);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnAddNew);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtSell);
             this.Controls.Add(this.txtBase);
             this.Controls.Add(this.txtBottle);
@@ -364,14 +432,21 @@
         private System.Windows.Forms.TextBox txtBottle;
         private System.Windows.Forms.TextBox txtBase;
         private System.Windows.Forms.TextBox txtSell;
-        private System.Windows.Forms.Button btnAddNew;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSave;
         private Designer.LineSeparator lineSeparator2;
         private System.Windows.Forms.Button btnImg;
         private System.Windows.Forms.Panel pnlData;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblProCat;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnUndo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }

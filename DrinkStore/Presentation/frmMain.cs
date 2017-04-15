@@ -23,7 +23,7 @@ namespace DrinkStore.Designer
             FormProduct.TopLevel = false;
             FormProduct.AutoScroll = false;
             FormProduct.Dock = DockStyle.Fill;
-            FormProduct.AutoSize = true;
+            FormProduct.AutoSize = false;
             this.pnlBody.Controls.Add(FormProduct);
             FormProduct.Show();
         }

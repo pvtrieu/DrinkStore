@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.expandButton1 = new DrinkStore.Designer.ExpandButton();
-            this.closeButton1 = new DrinkStore.Designer.CloseButton();
-            this.minimizeButton1 = new DrinkStore.Designer.MinimizeButton();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.lblLogo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -40,6 +37,11 @@
             this.btnProduct = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.minimizeButton1 = new DrinkStore.Designer.MinimizeButton();
+            this.closeButton1 = new DrinkStore.Designer.CloseButton();
+            this.expandButton1 = new DrinkStore.Designer.ExpandButton();
+            this.btnImport = new System.Windows.Forms.Button();
+            this.btnStatistic = new System.Windows.Forms.Button();
             this.pnlTop.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,31 +64,6 @@
             this.pnlTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
             this.pnlTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseUp);
             // 
-            // expandButton1
-            // 
-            this.expandButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.expandButton1.Location = new System.Drawing.Point(736, 12);
-            this.expandButton1.Name = "expandButton1";
-            this.expandButton1.Size = new System.Drawing.Size(24, 24);
-            this.expandButton1.TabIndex = 0;
-            // 
-            // closeButton1
-            // 
-            this.closeButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeButton1.AutoSize = true;
-            this.closeButton1.Location = new System.Drawing.Point(766, 12);
-            this.closeButton1.Name = "closeButton1";
-            this.closeButton1.Size = new System.Drawing.Size(27, 27);
-            this.closeButton1.TabIndex = 0;
-            // 
-            // minimizeButton1
-            // 
-            this.minimizeButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimizeButton1.Location = new System.Drawing.Point(706, 12);
-            this.minimizeButton1.Name = "minimizeButton1";
-            this.minimizeButton1.Size = new System.Drawing.Size(24, 24);
-            this.minimizeButton1.TabIndex = 4;
-            // 
             // pnlLogo
             // 
             this.pnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(45)))));
@@ -95,7 +72,7 @@
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(250, 50);
+            this.pnlLogo.Size = new System.Drawing.Size(200, 50);
             this.pnlLogo.TabIndex = 0;
             // 
             // lblLogo
@@ -122,12 +99,14 @@
             // pnlSide
             // 
             this.pnlSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.pnlSide.Controls.Add(this.btnStatistic);
+            this.pnlSide.Controls.Add(this.btnImport);
             this.pnlSide.Controls.Add(this.btnOrder);
             this.pnlSide.Controls.Add(this.btnProduct);
             this.pnlSide.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSide.Location = new System.Drawing.Point(0, 50);
             this.pnlSide.Name = "pnlSide";
-            this.pnlSide.Size = new System.Drawing.Size(250, 450);
+            this.pnlSide.Size = new System.Drawing.Size(200, 600);
             this.pnlSide.TabIndex = 0;
             // 
             // btnProduct
@@ -142,7 +121,7 @@
             this.btnProduct.Location = new System.Drawing.Point(0, 0);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnProduct.Size = new System.Drawing.Size(250, 35);
+            this.btnProduct.Size = new System.Drawing.Size(200, 35);
             this.btnProduct.TabIndex = 1;
             this.btnProduct.Text = "Product";
             this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -160,7 +139,7 @@
             this.btnOrder.Location = new System.Drawing.Point(0, 35);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.btnOrder.Size = new System.Drawing.Size(250, 35);
+            this.btnOrder.Size = new System.Drawing.Size(200, 35);
             this.btnOrder.TabIndex = 2;
             this.btnOrder.Text = "Order";
             this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -168,18 +147,80 @@
             // 
             // pnlBody
             // 
+            this.pnlBody.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBody.Location = new System.Drawing.Point(250, 50);
+            this.pnlBody.Location = new System.Drawing.Point(200, 50);
             this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(550, 450);
+            this.pnlBody.Size = new System.Drawing.Size(600, 600);
             this.pnlBody.TabIndex = 2;
+            // 
+            // minimizeButton1
+            // 
+            this.minimizeButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimizeButton1.Location = new System.Drawing.Point(706, 12);
+            this.minimizeButton1.Name = "minimizeButton1";
+            this.minimizeButton1.Size = new System.Drawing.Size(24, 24);
+            this.minimizeButton1.TabIndex = 4;
+            // 
+            // closeButton1
+            // 
+            this.closeButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeButton1.AutoSize = true;
+            this.closeButton1.Location = new System.Drawing.Point(766, 12);
+            this.closeButton1.Name = "closeButton1";
+            this.closeButton1.Size = new System.Drawing.Size(27, 27);
+            this.closeButton1.TabIndex = 0;
+            // 
+            // expandButton1
+            // 
+            this.expandButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.expandButton1.Location = new System.Drawing.Point(736, 12);
+            this.expandButton1.Name = "expandButton1";
+            this.expandButton1.Size = new System.Drawing.Size(24, 24);
+            this.expandButton1.TabIndex = 0;
+            // 
+            // btnImport
+            // 
+            this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnImport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnImport.FlatAppearance.BorderSize = 0;
+            this.btnImport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.btnImport.Location = new System.Drawing.Point(0, 70);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnImport.Size = new System.Drawing.Size(200, 35);
+            this.btnImport.TabIndex = 3;
+            this.btnImport.Text = "Import";
+            this.btnImport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImport.UseVisualStyleBackColor = false;
+            // 
+            // btnStatistic
+            // 
+            this.btnStatistic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnStatistic.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStatistic.FlatAppearance.BorderSize = 0;
+            this.btnStatistic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.btnStatistic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.btnStatistic.Location = new System.Drawing.Point(0, 105);
+            this.btnStatistic.Name = "btnStatistic";
+            this.btnStatistic.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnStatistic.Size = new System.Drawing.Size(200, 35);
+            this.btnStatistic.TabIndex = 4;
+            this.btnStatistic.Text = "Statistic";
+            this.btnStatistic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStatistic.UseVisualStyleBackColor = false;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.ClientSize = new System.Drawing.Size(800, 650);
             this.Controls.Add(this.pnlBody);
             this.Controls.Add(this.pnlSide);
             this.Controls.Add(this.pnlTop);
@@ -210,5 +251,7 @@
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Button btnProduct;
         private System.Windows.Forms.Panel pnlBody;
+        private System.Windows.Forms.Button btnStatistic;
+        private System.Windows.Forms.Button btnImport;
     }
 }
