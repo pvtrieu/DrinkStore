@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DrinkStore.Presentation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,15 +18,21 @@ namespace DrinkStore.Designer
             InitializeComponent();
         }
 
+        private void addForm (Form currForm)
+        {
+            pnlBody.Controls.Clear();
+            currForm.TopLevel = false;
+            currForm.AutoScroll = false;
+            currForm.Dock = DockStyle.Fill;
+            currForm.AutoSize = false;
+            this.pnlBody.Controls.Add(currForm);
+            currForm.Show();
+        }
+
         private void frmMain_Load(object sender, EventArgs e)
         {
-            frmProduct FormProduct = new frmProduct();
-            FormProduct.TopLevel = false;
-            FormProduct.AutoScroll = false;
-            FormProduct.Dock = DockStyle.Fill;
-            FormProduct.AutoSize = false;
-            this.pnlBody.Controls.Add(FormProduct);
-            FormProduct.Show();
+            frmProduct _form = new frmProduct();
+            addForm(_form);
         }
 
         // Form border movable
@@ -52,6 +59,41 @@ namespace DrinkStore.Designer
         private void pnlTop_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
+        }
+
+
+
+        //Envent for sidebar button
+
+        Button preBtn = new Button();                  //Current selected button
+        private void SelectBtn (Button currBtn)
+        {
+            Color notSelectColor = Color.FromArgb(41, 53, 65);
+            Color isSelectColor= Color.FromArgb(34, 42, 53);
+
+            preBtn.BackColor = notSelectColor;
+            currBtn.BackColor = isSelectColor;
+            preBtn = currBtn;
+        }
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            SelectBtn(btnProduct);
+            frmProduct _form = new frmProduct();
+            addForm(_form);
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            SelectBtn(btnOrder);
+            frmOrder _form = new frmOrder();
+            addForm(_form);
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            SelectBtn(btnImport);
+            frmImport _form = new frmImport();
+            addForm(_form);
         }
     }
 }

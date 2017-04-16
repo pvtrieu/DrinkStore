@@ -17,6 +17,9 @@ namespace DrinkStore.Presentation
             InitializeComponent();
         }
 
-       
+        private void frmOrder_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
