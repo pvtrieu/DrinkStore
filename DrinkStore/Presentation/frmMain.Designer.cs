@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.minimizeButton1 = new DrinkStore.Designer.MinimizeButton();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblLogo = new System.Windows.Forms.Label();
+            this.closeButton1 = new DrinkStore.Designer.CloseButton();
+            this.expandButton1 = new DrinkStore.Designer.ExpandButton();
             this.pnlSide = new System.Windows.Forms.Panel();
             this.btnStatistic = new System.Windows.Forms.Button();
             this.btnImport = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
             this.pnlBody = new System.Windows.Forms.Panel();
-            this.minimizeButton1 = new DrinkStore.Designer.MinimizeButton();
-            this.closeButton1 = new DrinkStore.Designer.CloseButton();
-            this.expandButton1 = new DrinkStore.Designer.ExpandButton();
             this.pnlTop.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,6 +63,14 @@
             this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
             this.pnlTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
             this.pnlTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseUp);
+            // 
+            // minimizeButton1
+            // 
+            this.minimizeButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minimizeButton1.Location = new System.Drawing.Point(706, 12);
+            this.minimizeButton1.Name = "minimizeButton1";
+            this.minimizeButton1.Size = new System.Drawing.Size(24, 24);
+            this.minimizeButton1.TabIndex = 4;
             // 
             // pnlLogo
             // 
@@ -95,6 +103,23 @@
             this.lblLogo.Size = new System.Drawing.Size(144, 25);
             this.lblLogo.TabIndex = 1;
             this.lblLogo.Text = "Drink Store";
+            // 
+            // closeButton1
+            // 
+            this.closeButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeButton1.AutoSize = true;
+            this.closeButton1.Location = new System.Drawing.Point(766, 12);
+            this.closeButton1.Name = "closeButton1";
+            this.closeButton1.Size = new System.Drawing.Size(27, 27);
+            this.closeButton1.TabIndex = 0;
+            // 
+            // expandButton1
+            // 
+            this.expandButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.expandButton1.Location = new System.Drawing.Point(736, 12);
+            this.expandButton1.Name = "expandButton1";
+            this.expandButton1.Size = new System.Drawing.Size(24, 24);
+            this.expandButton1.TabIndex = 0;
             // 
             // pnlSide
             // 
@@ -197,31 +222,6 @@
             this.pnlBody.Size = new System.Drawing.Size(600, 600);
             this.pnlBody.TabIndex = 2;
             // 
-            // minimizeButton1
-            // 
-            this.minimizeButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minimizeButton1.Location = new System.Drawing.Point(706, 12);
-            this.minimizeButton1.Name = "minimizeButton1";
-            this.minimizeButton1.Size = new System.Drawing.Size(24, 24);
-            this.minimizeButton1.TabIndex = 4;
-            // 
-            // closeButton1
-            // 
-            this.closeButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeButton1.AutoSize = true;
-            this.closeButton1.Location = new System.Drawing.Point(766, 12);
-            this.closeButton1.Name = "closeButton1";
-            this.closeButton1.Size = new System.Drawing.Size(27, 27);
-            this.closeButton1.TabIndex = 0;
-            // 
-            // expandButton1
-            // 
-            this.expandButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.expandButton1.Location = new System.Drawing.Point(736, 12);
-            this.expandButton1.Name = "expandButton1";
-            this.expandButton1.Size = new System.Drawing.Size(24, 24);
-            this.expandButton1.TabIndex = 0;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,6 +233,7 @@
             this.Controls.Add(this.pnlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnlTop.ResumeLayout(false);
