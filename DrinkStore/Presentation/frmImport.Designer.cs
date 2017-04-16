@@ -79,7 +79,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnCancel.Location = new System.Drawing.Point(328, 228);
+            this.btnCancel.Location = new System.Drawing.Point(326, 229);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(80, 26);
             this.btnCancel.TabIndex = 49;
@@ -89,7 +89,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(132, 99);
+            this.comboBox1.Location = new System.Drawing.Point(130, 100);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(276, 21);
             this.comboBox1.TabIndex = 48;
@@ -99,7 +99,7 @@
             this.lblProCat.AutoSize = true;
             this.lblProCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProCat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProCat.Location = new System.Drawing.Point(20, 54);
+            this.lblProCat.Location = new System.Drawing.Point(18, 55);
             this.lblProCat.Name = "lblProCat";
             this.lblProCat.Size = new System.Drawing.Size(78, 17);
             this.lblProCat.TabIndex = 47;
@@ -111,7 +111,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlData.Controls.Add(this.grdProduct);
-            this.pnlData.Location = new System.Drawing.Point(23, 290);
+            this.pnlData.Location = new System.Drawing.Point(21, 288);
             this.pnlData.Name = "pnlData";
             this.pnlData.Size = new System.Drawing.Size(560, 300);
             this.pnlData.TabIndex = 46;
@@ -166,7 +166,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lineSeparator2.AutoSize = true;
-            this.lineSeparator2.Location = new System.Drawing.Point(23, 272);
+            this.lineSeparator2.Location = new System.Drawing.Point(21, 272);
             this.lineSeparator2.MaximumSize = new System.Drawing.Size(2000, 2);
             this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
             this.lineSeparator2.Name = "lineSeparator2";
@@ -180,7 +180,7 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnUpdate.Location = new System.Drawing.Point(229, 228);
+            this.btnUpdate.Location = new System.Drawing.Point(227, 229);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(80, 26);
             this.btnUpdate.TabIndex = 43;
@@ -194,7 +194,7 @@
             this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnImport.Location = new System.Drawing.Point(132, 228);
+            this.btnImport.Location = new System.Drawing.Point(130, 229);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(80, 26);
             this.btnImport.TabIndex = 42;
@@ -203,7 +203,7 @@
             // 
             // txtPcask
             // 
-            this.txtPcask.Location = new System.Drawing.Point(132, 187);
+            this.txtPcask.Location = new System.Drawing.Point(130, 188);
             this.txtPcask.Name = "txtPcask";
             this.txtPcask.Size = new System.Drawing.Size(276, 20);
             this.txtPcask.TabIndex = 40;
@@ -212,7 +212,7 @@
             // 
             this.lblCask.AutoSize = true;
             this.lblCask.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblCask.Location = new System.Drawing.Point(129, 125);
+            this.lblCask.Location = new System.Drawing.Point(127, 126);
             this.lblCask.Name = "lblCask";
             this.lblCask.Size = new System.Drawing.Size(31, 13);
             this.lblCask.TabIndex = 35;
@@ -223,7 +223,7 @@
             this.lblCost.AutoSize = true;
             this.lblCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblCost.Location = new System.Drawing.Point(20, 190);
+            this.lblCost.Location = new System.Drawing.Point(18, 191);
             this.lblCost.Name = "lblCost";
             this.lblCost.Size = new System.Drawing.Size(85, 17);
             this.lblCost.TabIndex = 34;
@@ -234,7 +234,7 @@
             this.lblProQuant.AutoSize = true;
             this.lblProQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProQuant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProQuant.Location = new System.Drawing.Point(20, 144);
+            this.lblProQuant.Location = new System.Drawing.Point(18, 145);
             this.lblProQuant.Name = "lblProQuant";
             this.lblProQuant.Size = new System.Drawing.Size(74, 17);
             this.lblProQuant.TabIndex = 32;
@@ -245,7 +245,7 @@
             this.lblProTitle.AutoSize = true;
             this.lblProTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProTitle.Location = new System.Drawing.Point(20, 100);
+            this.lblProTitle.Location = new System.Drawing.Point(18, 101);
             this.lblProTitle.Name = "lblProTitle";
             this.lblProTitle.Size = new System.Drawing.Size(45, 17);
             this.lblProTitle.TabIndex = 30;
@@ -257,7 +257,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lineSeparator1.AutoSize = true;
-            this.lineSeparator1.Location = new System.Drawing.Point(23, 40);
+            this.lineSeparator1.Location = new System.Drawing.Point(21, 38);
             this.lineSeparator1.MaximumSize = new System.Drawing.Size(2000, 2);
             this.lineSeparator1.MinimumSize = new System.Drawing.Size(0, 2);
             this.lineSeparator1.Name = "lineSeparator1";
@@ -272,7 +272,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblTitle.Location = new System.Drawing.Point(18, 11);
+            this.lblTitle.Location = new System.Drawing.Point(16, 9);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(74, 26);
             this.lblTitle.TabIndex = 27;
@@ -281,14 +281,14 @@
             // cbxCat
             // 
             this.cbxCat.FormattingEnabled = true;
-            this.cbxCat.Location = new System.Drawing.Point(132, 53);
+            this.cbxCat.Location = new System.Drawing.Point(130, 54);
             this.cbxCat.Name = "cbxCat";
             this.cbxCat.Size = new System.Drawing.Size(276, 21);
             this.cbxCat.TabIndex = 50;
             // 
             // txtBottle
             // 
-            this.txtBottle.Location = new System.Drawing.Point(273, 141);
+            this.txtBottle.Location = new System.Drawing.Point(271, 142);
             this.txtBottle.Name = "txtBottle";
             this.txtBottle.Size = new System.Drawing.Size(135, 20);
             this.txtBottle.TabIndex = 52;
@@ -297,7 +297,7 @@
             // 
             this.lblBottle.AutoSize = true;
             this.lblBottle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblBottle.Location = new System.Drawing.Point(270, 125);
+            this.lblBottle.Location = new System.Drawing.Point(268, 126);
             this.lblBottle.Name = "lblBottle";
             this.lblBottle.Size = new System.Drawing.Size(34, 13);
             this.lblBottle.TabIndex = 51;
@@ -305,7 +305,7 @@
             // 
             // txtCask
             // 
-            this.txtCask.Location = new System.Drawing.Point(132, 141);
+            this.txtCask.Location = new System.Drawing.Point(130, 142);
             this.txtCask.Name = "txtCask";
             this.txtCask.Size = new System.Drawing.Size(135, 20);
             this.txtCask.TabIndex = 53;
@@ -315,7 +315,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.label1.Location = new System.Drawing.Point(426, 57);
+            this.label1.Location = new System.Drawing.Point(424, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 17);
             this.label1.TabIndex = 54;
@@ -324,7 +324,7 @@
             // cbxProID
             // 
             this.cbxProID.FormattingEnabled = true;
-            this.cbxProID.Location = new System.Drawing.Point(429, 98);
+            this.cbxProID.Location = new System.Drawing.Point(427, 99);
             this.cbxProID.Name = "cbxProID";
             this.cbxProID.Size = new System.Drawing.Size(154, 21);
             this.cbxProID.TabIndex = 55;
@@ -334,7 +334,7 @@
             this.lblExpired.AutoSize = true;
             this.lblExpired.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpired.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblExpired.Location = new System.Drawing.Point(426, 144);
+            this.lblExpired.Location = new System.Drawing.Point(424, 145);
             this.lblExpired.Name = "lblExpired";
             this.lblExpired.Size = new System.Drawing.Size(98, 17);
             this.lblExpired.TabIndex = 56;
@@ -342,7 +342,7 @@
             // 
             // dateExpired
             // 
-            this.dateExpired.Location = new System.Drawing.Point(429, 187);
+            this.dateExpired.Location = new System.Drawing.Point(427, 188);
             this.dateExpired.Name = "dateExpired";
             this.dateExpired.Size = new System.Drawing.Size(154, 20);
             this.dateExpired.TabIndex = 57;

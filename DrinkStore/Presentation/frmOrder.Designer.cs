@@ -74,7 +74,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblTitle.Location = new System.Drawing.Point(18, 11);
+            this.lblTitle.Location = new System.Drawing.Point(16, 9);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(67, 26);
             this.lblTitle.TabIndex = 27;
@@ -86,7 +86,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lineSeparator1.AutoSize = true;
-            this.lineSeparator1.Location = new System.Drawing.Point(23, 40);
+            this.lineSeparator1.Location = new System.Drawing.Point(21, 38);
             this.lineSeparator1.MaximumSize = new System.Drawing.Size(2000, 2);
             this.lineSeparator1.MinimumSize = new System.Drawing.Size(0, 2);
             this.lineSeparator1.Name = "lineSeparator1";
@@ -96,7 +96,7 @@
             // cbxCategory
             // 
             this.cbxCategory.FormattingEnabled = true;
-            this.cbxCategory.Location = new System.Drawing.Point(428, 96);
+            this.cbxCategory.Location = new System.Drawing.Point(428, 91);
             this.cbxCategory.Name = "cbxCategory";
             this.cbxCategory.Size = new System.Drawing.Size(156, 21);
             this.cbxCategory.TabIndex = 37;
@@ -106,7 +106,7 @@
             this.lblProCat.AutoSize = true;
             this.lblProCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProCat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProCat.Location = new System.Drawing.Point(316, 96);
+            this.lblProCat.Location = new System.Drawing.Point(316, 91);
             this.lblProCat.Name = "lblProCat";
             this.lblProCat.Size = new System.Drawing.Size(78, 17);
             this.lblProCat.TabIndex = 36;
@@ -116,7 +116,7 @@
             // 
             this.lblBottle.AutoSize = true;
             this.lblBottle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblBottle.Location = new System.Drawing.Point(508, 125);
+            this.lblBottle.Location = new System.Drawing.Point(508, 120);
             this.lblBottle.Name = "lblBottle";
             this.lblBottle.Size = new System.Drawing.Size(34, 13);
             this.lblBottle.TabIndex = 34;
@@ -126,7 +126,7 @@
             // 
             this.lblCask.AutoSize = true;
             this.lblCask.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblCask.Location = new System.Drawing.Point(425, 125);
+            this.lblCask.Location = new System.Drawing.Point(425, 120);
             this.lblCask.Name = "lblCask";
             this.lblCask.Size = new System.Drawing.Size(31, 13);
             this.lblCask.TabIndex = 33;
@@ -134,7 +134,7 @@
             // 
             // txtCask
             // 
-            this.txtCask.Location = new System.Drawing.Point(428, 141);
+            this.txtCask.Location = new System.Drawing.Point(428, 136);
             this.txtCask.Name = "txtCask";
             this.txtCask.Size = new System.Drawing.Size(73, 20);
             this.txtCask.TabIndex = 32;
@@ -144,7 +144,7 @@
             this.lblProQuant.AutoSize = true;
             this.lblProQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProQuant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProQuant.Location = new System.Drawing.Point(316, 141);
+            this.lblProQuant.Location = new System.Drawing.Point(316, 136);
             this.lblProQuant.Name = "lblProQuant";
             this.lblProQuant.Size = new System.Drawing.Size(74, 17);
             this.lblProQuant.TabIndex = 31;
@@ -155,7 +155,7 @@
             this.lblProduct.AutoSize = true;
             this.lblProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProduct.Location = new System.Drawing.Point(316, 54);
+            this.lblProduct.Location = new System.Drawing.Point(316, 49);
             this.lblProduct.Name = "lblProduct";
             this.lblProduct.Size = new System.Drawing.Size(69, 17);
             this.lblProduct.TabIndex = 29;
@@ -166,7 +166,7 @@
             this.lblCost.AutoSize = true;
             this.lblCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblCost.Location = new System.Drawing.Point(318, 193);
+            this.lblCost.Location = new System.Drawing.Point(318, 188);
             this.lblCost.Name = "lblCost";
             this.lblCost.Size = new System.Drawing.Size(45, 17);
             this.lblCost.TabIndex = 39;
@@ -178,7 +178,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlData.Controls.Add(this.grdOrder);
-            this.pnlData.Location = new System.Drawing.Point(23, 54);
+            this.pnlData.Location = new System.Drawing.Point(23, 49);
             this.pnlData.Name = "pnlData";
             this.pnlData.Size = new System.Drawing.Size(266, 203);
             this.pnlData.TabIndex = 40;
@@ -215,7 +215,7 @@
             // 
             // txtBottle
             // 
-            this.txtBottle.Location = new System.Drawing.Point(511, 141);
+            this.txtBottle.Location = new System.Drawing.Point(511, 136);
             this.txtBottle.Name = "txtBottle";
             this.txtBottle.Size = new System.Drawing.Size(73, 20);
             this.txtBottle.TabIndex = 41;
@@ -227,7 +227,7 @@
             this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnNew.Location = new System.Drawing.Point(319, 274);
+            this.btnNew.Location = new System.Drawing.Point(319, 269);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(80, 26);
             this.btnNew.TabIndex = 20;
@@ -241,7 +241,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnDelete.Location = new System.Drawing.Point(504, 274);
+            this.btnDelete.Location = new System.Drawing.Point(504, 269);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(80, 26);
             this.btnDelete.TabIndex = 43;
@@ -255,7 +255,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnSave.Location = new System.Drawing.Point(412, 274);
+            this.btnSave.Location = new System.Drawing.Point(412, 269);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(80, 26);
             this.btnSave.TabIndex = 42;
@@ -268,7 +268,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lineSeparator2.AutoSize = true;
-            this.lineSeparator2.Location = new System.Drawing.Point(28, 312);
+            this.lineSeparator2.Location = new System.Drawing.Point(21, 306);
             this.lineSeparator2.MaximumSize = new System.Drawing.Size(2000, 2);
             this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
             this.lineSeparator2.Name = "lineSeparator2";
@@ -280,7 +280,7 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblDate.Location = new System.Drawing.Point(316, 240);
+            this.lblDate.Location = new System.Drawing.Point(316, 235);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(47, 17);
             this.lblDate.TabIndex = 45;
@@ -289,7 +289,7 @@
             // lblCostField
             // 
             this.lblCostField.AutoSize = true;
-            this.lblCostField.Location = new System.Drawing.Point(427, 193);
+            this.lblCostField.Location = new System.Drawing.Point(427, 188);
             this.lblCostField.Name = "lblCostField";
             this.lblCostField.Size = new System.Drawing.Size(56, 13);
             this.lblCostField.TabIndex = 46;
@@ -298,7 +298,7 @@
             // lblDateField
             // 
             this.lblDateField.AutoSize = true;
-            this.lblDateField.Location = new System.Drawing.Point(425, 240);
+            this.lblDateField.Location = new System.Drawing.Point(425, 235);
             this.lblDateField.Name = "lblDateField";
             this.lblDateField.Size = new System.Drawing.Size(65, 13);
             this.lblDateField.TabIndex = 47;
@@ -309,7 +309,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblTotal.Location = new System.Drawing.Point(72, 279);
+            this.lblTotal.Location = new System.Drawing.Point(72, 274);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(126, 17);
             this.lblTotal.TabIndex = 48;
@@ -371,7 +371,7 @@
             // cbxProduct
             // 
             this.cbxProduct.FormattingEnabled = true;
-            this.cbxProduct.Location = new System.Drawing.Point(428, 53);
+            this.cbxProduct.Location = new System.Drawing.Point(428, 48);
             this.cbxProduct.Name = "cbxProduct";
             this.cbxProduct.Size = new System.Drawing.Size(156, 21);
             this.cbxProduct.TabIndex = 50;
@@ -406,6 +406,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmOrder";
             this.Text = "frmOrder";
+            this.Load += new System.EventHandler(this.frmOrder_Load);
             this.pnlData.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdOrder)).EndInit();
             this.panel1.ResumeLayout(false);
