@@ -152,12 +152,6 @@
     <None Include="Resources\error2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\expand.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\expand2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\minus.png" />
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +159,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

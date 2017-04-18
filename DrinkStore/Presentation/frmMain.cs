@@ -18,6 +18,7 @@ namespace DrinkStore.Designer
             InitializeComponent();
         }
 
+        // Load another form to body panel
         private void addForm (Form currForm)
         {
             pnlBody.Controls.Clear();
@@ -33,6 +34,7 @@ namespace DrinkStore.Designer
         {
             frmProduct _form = new frmProduct();
             addForm(_form);
+            SelectBtn(btnProduct);
         }
 
         // Form border movable
@@ -65,7 +67,8 @@ namespace DrinkStore.Designer
 
         //Envent for sidebar button
 
-        Button preBtn = new Button();                  //Current selected button
+        //Highlight selected button
+        Button preBtn = new Button();                  
         private void SelectBtn (Button currBtn)
         {
             Color notSelectColor = Color.FromArgb(41, 53, 65);
@@ -75,6 +78,7 @@ namespace DrinkStore.Designer
             currBtn.BackColor = isSelectColor;
             preBtn = currBtn;
         }
+
         private void btnProduct_Click(object sender, EventArgs e)
         {
             SelectBtn(btnProduct);
