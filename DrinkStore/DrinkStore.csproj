@@ -76,6 +76,12 @@
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\OrderList.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Presentation\frmImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmImport.Designer.cs">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\MinimizeButton.resx">
       <DependentUpon>MinimizeButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmImport.resx">
+      <DependentUpon>frmImport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
