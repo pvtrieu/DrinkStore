@@ -70,6 +70,12 @@
     <Compile Include="CustomControl\MinimizeButton.Designer.cs">
       <DependentUpon>MinimizeButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\Import.cs" />
+    <Compile Include="Entities\Order.cs" />
+    <Compile Include="Entities\OrderList.cs" />
+    <Compile Include="Entities\Product.cs" />
     <Compile Include="Presentation\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,7 +140,6 @@
   <ItemGroup>
     <Folder Include="Bussiness\" />
     <Folder Include="Data\" />
-    <Folder Include="Entities\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\error.png" />
