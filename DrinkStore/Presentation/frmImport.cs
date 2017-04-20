@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace DrinkStore.Presentation
 {
-    public partial class frmOrder : Form
+    public partial class frmImport : Form
     {
-        public frmOrder()
+        public frmImport()
         {
             InitializeComponent();
         }
 
-        private void frmOrder_Load(object sender, EventArgs e)
+        private void frmImport_Load(object sender, EventArgs e)
         {
 
         }
