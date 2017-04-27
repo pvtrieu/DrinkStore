@@ -43,8 +43,8 @@
             this.txtBottle = new System.Windows.Forms.TextBox();
             this.txtPcask = new System.Windows.Forms.TextBox();
             this.txtPbottle = new System.Windows.Forms.TextBox();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnImg = new System.Windows.Forms.Button();
             this.pnlData = new System.Windows.Forms.Panel();
             this.grdProduct = new System.Windows.Forms.DataGridView();
@@ -57,7 +57,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblProCat = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.lineSeparator2 = new DrinkStore.Designer.LineSeparator();
             this.lineSeparator1 = new DrinkStore.Designer.LineSeparator();
             this.pnlProductImg.SuspendLayout();
@@ -131,6 +131,7 @@
             // 
             this.txtCask.Location = new System.Drawing.Point(302, 142);
             this.txtCask.Name = "txtCask";
+            this.txtCask.ReadOnly = true;
             this.txtCask.Size = new System.Drawing.Size(135, 20);
             this.txtCask.TabIndex = 7;
             // 
@@ -189,6 +190,7 @@
             // 
             this.txtBottle.Location = new System.Drawing.Point(446, 142);
             this.txtBottle.Name = "txtBottle";
+            this.txtBottle.ReadOnly = true;
             this.txtBottle.Size = new System.Drawing.Size(135, 20);
             this.txtBottle.TabIndex = 16;
             // 
@@ -206,33 +208,33 @@
             this.txtPbottle.Size = new System.Drawing.Size(135, 20);
             this.txtPbottle.TabIndex = 18;
             // 
-            // btnNew
+            // btnAdd
             // 
-            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
-            this.btnNew.FlatAppearance.BorderSize = 0;
-            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnNew.Location = new System.Drawing.Point(302, 226);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(80, 26);
-            this.btnNew.TabIndex = 19;
-            this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.btnAdd.Location = new System.Drawing.Point(302, 226);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(80, 26);
+            this.btnAdd.TabIndex = 19;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
-            // btnSave
+            // btnUpdate
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnSave.Location = new System.Drawing.Point(399, 226);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(80, 26);
-            this.btnSave.TabIndex = 19;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.btnUpdate.Location = new System.Drawing.Point(399, 226);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(80, 26);
+            this.btnUpdate.TabIndex = 19;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
             // btnImg
             // 
@@ -332,19 +334,19 @@
             this.comboBox1.Size = new System.Drawing.Size(279, 21);
             this.comboBox1.TabIndex = 25;
             // 
-            // btnCancel
+            // btnDelete
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.Red;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnCancel.Location = new System.Drawing.Point(498, 226);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(80, 26);
-            this.btnCancel.TabIndex = 26;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.btnDelete.Location = new System.Drawing.Point(498, 226);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(80, 26);
+            this.btnDelete.TabIndex = 26;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // lineSeparator2
             // 
@@ -378,14 +380,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(600, 600);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lblProCat);
             this.Controls.Add(this.pnlData);
             this.Controls.Add(this.btnImg);
             this.Controls.Add(this.lineSeparator2);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtPbottle);
             this.Controls.Add(this.txtPcask);
             this.Controls.Add(this.txtBottle);
@@ -432,15 +434,15 @@
         private System.Windows.Forms.TextBox txtBottle;
         private System.Windows.Forms.TextBox txtPcask;
         private System.Windows.Forms.TextBox txtPbottle;
-        private System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnUpdate;
         private Designer.LineSeparator lineSeparator2;
         private System.Windows.Forms.Button btnImg;
         private System.Windows.Forms.Panel pnlData;
         private System.Windows.Forms.DataGridView grdProduct;
         private System.Windows.Forms.Label lblProCat;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

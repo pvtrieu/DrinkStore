@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +48,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.5.6298.4486, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.5.6298.4486\lib\net35-client\CircularProgressBar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,38 +64,42 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.5.6298.3372\lib\net35-client\WinFormAnimation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomControl\CloseButton.cs">
+    <Compile Include="GUI component\CloseButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CustomControl\CloseButton.Designer.cs">
+    <Compile Include="GUI component\CloseButton.Designer.cs">
       <DependentUpon>CloseButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomControl\ExpandButton.cs">
+    <Compile Include="GUI component\ExpandButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CustomControl\ExpandButton.Designer.cs">
+    <Compile Include="GUI component\ExpandButton.Designer.cs">
       <DependentUpon>ExpandButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomControl\LineSeparator.cs">
+    <Compile Include="GUI component\LineSeparator.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CustomControl\LineSeparator.Designer.cs">
+    <Compile Include="GUI component\LineSeparator.Designer.cs">
       <DependentUpon>LineSeparator.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomControl\MinimizeButton.cs">
+    <Compile Include="GUI component\MinimizeButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CustomControl\MinimizeButton.Designer.cs">
+    <Compile Include="GUI component\MinimizeButton.Designer.cs">
       <DependentUpon>MinimizeButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Category.cs" />
-    <Compile Include="Entities\Customer.cs" />
-    <Compile Include="Entities\Import.cs" />
-    <Compile Include="Entities\Order.cs" />
-    <Compile Include="Entities\OrderList.cs" />
-    <Compile Include="Entities\Product.cs" />
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Import.cs" />
+    <Compile Include="Model\Order.cs" />
+    <Compile Include="Model\OrderList.cs" />
+    <Compile Include="Model\Product.cs" />
     <Compile Include="Presentation\frmImport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,15 +124,21 @@
     <Compile Include="Presentation\frmProduct.Designer.cs">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\frmStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmStatistic.Designer.cs">
+      <DependentUpon>frmStatistic.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CustomControl\CloseButton.resx">
+    <EmbeddedResource Include="GUI component\CloseButton.resx">
       <DependentUpon>CloseButton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomControl\ExpandButton.resx">
+    <EmbeddedResource Include="GUI component\ExpandButton.resx">
       <DependentUpon>ExpandButton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomControl\MinimizeButton.resx">
+    <EmbeddedResource Include="GUI component\MinimizeButton.resx">
       <DependentUpon>MinimizeButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmImport.resx">
@@ -123,11 +153,15 @@
     <EmbeddedResource Include="Presentation\frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmStatistic.resx">
+      <DependentUpon>frmStatistic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -147,8 +181,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Bussiness\" />
-    <Folder Include="Data\" />
+    <Folder Include="BUS\" />
+    <Folder Include="DAO\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\error.png" />
@@ -170,6 +204,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\DrinkStore.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\DrinkStore_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>DrinkStore.mdf</DependentUpon>
+    </Content>
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

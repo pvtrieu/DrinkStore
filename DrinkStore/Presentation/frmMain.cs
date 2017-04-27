@@ -99,5 +99,12 @@ namespace DrinkStore.Designer
             frmImport _form = new frmImport();
             addForm(_form);
         }
+
+        private void btnStatistic_Click(object sender, EventArgs e)
+        {
+            SelectBtn(btnStatistic);
+            frmStatistic _form = new frmStatistic();
+            addForm(_form);
+        }
     }
 }

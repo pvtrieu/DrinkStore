@@ -198,7 +198,7 @@
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(80, 26);
             this.btnImport.TabIndex = 42;
-            this.btnImport.Text = "Import";
+            this.btnImport.Text = "Add";
             this.btnImport.UseVisualStyleBackColor = false;
             // 
             // txtPcask

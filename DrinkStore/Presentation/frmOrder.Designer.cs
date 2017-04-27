@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblTitle = new System.Windows.Forms.Label();
-            this.lineSeparator1 = new DrinkStore.Designer.LineSeparator();
             this.cbxCategory = new System.Windows.Forms.ComboBox();
             this.lblProCat = new System.Windows.Forms.Label();
             this.lblBottle = new System.Windows.Forms.Label();
@@ -46,8 +45,7 @@
             this.txtBottle = new System.Windows.Forms.TextBox();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.lineSeparator2 = new DrinkStore.Designer.LineSeparator();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblCostField = new System.Windows.Forms.Label();
             this.lblDateField = new System.Windows.Forms.Label();
@@ -60,6 +58,8 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbxProduct = new System.Windows.Forms.ComboBox();
+            this.lineSeparator2 = new DrinkStore.Designer.LineSeparator();
+            this.lineSeparator1 = new DrinkStore.Designer.LineSeparator();
             this.pnlData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdOrder)).BeginInit();
             this.panel1.SuspendLayout();
@@ -79,19 +79,6 @@
             this.lblTitle.Size = new System.Drawing.Size(67, 26);
             this.lblTitle.TabIndex = 27;
             this.lblTitle.Text = "Order";
-            // 
-            // lineSeparator1
-            // 
-            this.lineSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lineSeparator1.AutoSize = true;
-            this.lineSeparator1.Location = new System.Drawing.Point(21, 38);
-            this.lineSeparator1.MaximumSize = new System.Drawing.Size(2000, 2);
-            this.lineSeparator1.MinimumSize = new System.Drawing.Size(0, 2);
-            this.lineSeparator1.Name = "lineSeparator1";
-            this.lineSeparator1.Size = new System.Drawing.Size(560, 2);
-            this.lineSeparator1.TabIndex = 28;
             // 
             // cbxCategory
             // 
@@ -258,33 +245,20 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // btnSave
+            // btnUpdate
             // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnSave.Location = new System.Drawing.Point(412, 269);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(80, 26);
-            this.btnSave.TabIndex = 42;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            // 
-            // lineSeparator2
-            // 
-            this.lineSeparator2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lineSeparator2.AutoSize = true;
-            this.lineSeparator2.Location = new System.Drawing.Point(21, 306);
-            this.lineSeparator2.MaximumSize = new System.Drawing.Size(2000, 2);
-            this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
-            this.lineSeparator2.Name = "lineSeparator2";
-            this.lineSeparator2.Size = new System.Drawing.Size(560, 2);
-            this.lineSeparator2.TabIndex = 44;
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.btnUpdate.Location = new System.Drawing.Point(412, 269);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(80, 26);
+            this.btnUpdate.TabIndex = 42;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
             // lblDate
             // 
@@ -391,6 +365,32 @@
             this.cbxProduct.Size = new System.Drawing.Size(156, 21);
             this.cbxProduct.TabIndex = 50;
             // 
+            // lineSeparator2
+            // 
+            this.lineSeparator2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineSeparator2.AutoSize = true;
+            this.lineSeparator2.Location = new System.Drawing.Point(21, 306);
+            this.lineSeparator2.MaximumSize = new System.Drawing.Size(2000, 2);
+            this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
+            this.lineSeparator2.Name = "lineSeparator2";
+            this.lineSeparator2.Size = new System.Drawing.Size(560, 2);
+            this.lineSeparator2.TabIndex = 44;
+            // 
+            // lineSeparator1
+            // 
+            this.lineSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineSeparator1.AutoSize = true;
+            this.lineSeparator1.Location = new System.Drawing.Point(21, 38);
+            this.lineSeparator1.MaximumSize = new System.Drawing.Size(2000, 2);
+            this.lineSeparator1.MinimumSize = new System.Drawing.Size(0, 2);
+            this.lineSeparator1.Name = "lineSeparator1";
+            this.lineSeparator1.Size = new System.Drawing.Size(560, 2);
+            this.lineSeparator1.TabIndex = 28;
+            // 
             // frmOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,7 +404,7 @@
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lineSeparator2);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.txtBottle);
             this.Controls.Add(this.pnlData);
@@ -447,7 +447,7 @@
         private System.Windows.Forms.TextBox txtBottle;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnUpdate;
         private Designer.LineSeparator lineSeparator2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

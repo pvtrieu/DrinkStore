@@ -152,6 +152,7 @@
             this.btnStatistic.Text = "Statistic";
             this.btnStatistic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStatistic.UseVisualStyleBackColor = false;
+            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
             // 
             // btnImport
             // 
