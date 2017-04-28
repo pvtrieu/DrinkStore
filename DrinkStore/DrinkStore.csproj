@@ -106,6 +106,12 @@
     <Compile Include="Presentation\frmImport.Designer.cs">
       <DependentUpon>frmImport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmImport.resx">
       <DependentUpon>frmImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
