@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.lblLogo = new System.Windows.Forms.Label();
             this.pnlLogo = new System.Windows.Forms.Panel();
-            this.closeButton1 = new DrinkStore.Designer.CloseButton();
+            this.closeButton1 = new DrinkStore.Presentation.CloseButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
@@ -135,6 +135,7 @@
             this.btnLogin.TabIndex = 20;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // frmLogin
             // 
@@ -164,7 +165,7 @@
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Designer.CloseButton closeButton1;
+        private Presentation.CloseButton closeButton1;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label label1;

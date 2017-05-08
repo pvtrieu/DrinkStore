@@ -1,4 +1,4 @@
-﻿using DrinkStore.Presentation;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,14 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DrinkStore.Entities;
 
-namespace DrinkStore.Designer
+namespace DrinkStore.Presentation
 {
     public partial class frmMain : Form
     {
+        static Staff _staff;
         public frmMain()
         {
             InitializeComponent();
+        }
+
+        public frmMain(Staff staff)
+        {
+            InitializeComponent();
+            _staff = staff;
         }
 
         // Load another form to body panel

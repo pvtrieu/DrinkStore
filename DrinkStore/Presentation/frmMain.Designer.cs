@@ -1,4 +1,4 @@
-﻿namespace DrinkStore.Designer
+﻿namespace DrinkStore.Presentation
 {
     partial class frmMain
     {
@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.minimizeButton1 = new DrinkStore.Designer.MinimizeButton();
+            this.minimizeButton1 = new DrinkStore.Presentation.MinimizeButton();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblLogo = new System.Windows.Forms.Label();
-            this.closeButton1 = new DrinkStore.Designer.CloseButton();
-            this.expandButton1 = new DrinkStore.Designer.ExpandButton();
+            this.closeButton1 = new DrinkStore.Presentation.CloseButton();
+            this.expandButton1 = new DrinkStore.Presentation.ExpandButton();
             this.pnlSide = new System.Windows.Forms.Panel();
             this.btnStatistic = new System.Windows.Forms.Button();
             this.btnImport = new System.Windows.Forms.Button();

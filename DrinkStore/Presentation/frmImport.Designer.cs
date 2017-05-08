@@ -28,19 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.components = new System.ComponentModel.Container();
             this.btnCancel = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblProCat = new System.Windows.Forms.Label();
             this.pnlData = new System.Windows.Forms.Panel();
             this.grdProduct = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lineSeparator2 = new DrinkStore.Designer.LineSeparator();
+            this.lineSeparator2 = new DrinkStore.Presentation.LineSeparator();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnImport = new System.Windows.Forms.Button();
             this.txtPcask = new System.Windows.Forms.TextBox();
@@ -48,7 +42,7 @@
             this.lblCost = new System.Windows.Forms.Label();
             this.lblProQuant = new System.Windows.Forms.Label();
             this.lblProTitle = new System.Windows.Forms.Label();
-            this.lineSeparator1 = new DrinkStore.Designer.LineSeparator();
+            this.lineSeparator1 = new DrinkStore.Presentation.LineSeparator();
             this.lblTitle = new System.Windows.Forms.Label();
             this.cbxCat = new System.Windows.Forms.ComboBox();
             this.txtBottle = new System.Windows.Forms.TextBox();
@@ -58,19 +52,22 @@
             this.cbxProID = new System.Windows.Forms.ComboBox();
             this.lblExpired = new System.Windows.Forms.Label();
             this.dateExpired = new System.Windows.Forms.DateTimePicker();
+            this.importBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.importIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.importQuantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currentUnitQuantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currentBoxQuantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wholeCostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.retailCostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.importDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expiredDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cashierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.importBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Bottle";
-            this.Column5.Name = "Column5";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "P. Bottle";
-            this.Column7.Name = "Column7";
             // 
             // btnCancel
             // 
@@ -118,47 +115,28 @@
             // 
             // grdProduct
             // 
+            this.grdProduct.AutoGenerateColumns = false;
             this.grdProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdProduct.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.grdProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
+            this.importIDDataGridViewTextBoxColumn,
+            this.productDataGridViewTextBoxColumn,
+            this.supplierDataGridViewTextBoxColumn,
+            this.importQuantDataGridViewTextBoxColumn,
+            this.currentUnitQuantDataGridViewTextBoxColumn,
+            this.currentBoxQuantDataGridViewTextBoxColumn,
+            this.wholeCostDataGridViewTextBoxColumn,
+            this.retailCostDataGridViewTextBoxColumn,
+            this.importDateDataGridViewTextBoxColumn,
+            this.expiredDateDataGridViewTextBoxColumn,
+            this.cashierDataGridViewTextBoxColumn});
+            this.grdProduct.DataSource = this.importBindingSource;
             this.grdProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdProduct.Location = new System.Drawing.Point(0, 0);
             this.grdProduct.Name = "grdProduct";
             this.grdProduct.Size = new System.Drawing.Size(560, 300);
             this.grdProduct.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Title";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Category";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Cask";
-            this.Column4.Name = "Column4";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "P. Cask";
-            this.Column6.Name = "Column6";
             // 
             // lineSeparator2
             // 
@@ -347,6 +325,76 @@
             this.dateExpired.Size = new System.Drawing.Size(154, 20);
             this.dateExpired.TabIndex = 57;
             // 
+            // importBindingSource
+            // 
+            this.importBindingSource.DataSource = typeof(DrinkStore.Entities.Import);
+            // 
+            // importIDDataGridViewTextBoxColumn
+            // 
+            this.importIDDataGridViewTextBoxColumn.DataPropertyName = "ImportID";
+            this.importIDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.importIDDataGridViewTextBoxColumn.Name = "importIDDataGridViewTextBoxColumn";
+            // 
+            // productDataGridViewTextBoxColumn
+            // 
+            this.productDataGridViewTextBoxColumn.DataPropertyName = "Product";
+            this.productDataGridViewTextBoxColumn.HeaderText = "Product";
+            this.productDataGridViewTextBoxColumn.Name = "productDataGridViewTextBoxColumn";
+            // 
+            // supplierDataGridViewTextBoxColumn
+            // 
+            this.supplierDataGridViewTextBoxColumn.DataPropertyName = "Supplier";
+            this.supplierDataGridViewTextBoxColumn.HeaderText = "Supplier";
+            this.supplierDataGridViewTextBoxColumn.Name = "supplierDataGridViewTextBoxColumn";
+            // 
+            // importQuantDataGridViewTextBoxColumn
+            // 
+            this.importQuantDataGridViewTextBoxColumn.DataPropertyName = "ImportQuant";
+            this.importQuantDataGridViewTextBoxColumn.HeaderText = "Quant";
+            this.importQuantDataGridViewTextBoxColumn.Name = "importQuantDataGridViewTextBoxColumn";
+            // 
+            // currentUnitQuantDataGridViewTextBoxColumn
+            // 
+            this.currentUnitQuantDataGridViewTextBoxColumn.DataPropertyName = "CurrentUnitQuant";
+            this.currentUnitQuantDataGridViewTextBoxColumn.HeaderText = "C.Unit";
+            this.currentUnitQuantDataGridViewTextBoxColumn.Name = "currentUnitQuantDataGridViewTextBoxColumn";
+            // 
+            // currentBoxQuantDataGridViewTextBoxColumn
+            // 
+            this.currentBoxQuantDataGridViewTextBoxColumn.DataPropertyName = "CurrentBoxQuant";
+            this.currentBoxQuantDataGridViewTextBoxColumn.HeaderText = "C.Box";
+            this.currentBoxQuantDataGridViewTextBoxColumn.Name = "currentBoxQuantDataGridViewTextBoxColumn";
+            // 
+            // wholeCostDataGridViewTextBoxColumn
+            // 
+            this.wholeCostDataGridViewTextBoxColumn.DataPropertyName = "WholeCost";
+            this.wholeCostDataGridViewTextBoxColumn.HeaderText = "WholeCost";
+            this.wholeCostDataGridViewTextBoxColumn.Name = "wholeCostDataGridViewTextBoxColumn";
+            // 
+            // retailCostDataGridViewTextBoxColumn
+            // 
+            this.retailCostDataGridViewTextBoxColumn.DataPropertyName = "RetailCost";
+            this.retailCostDataGridViewTextBoxColumn.HeaderText = "RetailCost";
+            this.retailCostDataGridViewTextBoxColumn.Name = "retailCostDataGridViewTextBoxColumn";
+            // 
+            // importDateDataGridViewTextBoxColumn
+            // 
+            this.importDateDataGridViewTextBoxColumn.DataPropertyName = "ImportDate";
+            this.importDateDataGridViewTextBoxColumn.HeaderText = "ImportDate";
+            this.importDateDataGridViewTextBoxColumn.Name = "importDateDataGridViewTextBoxColumn";
+            // 
+            // expiredDateDataGridViewTextBoxColumn
+            // 
+            this.expiredDateDataGridViewTextBoxColumn.DataPropertyName = "ExpiredDate";
+            this.expiredDateDataGridViewTextBoxColumn.HeaderText = "ExpiredDate";
+            this.expiredDateDataGridViewTextBoxColumn.Name = "expiredDateDataGridViewTextBoxColumn";
+            // 
+            // cashierDataGridViewTextBoxColumn
+            // 
+            this.cashierDataGridViewTextBoxColumn.DataPropertyName = "Cashier";
+            this.cashierDataGridViewTextBoxColumn.HeaderText = "Cashier";
+            this.cashierDataGridViewTextBoxColumn.Name = "cashierDataGridViewTextBoxColumn";
+            // 
             // frmImport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -381,26 +429,19 @@
             this.Load += new System.EventHandler(this.frmImport_Load);
             this.pnlData.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.importBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lblProCat;
         private System.Windows.Forms.Panel pnlData;
         private System.Windows.Forms.DataGridView grdProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private Designer.LineSeparator lineSeparator2;
+        private Presentation.LineSeparator lineSeparator2;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnImport;
         private System.Windows.Forms.TextBox txtPcask;
@@ -408,7 +449,7 @@
         private System.Windows.Forms.Label lblCost;
         private System.Windows.Forms.Label lblProQuant;
         private System.Windows.Forms.Label lblProTitle;
-        private Designer.LineSeparator lineSeparator1;
+        private Presentation.LineSeparator lineSeparator1;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.ComboBox cbxCat;
         private System.Windows.Forms.TextBox txtBottle;
@@ -418,5 +459,17 @@
         private System.Windows.Forms.ComboBox cbxProID;
         private System.Windows.Forms.Label lblExpired;
         private System.Windows.Forms.DateTimePicker dateExpired;
+        private System.Windows.Forms.DataGridViewTextBoxColumn importIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn supplierDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn importQuantDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn currentUnitQuantDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn currentBoxQuantDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wholeCostDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn retailCostDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn importDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expiredDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cashierDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource importBindingSource;
     }
 }

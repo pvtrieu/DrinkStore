@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DrinkStore.BUS;
+using DrinkStore.Entities;
 
 namespace DrinkStore.Presentation
 {
@@ -22,6 +24,33 @@ namespace DrinkStore.Presentation
 
         }
 
-        
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            //Check empty username
+            if (String.IsNullOrEmpty(txtUsername.Text))
+            {
+                MessageBox.Show("Please enter username", "Message", MessageBoxButtons.OK);
+                txtUsername.Focus();
+                return;
+            }
+
+
+            //Authorize account
+            if (UserBUS.valid(txtUsername.Text, txtPassword.Text))
+            {
+                int id = UserBUS.getStaffID(txtUsername.Text);
+                Staff staff = StaffBUS.getByID(id);
+                frmMain _frmMain = new frmMain(staff);
+                this.Hide();
+                _frmMain.ShowDialog();
+                this.Close();
+                
+            }
+            else
+            {
+                MessageBox.Show("Incorrect account/password. Please enter again", "Message", MessageBoxButtons.OK);
+            }
+                
+        }
     }
 }

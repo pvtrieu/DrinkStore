@@ -52,8 +52,19 @@
       <HintPath>..\packages\CircularProgressBar.2.5.6298.4486\lib\net35-client\CircularProgressBar.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -70,6 +81,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\StaffBUS.cs" />
+    <Compile Include="BUS\UserBUS.cs" />
+    <Compile Include="DAO\StaffDAO.cs" />
+    <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="Entities\Brand.cs" />
+    <Compile Include="Entities\Cashier.cs" />
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\DSModel.cs" />
+    <Compile Include="Entities\Import.cs" />
+    <Compile Include="Entities\Manager.cs" />
+    <Compile Include="Entities\Order.cs" />
+    <Compile Include="Entities\OrderDetail.cs" />
+    <Compile Include="Entities\Person.cs" />
+    <Compile Include="Entities\Position.cs" />
+    <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\Staff.cs" />
+    <Compile Include="Entities\StorageManager.cs" />
+    <Compile Include="Entities\Supplier.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="GUI component\CloseButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -94,12 +124,6 @@
     <Compile Include="GUI component\MinimizeButton.Designer.cs">
       <DependentUpon>MinimizeButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Category.cs" />
-    <Compile Include="Model\Customer.cs" />
-    <Compile Include="Model\Import.cs" />
-    <Compile Include="Model\Order.cs" />
-    <Compile Include="Model\OrderList.cs" />
-    <Compile Include="Model\Product.cs" />
     <Compile Include="Presentation\frmImport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +195,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DrinkStore.Entities.Brand.datasource" />
+    <None Include="Properties\DataSources\DrinkStore.Entities.Category.datasource" />
+    <None Include="Properties\DataSources\DrinkStore.Entities.Import.datasource" />
+    <None Include="Properties\DataSources\DrinkStore.Entities.Product.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -189,10 +217,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BUS\" />
-    <Folder Include="DAO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\error.png" />
   </ItemGroup>
@@ -223,6 +248,7 @@
       <DependentUpon>DrinkStore.mdf</DependentUpon>
     </Content>
     <Content Include="readme.txt" />
+    <None Include="Resources\plus.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

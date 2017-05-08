@@ -58,8 +58,8 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbxProduct = new System.Windows.Forms.ComboBox();
-            this.lineSeparator2 = new DrinkStore.Designer.LineSeparator();
-            this.lineSeparator1 = new DrinkStore.Designer.LineSeparator();
+            this.lineSeparator2 = new DrinkStore.Presentation.LineSeparator();
+            this.lineSeparator1 = new DrinkStore.Presentation.LineSeparator();
             this.pnlData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdOrder)).BeginInit();
             this.panel1.SuspendLayout();
@@ -432,7 +432,7 @@
         }
 
         #endregion
-        private Designer.LineSeparator lineSeparator1;
+        private Presentation.LineSeparator lineSeparator1;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.ComboBox cbxCategory;
         private System.Windows.Forms.Label lblProCat;
@@ -448,7 +448,7 @@
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
-        private Designer.LineSeparator lineSeparator2;
+        private Presentation.LineSeparator lineSeparator2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

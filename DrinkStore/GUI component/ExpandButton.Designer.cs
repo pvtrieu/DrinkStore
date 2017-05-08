@@ -1,4 +1,4 @@
-﻿namespace DrinkStore.Designer
+﻿namespace DrinkStore.Presentation
 {
     partial class ExpandButton
     {

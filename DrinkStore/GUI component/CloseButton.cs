@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DrinkStore.Designer;
+using DrinkStore.Presentation;
 
-namespace DrinkStore.Designer
+namespace DrinkStore.Presentation
 {
     public partial class CloseButton : UserControl
     {

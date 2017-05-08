@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DrinkStore.Designer
+namespace DrinkStore.Presentation
 {
     public partial class MinimizeButton : UserControl
     {

@@ -1,4 +1,4 @@
-﻿namespace DrinkStore.Designer
+﻿namespace DrinkStore.Presentation
 {
     partial class frmProduct
     {
@@ -28,19 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProduct));
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlProductImg = new System.Windows.Forms.Panel();
             this.picProImg = new System.Windows.Forms.PictureBox();
-            this.lblProTitle = new System.Windows.Forms.Label();
+            this.lblProName = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblProQuant = new System.Windows.Forms.Label();
-            this.txtCask = new System.Windows.Forms.TextBox();
             this.lblProPrice = new System.Windows.Forms.Label();
-            this.lblCask = new System.Windows.Forms.Label();
-            this.lblBottle = new System.Windows.Forms.Label();
             this.lblSell = new System.Windows.Forms.Label();
             this.lblBase = new System.Windows.Forms.Label();
-            this.txtBottle = new System.Windows.Forms.TextBox();
             this.txtPcask = new System.Windows.Forms.TextBox();
             this.txtPbottle = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -48,22 +46,35 @@
             this.btnImg = new System.Windows.Forms.Button();
             this.pnlData = new System.Windows.Forms.Panel();
             this.grdProduct = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unitQuantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.boxQuantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wholeSaleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.retailSaleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brandDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblProCat = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.brandBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnDelete = new System.Windows.Forms.Button();
-            this.lineSeparator2 = new DrinkStore.Designer.LineSeparator();
-            this.lineSeparator1 = new DrinkStore.Designer.LineSeparator();
+            this.lineSeparator2 = new DrinkStore.Presentation.LineSeparator();
+            this.lineSeparator1 = new DrinkStore.Presentation.LineSeparator();
+            this.lblBrand = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlProductImg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProImg)).BeginInit();
             this.pnlData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -98,16 +109,16 @@
             this.picProImg.TabIndex = 0;
             this.picProImg.TabStop = false;
             // 
-            // lblProTitle
+            // lblProName
             // 
-            this.lblProTitle.AutoSize = true;
-            this.lblProTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProTitle.Location = new System.Drawing.Point(190, 55);
-            this.lblProTitle.Name = "lblProTitle";
-            this.lblProTitle.Size = new System.Drawing.Size(45, 17);
-            this.lblProTitle.TabIndex = 3;
-            this.lblProTitle.Text = "Title:";
+            this.lblProName.AutoSize = true;
+            this.lblProName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.lblProName.Location = new System.Drawing.Point(190, 55);
+            this.lblProName.Name = "lblProName";
+            this.lblProName.Size = new System.Drawing.Size(54, 17);
+            this.lblProName.TabIndex = 3;
+            this.lblProName.Text = "Name:";
             // 
             // textBox1
             // 
@@ -121,89 +132,53 @@
             this.lblProQuant.AutoSize = true;
             this.lblProQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProQuant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProQuant.Location = new System.Drawing.Point(190, 142);
+            this.lblProQuant.Location = new System.Drawing.Point(190, 155);
             this.lblProQuant.Name = "lblProQuant";
             this.lblProQuant.Size = new System.Drawing.Size(74, 17);
             this.lblProQuant.TabIndex = 5;
             this.lblProQuant.Text = "Quantity:";
-            // 
-            // txtCask
-            // 
-            this.txtCask.Location = new System.Drawing.Point(302, 142);
-            this.txtCask.Name = "txtCask";
-            this.txtCask.ReadOnly = true;
-            this.txtCask.Size = new System.Drawing.Size(135, 20);
-            this.txtCask.TabIndex = 7;
             // 
             // lblProPrice
             // 
             this.lblProPrice.AutoSize = true;
             this.lblProPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProPrice.Location = new System.Drawing.Point(190, 188);
+            this.lblProPrice.Location = new System.Drawing.Point(192, 189);
             this.lblProPrice.Name = "lblProPrice";
             this.lblProPrice.Size = new System.Drawing.Size(50, 17);
             this.lblProPrice.TabIndex = 8;
             this.lblProPrice.Text = "Price:";
             // 
-            // lblCask
-            // 
-            this.lblCask.AutoSize = true;
-            this.lblCask.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblCask.Location = new System.Drawing.Point(299, 126);
-            this.lblCask.Name = "lblCask";
-            this.lblCask.Size = new System.Drawing.Size(31, 13);
-            this.lblCask.TabIndex = 9;
-            this.lblCask.Text = "Cask";
-            // 
-            // lblBottle
-            // 
-            this.lblBottle.AutoSize = true;
-            this.lblBottle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblBottle.Location = new System.Drawing.Point(443, 126);
-            this.lblBottle.Name = "lblBottle";
-            this.lblBottle.Size = new System.Drawing.Size(34, 13);
-            this.lblBottle.TabIndex = 10;
-            this.lblBottle.Text = "Bottle";
-            // 
             // lblSell
             // 
             this.lblSell.AutoSize = true;
             this.lblSell.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblSell.Location = new System.Drawing.Point(443, 169);
+            this.lblSell.Location = new System.Drawing.Point(445, 172);
             this.lblSell.Name = "lblSell";
-            this.lblSell.Size = new System.Drawing.Size(52, 13);
+            this.lblSell.Size = new System.Drawing.Size(43, 13);
             this.lblSell.TabIndex = 14;
-            this.lblSell.Text = "Per bottle";
+            this.lblSell.Text = "Per unit";
             // 
             // lblBase
             // 
             this.lblBase.AutoSize = true;
             this.lblBase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblBase.Location = new System.Drawing.Point(299, 169);
+            this.lblBase.Location = new System.Drawing.Point(301, 172);
             this.lblBase.Name = "lblBase";
-            this.lblBase.Size = new System.Drawing.Size(49, 13);
+            this.lblBase.Size = new System.Drawing.Size(43, 13);
             this.lblBase.TabIndex = 13;
-            this.lblBase.Text = "Per cask";
-            // 
-            // txtBottle
-            // 
-            this.txtBottle.Location = new System.Drawing.Point(446, 142);
-            this.txtBottle.Name = "txtBottle";
-            this.txtBottle.ReadOnly = true;
-            this.txtBottle.Size = new System.Drawing.Size(135, 20);
-            this.txtBottle.TabIndex = 16;
+            this.lblBase.Text = "Per box";
             // 
             // txtPcask
             // 
-            this.txtPcask.Location = new System.Drawing.Point(302, 185);
+            this.txtPcask.Location = new System.Drawing.Point(304, 184);
             this.txtPcask.Name = "txtPcask";
             this.txtPcask.Size = new System.Drawing.Size(135, 20);
             this.txtPcask.TabIndex = 17;
             // 
             // txtPbottle
             // 
-            this.txtPbottle.Location = new System.Drawing.Point(446, 185);
+            this.txtPbottle.Location = new System.Drawing.Point(448, 184);
             this.txtPbottle.Name = "txtPbottle";
             this.txtPbottle.Size = new System.Drawing.Size(135, 20);
             this.txtPbottle.TabIndex = 18;
@@ -263,64 +238,84 @@
             // 
             // grdProduct
             // 
+            this.grdProduct.AutoGenerateColumns = false;
             this.grdProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdProduct.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.grdProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
+            this.productIDDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.unitQuantDataGridViewTextBoxColumn,
+            this.boxQuantDataGridViewTextBoxColumn,
+            this.wholeSaleDataGridViewTextBoxColumn,
+            this.retailSaleDataGridViewTextBoxColumn,
+            this.brandDataGridViewTextBoxColumn,
+            this.categoryDataGridViewTextBoxColumn});
+            this.grdProduct.DataSource = this.productBindingSource;
             this.grdProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdProduct.Location = new System.Drawing.Point(0, 0);
             this.grdProduct.Name = "grdProduct";
             this.grdProduct.Size = new System.Drawing.Size(560, 300);
             this.grdProduct.TabIndex = 0;
             // 
-            // Column1
+            // productIDDataGridViewTextBoxColumn
             // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
+            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
+            this.productIDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
             // 
-            // Column2
+            // nameDataGridViewTextBoxColumn
             // 
-            this.Column2.HeaderText = "Title";
-            this.Column2.Name = "Column2";
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             // 
-            // Column3
+            // unitQuantDataGridViewTextBoxColumn
             // 
-            this.Column3.HeaderText = "Category";
-            this.Column3.Name = "Column3";
+            this.unitQuantDataGridViewTextBoxColumn.DataPropertyName = "UnitQuant";
+            this.unitQuantDataGridViewTextBoxColumn.HeaderText = "Unit";
+            this.unitQuantDataGridViewTextBoxColumn.Name = "unitQuantDataGridViewTextBoxColumn";
             // 
-            // Column4
+            // boxQuantDataGridViewTextBoxColumn
             // 
-            this.Column4.HeaderText = "Cask";
-            this.Column4.Name = "Column4";
+            this.boxQuantDataGridViewTextBoxColumn.DataPropertyName = "BoxQuant";
+            this.boxQuantDataGridViewTextBoxColumn.HeaderText = "Box";
+            this.boxQuantDataGridViewTextBoxColumn.Name = "boxQuantDataGridViewTextBoxColumn";
             // 
-            // Column5
+            // wholeSaleDataGridViewTextBoxColumn
             // 
-            this.Column5.HeaderText = "Bottle";
-            this.Column5.Name = "Column5";
+            this.wholeSaleDataGridViewTextBoxColumn.DataPropertyName = "WholeSale";
+            this.wholeSaleDataGridViewTextBoxColumn.HeaderText = "WholeSale";
+            this.wholeSaleDataGridViewTextBoxColumn.Name = "wholeSaleDataGridViewTextBoxColumn";
             // 
-            // Column6
+            // retailSaleDataGridViewTextBoxColumn
             // 
-            this.Column6.HeaderText = "P. Cask";
-            this.Column6.Name = "Column6";
+            this.retailSaleDataGridViewTextBoxColumn.DataPropertyName = "RetailSale";
+            this.retailSaleDataGridViewTextBoxColumn.HeaderText = "RetailSale";
+            this.retailSaleDataGridViewTextBoxColumn.Name = "retailSaleDataGridViewTextBoxColumn";
             // 
-            // Column7
+            // brandDataGridViewTextBoxColumn
             // 
-            this.Column7.HeaderText = "P. Bottle";
-            this.Column7.Name = "Column7";
+            this.brandDataGridViewTextBoxColumn.DataPropertyName = "Brand";
+            this.brandDataGridViewTextBoxColumn.HeaderText = "Brand";
+            this.brandDataGridViewTextBoxColumn.Name = "brandDataGridViewTextBoxColumn";
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(DrinkStore.Entities.Product);
             // 
             // lblProCat
             // 
             this.lblProCat.AutoSize = true;
             this.lblProCat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProCat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProCat.Location = new System.Drawing.Point(190, 97);
+            this.lblProCat.Location = new System.Drawing.Point(192, 87);
             this.lblProCat.Name = "lblProCat";
             this.lblProCat.Size = new System.Drawing.Size(78, 17);
             this.lblProCat.TabIndex = 24;
@@ -328,11 +323,18 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.brandBindingSource;
+            this.comboBox1.DisplayMember = "CompanyName";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(302, 97);
+            this.comboBox1.Location = new System.Drawing.Point(302, 115);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(279, 21);
+            this.comboBox1.Size = new System.Drawing.Size(241, 21);
             this.comboBox1.TabIndex = 25;
+            this.comboBox1.ValueMember = "BrandID";
+            // 
+            // brandBindingSource
+            // 
+            this.brandBindingSource.DataSource = typeof(DrinkStore.Entities.Brand);
             // 
             // btnDelete
             // 
@@ -374,12 +376,62 @@
             this.lineSeparator1.Size = new System.Drawing.Size(560, 2);
             this.lineSeparator1.TabIndex = 1;
             // 
+            // lblBrand
+            // 
+            this.lblBrand.AutoSize = true;
+            this.lblBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrand.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.lblBrand.Location = new System.Drawing.Point(192, 119);
+            this.lblBrand.Name = "lblBrand";
+            this.lblBrand.Size = new System.Drawing.Size(56, 17);
+            this.lblBrand.TabIndex = 27;
+            this.lblBrand.Text = "Brand:";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataSource = this.categoryBindingSource;
+            this.comboBox2.DisplayMember = "Name";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(302, 86);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(241, 21);
+            this.comboBox2.TabIndex = 28;
+            this.comboBox2.ValueMember = "CategoryID";
+            // 
+            // categoryBindingSource
+            // 
+            this.categoryBindingSource.DataSource = typeof(DrinkStore.Entities.Category);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(560, 86);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(560, 115);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 30;
+            this.pictureBox2.TabStop = false;
+            // 
             // frmProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(600, 600);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.lblBrand);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lblProCat);
@@ -390,16 +442,12 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtPbottle);
             this.Controls.Add(this.txtPcask);
-            this.Controls.Add(this.txtBottle);
             this.Controls.Add(this.lblSell);
             this.Controls.Add(this.lblBase);
-            this.Controls.Add(this.lblBottle);
-            this.Controls.Add(this.lblCask);
             this.Controls.Add(this.lblProPrice);
-            this.Controls.Add(this.txtCask);
             this.Controls.Add(this.lblProQuant);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblProTitle);
+            this.Controls.Add(this.lblProName);
             this.Controls.Add(this.pnlProductImg);
             this.Controls.Add(this.lineSeparator1);
             this.Controls.Add(this.lblTitle);
@@ -411,6 +459,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.picProImg)).EndInit();
             this.pnlData.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,36 +472,40 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitle;
-        private Designer.LineSeparator lineSeparator1;
+        private Presentation.LineSeparator lineSeparator1;
         private System.Windows.Forms.Panel pnlProductImg;
         private System.Windows.Forms.PictureBox picProImg;
-        private System.Windows.Forms.Label lblProTitle;
+        private System.Windows.Forms.Label lblProName;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblProQuant;
-        private System.Windows.Forms.TextBox txtCask;
         private System.Windows.Forms.Label lblProPrice;
-        private System.Windows.Forms.Label lblCask;
-        private System.Windows.Forms.Label lblBottle;
         private System.Windows.Forms.Label lblSell;
         private System.Windows.Forms.Label lblBase;
-        private System.Windows.Forms.TextBox txtBottle;
         private System.Windows.Forms.TextBox txtPcask;
         private System.Windows.Forms.TextBox txtPbottle;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
-        private Designer.LineSeparator lineSeparator2;
+        private Presentation.LineSeparator lineSeparator2;
         private System.Windows.Forms.Button btnImg;
         private System.Windows.Forms.Panel pnlData;
         private System.Windows.Forms.DataGridView grdProduct;
         private System.Windows.Forms.Label lblProCat;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unitQuantDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn boxQuantDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wholeSaleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn retailSaleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brandDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource productBindingSource;
+        private System.Windows.Forms.Label lblBrand;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.BindingSource categoryBindingSource;
+        private System.Windows.Forms.BindingSource brandBindingSource;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

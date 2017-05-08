@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lineSeparator1 = new DrinkStore.Designer.LineSeparator();
+            this.lineSeparator1 = new DrinkStore.Presentation.LineSeparator();
             this.lblTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -76,7 +76,7 @@
 
         #endregion
 
-        private Designer.LineSeparator lineSeparator1;
+        private Presentation.LineSeparator lineSeparator1;
         private System.Windows.Forms.Label lblTitle;
     }
 }
