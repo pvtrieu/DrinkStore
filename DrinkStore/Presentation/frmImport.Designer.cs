@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.btnCancel = new System.Windows.Forms.Button();
             this.cboProduct = new System.Windows.Forms.ComboBox();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblProCat = new System.Windows.Forms.Label();
             this.pnlData = new System.Windows.Forms.Panel();
             this.grdProduct = new System.Windows.Forms.DataGridView();
@@ -57,15 +56,12 @@
             this.lineSeparator1 = new DrinkStore.Presentation.LineSeparator();
             this.lblTitle = new System.Windows.Forms.Label();
             this.cbxCat = new System.Windows.Forms.ComboBox();
-            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtQuant = new System.Windows.Forms.TextBox();
             this.lblBrand = new System.Windows.Forms.Label();
             this.lblExpired = new System.Windows.Forms.Label();
             this.dateExpired = new System.Windows.Forms.DateTimePicker();
             this.cboBrand = new System.Windows.Forms.ComboBox();
-            this.brandBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cboSupplier = new System.Windows.Forms.ComboBox();
-            this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.lblImportDate = new System.Windows.Forms.Label();
             this.dateImport = new System.Windows.Forms.DateTimePicker();
@@ -74,13 +70,9 @@
             this.txtCurrBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.pnlData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.importBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -99,18 +91,12 @@
             // 
             // cboProduct
             // 
-            this.cboProduct.DataSource = this.productBindingSource;
-            this.cboProduct.DisplayMember = "Name";
             this.cboProduct.FormattingEnabled = true;
             this.cboProduct.Location = new System.Drawing.Point(114, 90);
             this.cboProduct.Name = "cboProduct";
             this.cboProduct.Size = new System.Drawing.Size(163, 21);
             this.cboProduct.TabIndex = 48;
             this.cboProduct.ValueMember = "ProductID";
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(DrinkStore.Entities.Product);
             // 
             // lblProCat
             // 
@@ -339,18 +325,12 @@
             // 
             // cbxCat
             // 
-            this.cbxCat.DataSource = this.categoryBindingSource;
-            this.cbxCat.DisplayMember = "Name";
             this.cbxCat.FormattingEnabled = true;
             this.cbxCat.Location = new System.Drawing.Point(114, 53);
             this.cbxCat.Name = "cbxCat";
             this.cbxCat.Size = new System.Drawing.Size(163, 21);
             this.cbxCat.TabIndex = 50;
             this.cbxCat.ValueMember = "CategoryID";
-            // 
-            // categoryBindingSource
-            // 
-            this.categoryBindingSource.DataSource = typeof(DrinkStore.Entities.Category);
             // 
             // txtQuant
             // 
@@ -390,8 +370,6 @@
             // 
             // cboBrand
             // 
-            this.cboBrand.DataSource = this.brandBindingSource;
-            this.cboBrand.DisplayMember = "CompanyName";
             this.cboBrand.FormattingEnabled = true;
             this.cboBrand.Location = new System.Drawing.Point(418, 55);
             this.cboBrand.Name = "cboBrand";
@@ -399,24 +377,14 @@
             this.cboBrand.TabIndex = 58;
             this.cboBrand.ValueMember = "BrandID";
             // 
-            // brandBindingSource
-            // 
-            this.brandBindingSource.DataSource = typeof(DrinkStore.Entities.Brand);
-            // 
             // cboSupplier
             // 
-            this.cboSupplier.DataSource = this.supplierBindingSource;
-            this.cboSupplier.DisplayMember = "Name";
             this.cboSupplier.FormattingEnabled = true;
             this.cboSupplier.Location = new System.Drawing.Point(418, 93);
             this.cboSupplier.Name = "cboSupplier";
             this.cboSupplier.Size = new System.Drawing.Size(163, 21);
             this.cboSupplier.TabIndex = 59;
             this.cboSupplier.ValueMember = "SupplierID";
-            // 
-            // supplierBindingSource
-            // 
-            this.supplierBindingSource.DataSource = typeof(DrinkStore.Entities.Supplier);
             // 
             // label1
             // 
@@ -536,13 +504,9 @@
             this.Name = "frmImport";
             this.Text = "frmImport";
             this.Load += new System.EventHandler(this.frmImport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.pnlData.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.importBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -580,12 +544,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn expiredDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cashierDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource importBindingSource;
-        private System.Windows.Forms.BindingSource productBindingSource;
-        private System.Windows.Forms.BindingSource categoryBindingSource;
         private System.Windows.Forms.ComboBox cboBrand;
-        private System.Windows.Forms.BindingSource brandBindingSource;
         private System.Windows.Forms.ComboBox cboSupplier;
-        private System.Windows.Forms.BindingSource supplierBindingSource;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblImportDate;
         private System.Windows.Forms.DateTimePicker dateImport;

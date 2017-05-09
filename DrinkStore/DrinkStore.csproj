@@ -124,6 +124,12 @@
     <Compile Include="GUI component\MinimizeButton.Designer.cs">
       <DependentUpon>MinimizeButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\frmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmCategory.Designer.cs">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\frmImport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI component\MinimizeButton.resx">
       <DependentUpon>MinimizeButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmCategory.resx">
+      <DependentUpon>frmCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmImport.resx">
       <DependentUpon>frmImport.cs</DependentUpon>
