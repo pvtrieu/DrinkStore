@@ -30,29 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboProduct = new System.Windows.Forms.ComboBox();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblProCat = new System.Windows.Forms.Label();
             this.pnlData = new System.Windows.Forms.Panel();
             this.grdProduct = new System.Windows.Forms.DataGridView();
-            this.lineSeparator2 = new DrinkStore.Presentation.LineSeparator();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnImport = new System.Windows.Forms.Button();
-            this.txtPcask = new System.Windows.Forms.TextBox();
-            this.lblCask = new System.Windows.Forms.Label();
-            this.lblCost = new System.Windows.Forms.Label();
-            this.lblProQuant = new System.Windows.Forms.Label();
-            this.lblProTitle = new System.Windows.Forms.Label();
-            this.lineSeparator1 = new DrinkStore.Presentation.LineSeparator();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.cbxCat = new System.Windows.Forms.ComboBox();
-            this.txtBottle = new System.Windows.Forms.TextBox();
-            this.lblBottle = new System.Windows.Forms.Label();
-            this.txtCask = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbxProID = new System.Windows.Forms.ComboBox();
-            this.lblExpired = new System.Windows.Forms.Label();
-            this.dateExpired = new System.Windows.Forms.DateTimePicker();
-            this.importBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.importIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,9 +46,41 @@
             this.importDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expiredDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cashierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.importBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lineSeparator2 = new DrinkStore.Presentation.LineSeparator();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnImport = new System.Windows.Forms.Button();
+            this.txtCost = new System.Windows.Forms.TextBox();
+            this.lblCost = new System.Windows.Forms.Label();
+            this.lblProQuant = new System.Windows.Forms.Label();
+            this.lblProduct = new System.Windows.Forms.Label();
+            this.lineSeparator1 = new DrinkStore.Presentation.LineSeparator();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.cbxCat = new System.Windows.Forms.ComboBox();
+            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtQuant = new System.Windows.Forms.TextBox();
+            this.lblBrand = new System.Windows.Forms.Label();
+            this.lblExpired = new System.Windows.Forms.Label();
+            this.dateExpired = new System.Windows.Forms.DateTimePicker();
+            this.cboBrand = new System.Windows.Forms.ComboBox();
+            this.brandBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cboSupplier = new System.Windows.Forms.ComboBox();
+            this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblImportDate = new System.Windows.Forms.Label();
+            this.dateImport = new System.Windows.Forms.DateTimePicker();
+            this.txtCurrUnit = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCurrBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.pnlData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.importBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -76,20 +90,27 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnCancel.Location = new System.Drawing.Point(326, 229);
+            this.btnCancel.Location = new System.Drawing.Point(197, 229);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(80, 26);
             this.btnCancel.TabIndex = 49;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // cboProduct
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(130, 100);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(276, 21);
-            this.comboBox1.TabIndex = 48;
+            this.cboProduct.DataSource = this.productBindingSource;
+            this.cboProduct.DisplayMember = "Name";
+            this.cboProduct.FormattingEnabled = true;
+            this.cboProduct.Location = new System.Drawing.Point(114, 90);
+            this.cboProduct.Name = "cboProduct";
+            this.cboProduct.Size = new System.Drawing.Size(163, 21);
+            this.cboProduct.TabIndex = 48;
+            this.cboProduct.ValueMember = "ProductID";
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(DrinkStore.Entities.Product);
             // 
             // lblProCat
             // 
@@ -137,197 +158,6 @@
             this.grdProduct.Name = "grdProduct";
             this.grdProduct.Size = new System.Drawing.Size(560, 300);
             this.grdProduct.TabIndex = 0;
-            // 
-            // lineSeparator2
-            // 
-            this.lineSeparator2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lineSeparator2.AutoSize = true;
-            this.lineSeparator2.Location = new System.Drawing.Point(21, 272);
-            this.lineSeparator2.MaximumSize = new System.Drawing.Size(2000, 2);
-            this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
-            this.lineSeparator2.Name = "lineSeparator2";
-            this.lineSeparator2.Size = new System.Drawing.Size(560, 2);
-            this.lineSeparator2.TabIndex = 44;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnUpdate.Location = new System.Drawing.Point(227, 229);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(80, 26);
-            this.btnUpdate.TabIndex = 43;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // btnImport
-            // 
-            this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
-            this.btnImport.FlatAppearance.BorderSize = 0;
-            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.btnImport.Location = new System.Drawing.Point(130, 229);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(80, 26);
-            this.btnImport.TabIndex = 42;
-            this.btnImport.Text = "Add";
-            this.btnImport.UseVisualStyleBackColor = false;
-            // 
-            // txtPcask
-            // 
-            this.txtPcask.Location = new System.Drawing.Point(130, 188);
-            this.txtPcask.Name = "txtPcask";
-            this.txtPcask.Size = new System.Drawing.Size(276, 20);
-            this.txtPcask.TabIndex = 40;
-            // 
-            // lblCask
-            // 
-            this.lblCask.AutoSize = true;
-            this.lblCask.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblCask.Location = new System.Drawing.Point(127, 126);
-            this.lblCask.Name = "lblCask";
-            this.lblCask.Size = new System.Drawing.Size(31, 13);
-            this.lblCask.TabIndex = 35;
-            this.lblCask.Text = "Cask";
-            // 
-            // lblCost
-            // 
-            this.lblCost.AutoSize = true;
-            this.lblCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblCost.Location = new System.Drawing.Point(18, 191);
-            this.lblCost.Name = "lblCost";
-            this.lblCost.Size = new System.Drawing.Size(85, 17);
-            this.lblCost.TabIndex = 34;
-            this.lblCost.Text = "Total cost:";
-            // 
-            // lblProQuant
-            // 
-            this.lblProQuant.AutoSize = true;
-            this.lblProQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProQuant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProQuant.Location = new System.Drawing.Point(18, 145);
-            this.lblProQuant.Name = "lblProQuant";
-            this.lblProQuant.Size = new System.Drawing.Size(74, 17);
-            this.lblProQuant.TabIndex = 32;
-            this.lblProQuant.Text = "Quantity:";
-            // 
-            // lblProTitle
-            // 
-            this.lblProTitle.AutoSize = true;
-            this.lblProTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProTitle.Location = new System.Drawing.Point(18, 101);
-            this.lblProTitle.Name = "lblProTitle";
-            this.lblProTitle.Size = new System.Drawing.Size(45, 17);
-            this.lblProTitle.TabIndex = 30;
-            this.lblProTitle.Text = "Title:";
-            // 
-            // lineSeparator1
-            // 
-            this.lineSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lineSeparator1.AutoSize = true;
-            this.lineSeparator1.Location = new System.Drawing.Point(21, 38);
-            this.lineSeparator1.MaximumSize = new System.Drawing.Size(2000, 2);
-            this.lineSeparator1.MinimumSize = new System.Drawing.Size(0, 2);
-            this.lineSeparator1.Name = "lineSeparator1";
-            this.lineSeparator1.Size = new System.Drawing.Size(560, 2);
-            this.lineSeparator1.TabIndex = 28;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblTitle.Location = new System.Drawing.Point(16, 9);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(74, 26);
-            this.lblTitle.TabIndex = 27;
-            this.lblTitle.Text = "Import";
-            // 
-            // cbxCat
-            // 
-            this.cbxCat.FormattingEnabled = true;
-            this.cbxCat.Location = new System.Drawing.Point(130, 54);
-            this.cbxCat.Name = "cbxCat";
-            this.cbxCat.Size = new System.Drawing.Size(276, 21);
-            this.cbxCat.TabIndex = 50;
-            // 
-            // txtBottle
-            // 
-            this.txtBottle.Location = new System.Drawing.Point(271, 142);
-            this.txtBottle.Name = "txtBottle";
-            this.txtBottle.Size = new System.Drawing.Size(135, 20);
-            this.txtBottle.TabIndex = 52;
-            // 
-            // lblBottle
-            // 
-            this.lblBottle.AutoSize = true;
-            this.lblBottle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblBottle.Location = new System.Drawing.Point(268, 126);
-            this.lblBottle.Name = "lblBottle";
-            this.lblBottle.Size = new System.Drawing.Size(34, 13);
-            this.lblBottle.TabIndex = 51;
-            this.lblBottle.Text = "Bottle";
-            // 
-            // txtCask
-            // 
-            this.txtCask.Location = new System.Drawing.Point(130, 142);
-            this.txtCask.Name = "txtCask";
-            this.txtCask.Size = new System.Drawing.Size(135, 20);
-            this.txtCask.TabIndex = 53;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.label1.Location = new System.Drawing.Point(424, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 17);
-            this.label1.TabIndex = 54;
-            this.label1.Text = "Product ID:";
-            // 
-            // cbxProID
-            // 
-            this.cbxProID.FormattingEnabled = true;
-            this.cbxProID.Location = new System.Drawing.Point(427, 99);
-            this.cbxProID.Name = "cbxProID";
-            this.cbxProID.Size = new System.Drawing.Size(154, 21);
-            this.cbxProID.TabIndex = 55;
-            // 
-            // lblExpired
-            // 
-            this.lblExpired.AutoSize = true;
-            this.lblExpired.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpired.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblExpired.Location = new System.Drawing.Point(424, 145);
-            this.lblExpired.Name = "lblExpired";
-            this.lblExpired.Size = new System.Drawing.Size(98, 17);
-            this.lblExpired.TabIndex = 56;
-            this.lblExpired.Text = "Expired day:";
-            // 
-            // dateExpired
-            // 
-            this.dateExpired.Location = new System.Drawing.Point(427, 188);
-            this.dateExpired.Name = "dateExpired";
-            this.dateExpired.Size = new System.Drawing.Size(154, 20);
-            this.dateExpired.TabIndex = 57;
-            // 
-            // importBindingSource
-            // 
-            this.importBindingSource.DataSource = typeof(DrinkStore.Entities.Import);
             // 
             // importIDDataGridViewTextBoxColumn
             // 
@@ -395,41 +225,324 @@
             this.cashierDataGridViewTextBoxColumn.HeaderText = "Cashier";
             this.cashierDataGridViewTextBoxColumn.Name = "cashierDataGridViewTextBoxColumn";
             // 
+            // importBindingSource
+            // 
+            this.importBindingSource.DataSource = typeof(DrinkStore.Entities.Import);
+            // 
+            // lineSeparator2
+            // 
+            this.lineSeparator2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineSeparator2.AutoSize = true;
+            this.lineSeparator2.Location = new System.Drawing.Point(21, 272);
+            this.lineSeparator2.MaximumSize = new System.Drawing.Size(2000, 2);
+            this.lineSeparator2.MinimumSize = new System.Drawing.Size(0, 2);
+            this.lineSeparator2.Name = "lineSeparator2";
+            this.lineSeparator2.Size = new System.Drawing.Size(560, 2);
+            this.lineSeparator2.TabIndex = 44;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.btnUpdate.Location = new System.Drawing.Point(110, 229);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(80, 26);
+            this.btnUpdate.TabIndex = 43;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            // 
+            // btnImport
+            // 
+            this.btnImport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
+            this.btnImport.FlatAppearance.BorderSize = 0;
+            this.btnImport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImport.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.btnImport.Location = new System.Drawing.Point(21, 229);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(80, 26);
+            this.btnImport.TabIndex = 42;
+            this.btnImport.Text = "Add";
+            this.btnImport.UseVisualStyleBackColor = false;
+            // 
+            // txtCost
+            // 
+            this.txtCost.Location = new System.Drawing.Point(418, 127);
+            this.txtCost.Name = "txtCost";
+            this.txtCost.Size = new System.Drawing.Size(163, 20);
+            this.txtCost.TabIndex = 40;
+            // 
+            // lblCost
+            // 
+            this.lblCost.AutoSize = true;
+            this.lblCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.lblCost.Location = new System.Drawing.Point(327, 126);
+            this.lblCost.Name = "lblCost";
+            this.lblCost.Size = new System.Drawing.Size(85, 17);
+            this.lblCost.TabIndex = 34;
+            this.lblCost.Text = "Total cost:";
+            // 
+            // lblProQuant
+            // 
+            this.lblProQuant.AutoSize = true;
+            this.lblProQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProQuant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.lblProQuant.Location = new System.Drawing.Point(18, 127);
+            this.lblProQuant.Name = "lblProQuant";
+            this.lblProQuant.Size = new System.Drawing.Size(74, 17);
+            this.lblProQuant.TabIndex = 32;
+            this.lblProQuant.Text = "Quantity:";
+            // 
+            // lblProduct
+            // 
+            this.lblProduct.AutoSize = true;
+            this.lblProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.lblProduct.Location = new System.Drawing.Point(18, 91);
+            this.lblProduct.Name = "lblProduct";
+            this.lblProduct.Size = new System.Drawing.Size(69, 17);
+            this.lblProduct.TabIndex = 30;
+            this.lblProduct.Text = "Product:";
+            // 
+            // lineSeparator1
+            // 
+            this.lineSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lineSeparator1.AutoSize = true;
+            this.lineSeparator1.Location = new System.Drawing.Point(21, 38);
+            this.lineSeparator1.MaximumSize = new System.Drawing.Size(2000, 2);
+            this.lineSeparator1.MinimumSize = new System.Drawing.Size(0, 2);
+            this.lineSeparator1.Name = "lineSeparator1";
+            this.lineSeparator1.Size = new System.Drawing.Size(560, 2);
+            this.lineSeparator1.TabIndex = 28;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.lblTitle.Location = new System.Drawing.Point(16, 9);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(74, 26);
+            this.lblTitle.TabIndex = 27;
+            this.lblTitle.Text = "Import";
+            // 
+            // cbxCat
+            // 
+            this.cbxCat.DataSource = this.categoryBindingSource;
+            this.cbxCat.DisplayMember = "Name";
+            this.cbxCat.FormattingEnabled = true;
+            this.cbxCat.Location = new System.Drawing.Point(114, 53);
+            this.cbxCat.Name = "cbxCat";
+            this.cbxCat.Size = new System.Drawing.Size(163, 21);
+            this.cbxCat.TabIndex = 50;
+            this.cbxCat.ValueMember = "CategoryID";
+            // 
+            // categoryBindingSource
+            // 
+            this.categoryBindingSource.DataSource = typeof(DrinkStore.Entities.Category);
+            // 
+            // txtQuant
+            // 
+            this.txtQuant.Location = new System.Drawing.Point(114, 125);
+            this.txtQuant.Name = "txtQuant";
+            this.txtQuant.Size = new System.Drawing.Size(163, 20);
+            this.txtQuant.TabIndex = 53;
+            // 
+            // lblBrand
+            // 
+            this.lblBrand.AutoSize = true;
+            this.lblBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrand.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.lblBrand.Location = new System.Drawing.Point(350, 54);
+            this.lblBrand.Name = "lblBrand";
+            this.lblBrand.Size = new System.Drawing.Size(56, 17);
+            this.lblBrand.TabIndex = 54;
+            this.lblBrand.Text = "Brand:";
+            // 
+            // lblExpired
+            // 
+            this.lblExpired.AutoSize = true;
+            this.lblExpired.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpired.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.lblExpired.Location = new System.Drawing.Point(18, 158);
+            this.lblExpired.Name = "lblExpired";
+            this.lblExpired.Size = new System.Drawing.Size(67, 17);
+            this.lblExpired.TabIndex = 56;
+            this.lblExpired.Text = "Expired:";
+            // 
+            // dateExpired
+            // 
+            this.dateExpired.Location = new System.Drawing.Point(114, 155);
+            this.dateExpired.Name = "dateExpired";
+            this.dateExpired.Size = new System.Drawing.Size(163, 20);
+            this.dateExpired.TabIndex = 57;
+            // 
+            // cboBrand
+            // 
+            this.cboBrand.DataSource = this.brandBindingSource;
+            this.cboBrand.DisplayMember = "CompanyName";
+            this.cboBrand.FormattingEnabled = true;
+            this.cboBrand.Location = new System.Drawing.Point(418, 55);
+            this.cboBrand.Name = "cboBrand";
+            this.cboBrand.Size = new System.Drawing.Size(163, 21);
+            this.cboBrand.TabIndex = 58;
+            this.cboBrand.ValueMember = "BrandID";
+            // 
+            // brandBindingSource
+            // 
+            this.brandBindingSource.DataSource = typeof(DrinkStore.Entities.Brand);
+            // 
+            // cboSupplier
+            // 
+            this.cboSupplier.DataSource = this.supplierBindingSource;
+            this.cboSupplier.DisplayMember = "Name";
+            this.cboSupplier.FormattingEnabled = true;
+            this.cboSupplier.Location = new System.Drawing.Point(418, 93);
+            this.cboSupplier.Name = "cboSupplier";
+            this.cboSupplier.Size = new System.Drawing.Size(163, 21);
+            this.cboSupplier.TabIndex = 59;
+            this.cboSupplier.ValueMember = "SupplierID";
+            // 
+            // supplierBindingSource
+            // 
+            this.supplierBindingSource.DataSource = typeof(DrinkStore.Entities.Supplier);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.label1.Location = new System.Drawing.Point(339, 91);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 17);
+            this.label1.TabIndex = 60;
+            this.label1.Text = "Supplier:";
+            // 
+            // lblImportDate
+            // 
+            this.lblImportDate.AutoSize = true;
+            this.lblImportDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImportDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.lblImportDate.Location = new System.Drawing.Point(312, 158);
+            this.lblImportDate.Name = "lblImportDate";
+            this.lblImportDate.Size = new System.Drawing.Size(95, 17);
+            this.lblImportDate.TabIndex = 61;
+            this.lblImportDate.Text = "Import date:";
+            // 
+            // dateImport
+            // 
+            this.dateImport.Enabled = false;
+            this.dateImport.Location = new System.Drawing.Point(418, 159);
+            this.dateImport.Name = "dateImport";
+            this.dateImport.Size = new System.Drawing.Size(163, 20);
+            this.dateImport.TabIndex = 62;
+            // 
+            // txtCurrUnit
+            // 
+            this.txtCurrUnit.Location = new System.Drawing.Point(114, 189);
+            this.txtCurrUnit.Name = "txtCurrUnit";
+            this.txtCurrUnit.Size = new System.Drawing.Size(163, 20);
+            this.txtCurrUnit.TabIndex = 64;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.label2.Location = new System.Drawing.Point(18, 190);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 17);
+            this.label2.TabIndex = 63;
+            this.label2.Text = "Unit instock:";
+            // 
+            // txtCurrBox
+            // 
+            this.txtCurrBox.Location = new System.Drawing.Point(418, 190);
+            this.txtCurrBox.Name = "txtCurrBox";
+            this.txtCurrBox.Size = new System.Drawing.Size(163, 20);
+            this.txtCurrBox.TabIndex = 66;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.label3.Location = new System.Drawing.Point(312, 191);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 17);
+            this.label3.TabIndex = 65;
+            this.label3.Text = "Box instock:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.button1.Location = new System.Drawing.Point(418, 229);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(163, 26);
+            this.button1.TabIndex = 67;
+            this.button1.Text = "New Supplier";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // frmImport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(600, 600);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtCurrBox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtCurrUnit);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dateImport);
+            this.Controls.Add(this.lblImportDate);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cboSupplier);
+            this.Controls.Add(this.cboBrand);
             this.Controls.Add(this.dateExpired);
             this.Controls.Add(this.lblExpired);
-            this.Controls.Add(this.cbxProID);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtCask);
-            this.Controls.Add(this.txtBottle);
-            this.Controls.Add(this.lblBottle);
+            this.Controls.Add(this.lblBrand);
+            this.Controls.Add(this.txtQuant);
             this.Controls.Add(this.cbxCat);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboProduct);
             this.Controls.Add(this.lblProCat);
             this.Controls.Add(this.pnlData);
             this.Controls.Add(this.lineSeparator2);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnImport);
-            this.Controls.Add(this.txtPcask);
-            this.Controls.Add(this.lblCask);
+            this.Controls.Add(this.txtCost);
             this.Controls.Add(this.lblCost);
             this.Controls.Add(this.lblProQuant);
-            this.Controls.Add(this.lblProTitle);
+            this.Controls.Add(this.lblProduct);
             this.Controls.Add(this.lineSeparator1);
             this.Controls.Add(this.lblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmImport";
             this.Text = "frmImport";
             this.Load += new System.EventHandler(this.frmImport_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.pnlData.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.importBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,26 +550,22 @@
 
         #endregion
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboProduct;
         private System.Windows.Forms.Label lblProCat;
         private System.Windows.Forms.Panel pnlData;
         private System.Windows.Forms.DataGridView grdProduct;
         private Presentation.LineSeparator lineSeparator2;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnImport;
-        private System.Windows.Forms.TextBox txtPcask;
-        private System.Windows.Forms.Label lblCask;
+        private System.Windows.Forms.TextBox txtCost;
         private System.Windows.Forms.Label lblCost;
         private System.Windows.Forms.Label lblProQuant;
-        private System.Windows.Forms.Label lblProTitle;
+        private System.Windows.Forms.Label lblProduct;
         private Presentation.LineSeparator lineSeparator1;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.ComboBox cbxCat;
-        private System.Windows.Forms.TextBox txtBottle;
-        private System.Windows.Forms.Label lblBottle;
-        private System.Windows.Forms.TextBox txtCask;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbxProID;
+        private System.Windows.Forms.TextBox txtQuant;
+        private System.Windows.Forms.Label lblBrand;
         private System.Windows.Forms.Label lblExpired;
         private System.Windows.Forms.DateTimePicker dateExpired;
         private System.Windows.Forms.DataGridViewTextBoxColumn importIDDataGridViewTextBoxColumn;
@@ -471,5 +580,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn expiredDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cashierDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource importBindingSource;
+        private System.Windows.Forms.BindingSource productBindingSource;
+        private System.Windows.Forms.BindingSource categoryBindingSource;
+        private System.Windows.Forms.ComboBox cboBrand;
+        private System.Windows.Forms.BindingSource brandBindingSource;
+        private System.Windows.Forms.ComboBox cboSupplier;
+        private System.Windows.Forms.BindingSource supplierBindingSource;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblImportDate;
+        private System.Windows.Forms.DateTimePicker dateImport;
+        private System.Windows.Forms.TextBox txtCurrUnit;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCurrBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }
