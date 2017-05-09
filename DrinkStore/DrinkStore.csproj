@@ -83,6 +83,7 @@
   <ItemGroup>
     <Compile Include="BUS\StaffBUS.cs" />
     <Compile Include="BUS\UserBUS.cs" />
+    <Compile Include="DAO\ProductDAO.cs" />
     <Compile Include="DAO\StaffDAO.cs" />
     <Compile Include="DAO\UserDAO.cs" />
     <Compile Include="Entities\Brand.cs" />
