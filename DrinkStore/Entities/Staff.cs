@@ -9,7 +9,6 @@ namespace DrinkStore.Entities
     [Table("Staff")]
     public partial class Staff
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int StaffID { get; set; }
 
         public int PersonID { get; set; }

@@ -16,7 +16,6 @@ namespace DrinkStore.Entities
             OrderDetails = new HashSet<OrderDetail>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ProductID { get; set; }
 
         [StringLength(100)]

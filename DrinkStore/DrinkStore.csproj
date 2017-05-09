@@ -81,8 +81,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BrandBUS.cs" />
+    <Compile Include="BUS\CategoryBUS.cs" />
+    <Compile Include="BUS\ProductBUS.cs" />
     <Compile Include="BUS\StaffBUS.cs" />
     <Compile Include="BUS\UserBUS.cs" />
+    <Compile Include="DAO\BrandDAO.cs" />
+    <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\ProductDAO.cs" />
     <Compile Include="DAO\StaffDAO.cs" />
     <Compile Include="DAO\UserDAO.cs" />

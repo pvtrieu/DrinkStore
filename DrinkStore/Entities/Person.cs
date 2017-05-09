@@ -15,7 +15,6 @@ namespace DrinkStore.Entities
             Staffs = new HashSet<Staff>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int PersonID { get; set; }
 
         [StringLength(100)]

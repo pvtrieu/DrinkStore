@@ -9,7 +9,6 @@ namespace DrinkStore.Entities
     [Table("Import")]
     public partial class Import
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ImportID { get; set; }
 
         public int CashierID { get; set; }

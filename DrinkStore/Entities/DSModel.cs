@@ -8,7 +8,7 @@ namespace DrinkStore.Entities
     public partial class DSModel : DbContext
     {
         public DSModel()
-            : base("name=DSModel")
+            : base("name=DSModel1")
         {
         }
 

@@ -15,13 +15,10 @@ namespace DrinkStore.Entities
             Products = new HashSet<Product>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CategoryID { get; set; }
 
         [StringLength(100)]
         public string Name { get; set; }
-
-        public int? ProductCount { get; set; }
 
         [StringLength(100)]
         public string Unit { get; set; }
