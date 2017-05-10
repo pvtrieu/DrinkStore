@@ -21,7 +21,9 @@ namespace DrinkStore.Entities
         public string Name { get; set; }
 
         [StringLength(100)]
-        public string Unit { get; set; }
+        public string UnitName { get; set; }
+
+        public int? Unit { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Products { get; set; }

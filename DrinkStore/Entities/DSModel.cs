@@ -8,7 +8,7 @@ namespace DrinkStore.Entities
     public partial class DSModel : DbContext
     {
         public DSModel()
-            : base("name=DSModel1")
+            : base("name=DSModel")
         {
         }
 
@@ -55,7 +55,7 @@ namespace DrinkStore.Entities
                 .IsUnicode(false);
 
             modelBuilder.Entity<Category>()
-                .Property(e => e.Unit)
+                .Property(e => e.UnitName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Category>()
