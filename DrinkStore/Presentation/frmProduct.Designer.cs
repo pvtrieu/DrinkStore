@@ -67,6 +67,7 @@
             this.plusButton2 = new DrinkStore.GUI_component.PlusButton();
             this.btnAddCate = new DrinkStore.GUI_component.PlusButton();
             this.btnAddBrand = new DrinkStore.GUI_component.PlusButton();
+            this.searchButton1 = new DrinkStore.GUI_component.SearchButton();
             this.pnlProductImg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -131,7 +132,7 @@
             this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Name", true));
             this.txtName.Location = new System.Drawing.Point(302, 55);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(279, 20);
+            this.txtName.Size = new System.Drawing.Size(241, 20);
             this.txtName.TabIndex = 0;
             // 
             // productTBBindingSource
@@ -470,12 +471,21 @@
             this.btnAddBrand.ButtonClick += new System.EventHandler(this.btnAddBrand_Click);
             this.btnAddBrand.Click += new System.EventHandler(this.btnAddBrand_Click);
             // 
+            // searchButton1
+            // 
+            this.searchButton1.Location = new System.Drawing.Point(557, 56);
+            this.searchButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.searchButton1.Name = "searchButton1";
+            this.searchButton1.Size = new System.Drawing.Size(20, 20);
+            this.searchButton1.TabIndex = 33;
+            // 
             // frmProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(600, 600);
+            this.Controls.Add(this.searchButton1);
             this.Controls.Add(this.btnAddBrand);
             this.Controls.Add(this.btnAddCate);
             this.Controls.Add(this.plusButton2);
@@ -557,5 +567,6 @@
         private GUI_component.PlusButton plusButton2;
         private GUI_component.PlusButton btnAddCate;
         private GUI_component.PlusButton btnAddBrand;
+        private GUI_component.SearchButton searchButton1;
     }
 }

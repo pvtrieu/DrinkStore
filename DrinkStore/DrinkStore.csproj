@@ -140,6 +140,12 @@
     <Compile Include="GUI component\MovePanel.Designer.cs">
       <DependentUpon>MovePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI component\SearchButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI component\SearchButton.Designer.cs">
+      <DependentUpon>SearchButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI component\PlusButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI component\MovePanel.resx">
       <DependentUpon>MovePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI component\SearchButton.resx">
+      <DependentUpon>SearchButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI component\PlusButton.resx">
       <DependentUpon>PlusButton.cs</DependentUpon>
@@ -295,6 +304,8 @@
       <DependentUpon>DrinkStore.mdf</DependentUpon>
     </Content>
     <Content Include="readme.txt" />
+    <None Include="Resources\lookup_hover.png" />
+    <None Include="Resources\lookup_base.png" />
     <None Include="Resources\plus_hover.png" />
     <None Include="Resources\plus_base.png" />
     <None Include="Resources\plus.png" />

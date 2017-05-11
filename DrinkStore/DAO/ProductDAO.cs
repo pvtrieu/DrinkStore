@@ -45,5 +45,13 @@ namespace DrinkStore.DAO
                 return model.Products.ToList();
             }
         }
+
+        public static List<Product> searchByName(string name)
+        {
+            using (DSModel model = new DSModel())
+            {
+                return model.Products.Where(x => x.Name.Contains(name)).ToList();
+            }
+        }
     }
 }

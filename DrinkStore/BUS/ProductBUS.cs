@@ -32,5 +32,10 @@ namespace DrinkStore.BUS
         {
             return ProductDAO.getAll();
         }
+
+        public static List<Product> searchByName(string name)
+        {
+            return ProductDAO.searchByName(name);
+        }
     }
 }
