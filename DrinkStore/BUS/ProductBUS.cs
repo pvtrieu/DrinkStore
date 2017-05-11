@@ -12,7 +12,10 @@ namespace DrinkStore.BUS
     {
         public static void insert(Product product)
         {
-            ProductDAO.insert(product);
+            if (product != null)
+            {
+                ProductDAO.insert(product);
+            }            
         }
 
         public static void update(Product product)

@@ -130,6 +130,24 @@
     <Compile Include="GUI component\MinimizeButton.Designer.cs">
       <DependentUpon>MinimizeButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI component\MovePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI component\MovePanel.Designer.cs">
+      <DependentUpon>MovePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI component\PlusButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI component\PlusButton.Designer.cs">
+      <DependentUpon>PlusButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmBrand.Designer.cs">
+      <DependentUpon>frmBrand.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\frmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +200,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI component\MinimizeButton.resx">
       <DependentUpon>MinimizeButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI component\MovePanel.resx">
+      <DependentUpon>MovePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI component\PlusButton.resx">
+      <DependentUpon>PlusButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmBrand.resx">
+      <DependentUpon>frmBrand.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmCategory.resx">
       <DependentUpon>frmCategory.cs</DependentUpon>
@@ -264,6 +291,8 @@
       <DependentUpon>DrinkStore.mdf</DependentUpon>
     </Content>
     <Content Include="readme.txt" />
+    <None Include="Resources\plus_hover.png" />
+    <None Include="Resources\plus_base.png" />
     <None Include="Resources\plus.png" />
   </ItemGroup>
   <ItemGroup>

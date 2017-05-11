@@ -16,5 +16,20 @@ namespace DrinkStore.BUS
         {
             return CategoryDAO.getAll();
         }
+
+        public static Category getById(int id)
+        {
+            return CategoryDAO.getById(id);
+        }
+
+        public static void insert (Category category)
+        {
+            CategoryDAO.insert(category);
+        }
+
+        public static void update (Category category)
+        {
+            CategoryDAO.update(category);
+        }
     }
 }

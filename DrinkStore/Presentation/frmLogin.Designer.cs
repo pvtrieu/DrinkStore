@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.lblLogo = new System.Windows.Forms.Label();
-            this.pnlLogo = new System.Windows.Forms.Panel();
             this.closeButton1 = new DrinkStore.Presentation.CloseButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -38,46 +37,37 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.pnlLogo.SuspendLayout();
+            this.movePanel1 = new DrinkStore.GUI_component.MovePanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLogo
             // 
             this.lblLogo.AutoSize = true;
+            this.lblLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(45)))));
             this.lblLogo.Font = new System.Drawing.Font("Lucida Fax", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.lblLogo.Location = new System.Drawing.Point(50, 12);
+            this.lblLogo.Location = new System.Drawing.Point(60, 9);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.Size = new System.Drawing.Size(144, 25);
             this.lblLogo.TabIndex = 1;
             this.lblLogo.Text = "Drink Store";
             // 
-            // pnlLogo
-            // 
-            this.pnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(45)))));
-            this.pnlLogo.Controls.Add(this.closeButton1);
-            this.pnlLogo.Controls.Add(this.pictureBox1);
-            this.pnlLogo.Controls.Add(this.lblLogo);
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(452, 50);
-            this.pnlLogo.TabIndex = 1;
-            // 
             // closeButton1
             // 
             this.closeButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeButton1.AutoSize = true;
-            this.closeButton1.Location = new System.Drawing.Point(413, 10);
+            this.closeButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(45)))));
+            this.closeButton1.Location = new System.Drawing.Point(413, 7);
             this.closeButton1.Name = "closeButton1";
             this.closeButton1.Size = new System.Drawing.Size(27, 27);
             this.closeButton1.TabIndex = 2;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(45)))));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -121,6 +111,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(195, 26);
             this.txtPassword.TabIndex = 5;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
@@ -137,23 +128,33 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // movePanel1
+            // 
+            this.movePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(45)))));
+            this.movePanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.movePanel1.Location = new System.Drawing.Point(0, 0);
+            this.movePanel1.Name = "movePanel1";
+            this.movePanel1.Size = new System.Drawing.Size(452, 44);
+            this.movePanel1.TabIndex = 21;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(452, 261);
+            this.Controls.Add(this.closeButton1);
             this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblLogo);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.pnlLogo);
+            this.Controls.Add(this.movePanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.Text = "frmLogin";
             this.Load += new System.EventHandler(this.frmLogin_Load);
-            this.pnlLogo.ResumeLayout(false);
-            this.pnlLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -163,7 +164,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblLogo;
-        private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Presentation.CloseButton closeButton1;
         private System.Windows.Forms.TextBox txtUsername;
@@ -171,5 +171,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
+        private GUI_component.MovePanel movePanel1;
     }
 }

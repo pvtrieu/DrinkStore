@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProduct));
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlProductImg = new System.Windows.Forms.Panel();
             this.picProImg = new System.Windows.Forms.PictureBox();
@@ -65,8 +64,9 @@
             this.lineSeparator1 = new DrinkStore.Presentation.LineSeparator();
             this.lblBrand = new System.Windows.Forms.Label();
             this.cboCate = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.plusButton2 = new DrinkStore.GUI_component.PlusButton();
+            this.btnAddCate = new DrinkStore.GUI_component.PlusButton();
+            this.btnAddBrand = new DrinkStore.GUI_component.PlusButton();
             this.pnlProductImg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -75,8 +75,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -109,6 +107,7 @@
             this.picProImg.Location = new System.Drawing.Point(0, 0);
             this.picProImg.Name = "picProImg";
             this.picProImg.Size = new System.Drawing.Size(150, 150);
+            this.picProImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picProImg.TabIndex = 0;
             this.picProImg.TabStop = false;
             // 
@@ -188,6 +187,7 @@
             this.txtPBox.Name = "txtPBox";
             this.txtPBox.Size = new System.Drawing.Size(135, 20);
             this.txtPBox.TabIndex = 1;
+            this.txtPBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPBox_KeyPress);
             // 
             // txtPUnit
             // 
@@ -240,6 +240,7 @@
             this.btnImg.TabIndex = 22;
             this.btnImg.Text = "Add Image";
             this.btnImg.UseVisualStyleBackColor = false;
+            this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
             // 
             // pnlData
             // 
@@ -276,6 +277,7 @@
             this.dgvProduct.Size = new System.Drawing.Size(560, 300);
             this.dgvProduct.TabIndex = 0;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
+            this.dgvProduct.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvProduct_DataError);
             // 
             // productIDDataGridViewTextBoxColumn
             // 
@@ -440,25 +442,33 @@
             this.cboCate.TabIndex = 28;
             this.cboCate.ValueMember = "CategoryID";
             // 
-            // pictureBox1
+            // plusButton2
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(560, 86);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 29;
-            this.pictureBox1.TabStop = false;
+            this.plusButton2.Location = new System.Drawing.Point(-15, -15);
+            this.plusButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.plusButton2.Name = "plusButton2";
+            this.plusButton2.Size = new System.Drawing.Size(20, 20);
+            this.plusButton2.TabIndex = 30;
             // 
-            // pictureBox2
+            // btnAddCate
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(560, 115);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 30;
-            this.pictureBox2.TabStop = false;
+            this.btnAddCate.Location = new System.Drawing.Point(557, 86);
+            this.btnAddCate.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddCate.Name = "btnAddCate";
+            this.btnAddCate.Size = new System.Drawing.Size(20, 20);
+            this.btnAddCate.TabIndex = 31;
+            this.btnAddCate.ButtonClick += new System.EventHandler(this.btnAddCate_Click);
+            this.btnAddCate.Click += new System.EventHandler(this.btnAddCate_Click);
+            // 
+            // btnAddBrand
+            // 
+            this.btnAddBrand.Location = new System.Drawing.Point(557, 116);
+            this.btnAddBrand.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddBrand.Name = "btnAddBrand";
+            this.btnAddBrand.Size = new System.Drawing.Size(20, 20);
+            this.btnAddBrand.TabIndex = 32;
+            this.btnAddBrand.ButtonClick += new System.EventHandler(this.btnAddBrand_Click);
+            this.btnAddBrand.Click += new System.EventHandler(this.btnAddBrand_Click);
             // 
             // frmProduct
             // 
@@ -466,8 +476,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(600, 600);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnAddBrand);
+            this.Controls.Add(this.btnAddCate);
+            this.Controls.Add(this.plusButton2);
             this.Controls.Add(this.cboCate);
             this.Controls.Add(this.lblBrand);
             this.Controls.Add(this.btnDelete);
@@ -501,8 +512,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -536,8 +545,6 @@
         private System.Windows.Forms.ComboBox cboCate;
         private System.Windows.Forms.BindingSource categoryBindingSource;
         private System.Windows.Forms.BindingSource brandBindingSource;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
@@ -547,5 +554,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn retailSaleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn CategoryID;
         private System.Windows.Forms.DataGridViewComboBoxColumn BrandID;
+        private GUI_component.PlusButton plusButton2;
+        private GUI_component.PlusButton btnAddCate;
+        private GUI_component.PlusButton btnAddBrand;
     }
 }

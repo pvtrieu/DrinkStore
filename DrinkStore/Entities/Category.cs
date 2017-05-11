@@ -23,7 +23,7 @@ namespace DrinkStore.Entities
         [StringLength(100)]
         public string UnitName { get; set; }
 
-        public int? Unit { get; set; }
+        public int Unit { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Products { get; set; }

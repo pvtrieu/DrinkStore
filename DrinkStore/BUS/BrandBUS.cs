@@ -14,5 +14,20 @@ namespace DrinkStore.BUS
         {
             return BrandDAO.getAll();
         }
+
+        public static Brand getById(int id)
+        {
+            return BrandDAO.getById(id);
+        }
+
+        public static void insert(Brand brand)
+        {
+            BrandDAO.insert(brand);
+        }
+
+        public static void update(Brand brand)
+        {
+            BrandDAO.update(brand);
+        }
     }
 }

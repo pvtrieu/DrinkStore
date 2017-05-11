@@ -114,5 +114,7 @@ namespace DrinkStore.Presentation
             frmStatistic _form = new frmStatistic();
             addForm(_form);
         }
+
+       
     }
 }

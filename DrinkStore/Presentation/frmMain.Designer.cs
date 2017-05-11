@@ -82,6 +82,7 @@
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Size = new System.Drawing.Size(200, 50);
             this.pnlLogo.TabIndex = 0;
+            
             // 
             // pictureBox1
             // 
