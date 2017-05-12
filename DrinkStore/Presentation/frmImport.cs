@@ -31,8 +31,8 @@ namespace DrinkStore.Presentation
 
         private void grdProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            importBindingSource.DataSource = productBindingSource.Current;
-            importBindingSource.DataSource = supplierBindingSource.Current;
+            importBindingSource.DataSource = importTBBindingSource.Current;
+ 
         }
 
         private void grdProduct_DataError(object sender, DataGridViewDataErrorEventArgs e)
@@ -42,17 +42,23 @@ namespace DrinkStore.Presentation
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            ImportBUS.insert(importBindingSource.Current as Import);
+            importTBBindingSource.DataSource = ImportBUS.getAll();
+            importBindingSource.DataSource = new Import();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            ImportBUS.update(importBindingSource.Current as Import);
+            importTBBindingSource.DataSource = ImportBUS.getAll();
+            importBindingSource.DataSource = new Import();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            ImportBUS.delete(importBindingSource.Current as Import);
+            importTBBindingSource.DataSource = ImportBUS.getAll();
+            importBindingSource.DataSource = new Import();
         }
     }
 }

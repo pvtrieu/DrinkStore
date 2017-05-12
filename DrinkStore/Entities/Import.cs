@@ -11,11 +11,11 @@ namespace DrinkStore.Entities
     {
         public int ImportID { get; set; }
 
-        public int CashierID { get; set; }
+        public int? CashierID { get; set; }
 
         public int ProductID { get; set; }
 
-        public int SupplierID { get; set; }
+        public int? SupplierID { get; set; }
 
         public int? ImportQuant { get; set; }
 
