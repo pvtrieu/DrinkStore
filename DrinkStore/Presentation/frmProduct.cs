@@ -114,6 +114,11 @@ namespace DrinkStore.Presentation
 
         private void txtPBox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            
+        }
+
+        private void txtPBox_KeyUp(object sender, KeyEventArgs e)
+        {
             int input;
             if (int.TryParse(txtPBox.Text, out input))
             {

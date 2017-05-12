@@ -189,6 +189,7 @@
             this.txtPBox.Size = new System.Drawing.Size(135, 20);
             this.txtPBox.TabIndex = 1;
             this.txtPBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPBox_KeyPress);
+            this.txtPBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPBox_KeyUp);
             // 
             // txtPUnit
             // 
