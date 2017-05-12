@@ -67,7 +67,7 @@
             this.plusButton2 = new DrinkStore.GUI_component.PlusButton();
             this.btnAddCate = new DrinkStore.GUI_component.PlusButton();
             this.btnAddBrand = new DrinkStore.GUI_component.PlusButton();
-            this.searchButton1 = new DrinkStore.GUI_component.SearchButton();
+            this.btnSearchName = new DrinkStore.GUI_component.SearchButton();
             this.pnlProductImg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -187,8 +187,7 @@
             this.txtPBox.Location = new System.Drawing.Point(304, 184);
             this.txtPBox.Name = "txtPBox";
             this.txtPBox.Size = new System.Drawing.Size(135, 20);
-            this.txtPBox.TabIndex = 1;
-            this.txtPBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPBox_KeyPress);
+            this.txtPBox.TabIndex = 1;            
             this.txtPBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPBox_KeyUp);
             // 
             // txtPUnit
@@ -472,13 +471,15 @@
             this.btnAddBrand.ButtonClick += new System.EventHandler(this.btnAddBrand_Click);
             this.btnAddBrand.Click += new System.EventHandler(this.btnAddBrand_Click);
             // 
-            // searchButton1
+            // btnSearchName
             // 
-            this.searchButton1.Location = new System.Drawing.Point(557, 56);
-            this.searchButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.searchButton1.Name = "searchButton1";
-            this.searchButton1.Size = new System.Drawing.Size(20, 20);
-            this.searchButton1.TabIndex = 33;
+            this.btnSearchName.Location = new System.Drawing.Point(557, 56);
+            this.btnSearchName.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSearchName.Name = "btnSearchName";
+            this.btnSearchName.Size = new System.Drawing.Size(20, 20);
+            this.btnSearchName.TabIndex = 33;
+            this.btnSearchName.ButtonClick += new System.EventHandler(this.btnSearchName_Click);
+            this.btnSearchName.Click += new System.EventHandler(this.btnSearchName_Click);
             // 
             // frmProduct
             // 
@@ -486,7 +487,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(600, 600);
-            this.Controls.Add(this.searchButton1);
+            this.Controls.Add(this.btnSearchName);
             this.Controls.Add(this.btnAddBrand);
             this.Controls.Add(this.btnAddCate);
             this.Controls.Add(this.plusButton2);
@@ -515,6 +516,7 @@
             this.Name = "frmProduct";
             this.Text = "frmProduct";
             this.Load += new System.EventHandler(this.frmProduct_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmProduct_MouseClick);
             this.pnlProductImg.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picProImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
@@ -568,6 +570,6 @@
         private GUI_component.PlusButton plusButton2;
         private GUI_component.PlusButton btnAddCate;
         private GUI_component.PlusButton btnAddBrand;
-        private GUI_component.SearchButton searchButton1;
+        private GUI_component.SearchButton btnSearchName;
     }
 }

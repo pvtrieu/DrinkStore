@@ -21,50 +21,69 @@ namespace DrinkStore.Presentation
             InitializeComponent();
             productBindingSource.DataSource = new Product();
         }
-
-        private void frmProduct_Load(object sender, EventArgs e)
+        
+        // Load database to view
+        private void initLoad()
         {
-            
             productTBBindingSource.DataSource = ProductBUS.getAll();
             categoryBindingSource.DataSource = CategoryBUS.getAll();
             brandBindingSource.DataSource = BrandBUS.getAll();
+            productBindingSource.DataSource = new Product();
+            dgvProduct.ClearSelection();
+        }
 
-            
+        // Load datbase to view without change in category and brand
+        private void onLoad()
+        {
+            productTBBindingSource.DataSource = ProductBUS.getAll();
+            productBindingSource.DataSource = new Product();
+            dgvProduct.ClearSelection();
+        }
+
+
+        private void frmProduct_Load(object sender, EventArgs e)
+        {
+            initLoad();
+                      
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
            
             ProductBUS.insert(productBindingSource.Current as Product);
-            productTBBindingSource.DataSource = ProductBUS.getAll();
-            productBindingSource.DataSource = new Product();
+            onLoad();
         }
 
         private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            productBindingSource.DataSource = productTBBindingSource.Current;
+            productBindingSource.DataSource = productTBBindingSource.Current;           
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             ProductBUS.update(productBindingSource.Current as Product);
-            productTBBindingSource.DataSource = ProductBUS.getAll();
-            productBindingSource.DataSource = new Product();
+            onLoad();
 
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            ProductBUS.delete(productBindingSource.Current as Product);
-            productTBBindingSource.DataSource = ProductBUS.getAll();
-            productBindingSource.DataSource = new Product();
+            if (MessageBox.Show("Message", "Are you sure?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                ProductBUS.delete(productBindingSource.Current as Product);
+                onLoad();
+            };
+            
+           
         }
 
+        //Pass the error on datagridview combobox
         private void dgvProduct_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
 
         }
 
+        
         public byte[] imageToByteArray(System.Drawing.Image imageIn)
         {
             MemoryStream ms = new MemoryStream();
@@ -84,7 +103,7 @@ namespace DrinkStore.Presentation
             Product product = productBindingSource.Current as Product;
             OpenFileDialog dialog= new OpenFileDialog();
             dialog.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
-            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
                 product.Avatar = imageToByteArray(Image.FromFile(dialog.FileName));
                 picProImg.Image = byteArrayToImage(product.Avatar);
@@ -95,7 +114,7 @@ namespace DrinkStore.Presentation
         private void btnAddCate_Click(object sender, EventArgs e)
         {
             frmCategory _frmCate = new frmCategory();
-            if (_frmCate.ShowDialog() == System.Windows.Forms.DialogResult.Cancel)
+            if (_frmCate.ShowDialog() == DialogResult.Cancel)
             {
                 categoryBindingSource.DataSource = CategoryBUS.getAll();
             }
@@ -112,10 +131,7 @@ namespace DrinkStore.Presentation
             }
         }
 
-        private void txtPBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-        }
+      
 
         private void txtPBox_KeyUp(object sender, KeyEventArgs e)
         {
@@ -126,6 +142,21 @@ namespace DrinkStore.Presentation
                 int output = (input + _cate.Unit - 1) / _cate.Unit;
                 txtPUnit.Text = output.ToString();
             }
+        }
+
+        private void btnSearchName_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtName.Text))
+                productTBBindingSource.DataSource = ProductBUS.getAll();
+            else            
+                productTBBindingSource.DataSource = ProductBUS.searchByName(txtName.Text);
+        }
+
+        //Reload form if right click
+        private void frmProduct_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                onLoad();
         }
     }
 }

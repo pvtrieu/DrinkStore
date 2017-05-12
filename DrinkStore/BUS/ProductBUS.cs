@@ -10,22 +10,45 @@ namespace DrinkStore.BUS
 {
     class ProductBUS
     {
-        public static void insert(Product product)
+        public static bool insert(Product product)
         {
-            if (product != null)
+            try
             {
                 ProductDAO.insert(product);
-            }            
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        public static void update(Product product)
+        public static bool update(Product product)
         {
-            ProductDAO.update(product);
+            try
+            {
+                ProductDAO.update(product);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+           
         }
 
-        public static void delete(Product product)
+        public static bool delete(Product product)
         {
-            ProductDAO.delete(product);
+            try
+            {
+                ProductDAO.delete(product);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+           
         }
 
         public static List<Product> getAll()
