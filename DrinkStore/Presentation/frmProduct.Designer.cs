@@ -132,7 +132,7 @@
             this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "Name", true));
             this.txtName.Location = new System.Drawing.Point(302, 55);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(241, 20);
+            this.txtName.Size = new System.Drawing.Size(239, 20);
             this.txtName.TabIndex = 0;
             // 
             // productTBBindingSource
@@ -187,7 +187,7 @@
             this.txtPBox.Location = new System.Drawing.Point(304, 184);
             this.txtPBox.Name = "txtPBox";
             this.txtPBox.Size = new System.Drawing.Size(135, 20);
-            this.txtPBox.TabIndex = 1;            
+            this.txtPBox.TabIndex = 1;
             this.txtPBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPBox_KeyUp);
             // 
             // txtPUnit
@@ -372,12 +372,14 @@
             this.cboBrand.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productBindingSource, "BrandID", true));
             this.cboBrand.DataSource = this.brandBindingSource;
             this.cboBrand.DisplayMember = "CompanyName";
+            this.cboBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBrand.FormattingEnabled = true;
             this.cboBrand.Location = new System.Drawing.Point(302, 115);
             this.cboBrand.Name = "cboBrand";
-            this.cboBrand.Size = new System.Drawing.Size(241, 21);
+            this.cboBrand.Size = new System.Drawing.Size(239, 21);
             this.cboBrand.TabIndex = 25;
             this.cboBrand.ValueMember = "BrandID";
+            this.cboBrand.SelectedIndexChanged += new System.EventHandler(this.cboBrand_SelectedIndexChanged);
             // 
             // btnDelete
             // 
@@ -436,12 +438,14 @@
             this.cboCate.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productBindingSource, "CategoryID", true));
             this.cboCate.DataSource = this.categoryBindingSource;
             this.cboCate.DisplayMember = "Name";
+            this.cboCate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCate.FormattingEnabled = true;
             this.cboCate.Location = new System.Drawing.Point(302, 86);
             this.cboCate.Name = "cboCate";
-            this.cboCate.Size = new System.Drawing.Size(241, 21);
+            this.cboCate.Size = new System.Drawing.Size(239, 21);
             this.cboCate.TabIndex = 28;
             this.cboCate.ValueMember = "CategoryID";
+            this.cboCate.SelectedIndexChanged += new System.EventHandler(this.cboCate_SelectedIndexChanged);
             // 
             // plusButton2
             // 
@@ -473,7 +477,7 @@
             // 
             // btnSearchName
             // 
-            this.btnSearchName.Location = new System.Drawing.Point(557, 56);
+            this.btnSearchName.Location = new System.Drawing.Point(557, 55);
             this.btnSearchName.Margin = new System.Windows.Forms.Padding(0);
             this.btnSearchName.Name = "btnSearchName";
             this.btnSearchName.Size = new System.Drawing.Size(20, 20);

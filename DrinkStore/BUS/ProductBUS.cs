@@ -60,5 +60,15 @@ namespace DrinkStore.BUS
         {
             return ProductDAO.searchByName(name);
         }
+
+        public static List<Product> searchByCategory(int cateID)
+        {
+            return ProductDAO.searchByCategory(cateID);
+        }
+
+        public static List<Product> searchByBrand(int brandID)
+        {
+            return ProductDAO.searchByBrand(brandID);
+        }
     }
 }

@@ -49,9 +49,10 @@ namespace DrinkStore.Presentation
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-           
-            ProductBUS.insert(productBindingSource.Current as Product);
-            onLoad();
+            if (ProductBUS.insert(productBindingSource.Current as Product))
+                onLoad();
+            else
+                MessageBox.Show("Invalid input");
         }
 
         private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -61,8 +62,10 @@ namespace DrinkStore.Presentation
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            ProductBUS.update(productBindingSource.Current as Product);
-            onLoad();
+            if (ProductBUS.update(productBindingSource.Current as Product))
+                onLoad();
+            else
+                MessageBox.Show("Cannot Update!");
 
         }
 
@@ -132,7 +135,7 @@ namespace DrinkStore.Presentation
         }
 
       
-
+        //Auto complete the unit price unit base on box 
         private void txtPBox_KeyUp(object sender, KeyEventArgs e)
         {
             int input;
@@ -157,6 +160,22 @@ namespace DrinkStore.Presentation
         {
             if (e.Button == MouseButtons.Right)
                 onLoad();
+        }
+
+        private void cboCate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+            if (cboCate.SelectedValue != null)
+                productTBBindingSource.DataSource = 
+                    ProductBUS.searchByCategory((int)cboCate.SelectedValue);
+                
+        }
+
+        private void cboBrand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboBrand.SelectedValue != null)
+                productTBBindingSource.DataSource = 
+                    ProductBUS.searchByBrand((int)cboBrand.SelectedValue);
         }
     }
 }
