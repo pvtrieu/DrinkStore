@@ -29,5 +29,10 @@ namespace DrinkStore.BUS
         {
             return ImportDAO.getAll();
         }
+
+        public static List<Import> searchByProduct(int productID)
+        {
+            return ImportDAO.searchByProduct(productID);
+        }
     }
 }

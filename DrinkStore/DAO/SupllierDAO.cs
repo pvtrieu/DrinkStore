@@ -9,6 +9,14 @@ namespace DrinkStore.DAO
 {
     class SupplierDAO
     {
+        public static Supplier getById(int id)
+        {
+            using (DSModel model = new DSModel())
+            {
+                return model.Suppliers.Find(id);
+            }
+        }
+
         public static void insert(Supplier supplier)
         {
             using (DSModel model = new DSModel())

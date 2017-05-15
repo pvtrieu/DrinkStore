@@ -162,19 +162,20 @@ namespace DrinkStore.Presentation
                 onLoad();
         }
 
-        private void cboCate_SelectedIndexChanged(object sender, EventArgs e)
+        
+        //Search by Category
+        private void btnSearchCate_Click(object sender, EventArgs e)
         {
-           
             if (cboCate.SelectedValue != null)
-                productTBBindingSource.DataSource = 
+                productTBBindingSource.DataSource =
                     ProductBUS.searchByCategory((int)cboCate.SelectedValue);
-                
         }
 
-        private void cboBrand_SelectedIndexChanged(object sender, EventArgs e)
+        //Search by Brand
+        private void btnSearchBrand_Click(object sender, EventArgs e)
         {
             if (cboBrand.SelectedValue != null)
-                productTBBindingSource.DataSource = 
+                productTBBindingSource.DataSource =
                     ProductBUS.searchByBrand((int)cboBrand.SelectedValue);
         }
     }

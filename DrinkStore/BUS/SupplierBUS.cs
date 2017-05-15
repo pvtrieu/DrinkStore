@@ -17,5 +17,19 @@ namespace DrinkStore.BUS
                 return model.Suppliers.ToList();
             }
         }
+        public static Supplier getById(int id)
+        {
+            return SupplierDAO.getById(id);
+        }
+
+        public static void insert(Supplier supplier)
+        {
+            SupplierDAO.insert(supplier);
+        }
+
+        public static void update(Supplier supplier)
+        {
+            SupplierDAO.update(supplier);
+        }
     }
 }

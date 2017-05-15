@@ -60,5 +60,27 @@ namespace DrinkStore.Presentation
             importTBBindingSource.DataSource = ImportBUS.getAll();
             importBindingSource.DataSource = new Import();
         }
+
+        private void cboCate_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (cboCate.SelectedValue != null)
+                productBindingSource.DataSource =
+                    ProductBUS.searchByCategory((int)cboCate.SelectedValue);
+        }
+
+        private void cboBrand_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (cboBrand.SelectedValue != null)
+                productBindingSource.DataSource =
+                    ProductBUS.searchByBrand((int)cboBrand.SelectedValue);
+        }
+
+        private void btnSearchProduct_Click(object sender, EventArgs e)
+        {
+            if (cboProduct.SelectedValue != null)
+                importTBBindingSource.DataSource =
+                    ImportBUS.searchByProduct((int)cboBrand.SelectedValue);
+        }
+    
     }
 }

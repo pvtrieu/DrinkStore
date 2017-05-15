@@ -68,6 +68,10 @@
             this.btnAddCate = new DrinkStore.GUI_component.PlusButton();
             this.btnAddBrand = new DrinkStore.GUI_component.PlusButton();
             this.btnSearchName = new DrinkStore.GUI_component.SearchButton();
+            this.btnSearchCate = new DrinkStore.GUI_component.SearchButton();
+            this.btnSearchBrand = new DrinkStore.GUI_component.SearchButton();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.pnlProductImg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -144,7 +148,7 @@
             this.lblProQuant.AutoSize = true;
             this.lblProQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProQuant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProQuant.Location = new System.Drawing.Point(190, 155);
+            this.lblProQuant.Location = new System.Drawing.Point(192, 152);
             this.lblProQuant.Name = "lblProQuant";
             this.lblProQuant.Size = new System.Drawing.Size(74, 17);
             this.lblProQuant.TabIndex = 5;
@@ -165,7 +169,7 @@
             // 
             this.lblSell.AutoSize = true;
             this.lblSell.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblSell.Location = new System.Drawing.Point(445, 172);
+            this.lblSell.Location = new System.Drawing.Point(445, 139);
             this.lblSell.Name = "lblSell";
             this.lblSell.Size = new System.Drawing.Size(43, 13);
             this.lblSell.TabIndex = 14;
@@ -175,7 +179,7 @@
             // 
             this.lblBase.AutoSize = true;
             this.lblBase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblBase.Location = new System.Drawing.Point(301, 172);
+            this.lblBase.Location = new System.Drawing.Point(299, 139);
             this.lblBase.Name = "lblBase";
             this.lblBase.Size = new System.Drawing.Size(43, 13);
             this.lblBase.TabIndex = 13;
@@ -376,10 +380,9 @@
             this.cboBrand.FormattingEnabled = true;
             this.cboBrand.Location = new System.Drawing.Point(302, 115);
             this.cboBrand.Name = "cboBrand";
-            this.cboBrand.Size = new System.Drawing.Size(239, 21);
+            this.cboBrand.Size = new System.Drawing.Size(209, 21);
             this.cboBrand.TabIndex = 25;
             this.cboBrand.ValueMember = "BrandID";
-            this.cboBrand.SelectedIndexChanged += new System.EventHandler(this.cboBrand_SelectedIndexChanged);
             // 
             // btnDelete
             // 
@@ -442,10 +445,9 @@
             this.cboCate.FormattingEnabled = true;
             this.cboCate.Location = new System.Drawing.Point(302, 86);
             this.cboCate.Name = "cboCate";
-            this.cboCate.Size = new System.Drawing.Size(239, 21);
+            this.cboCate.Size = new System.Drawing.Size(209, 21);
             this.cboCate.TabIndex = 28;
             this.cboCate.ValueMember = "CategoryID";
-            this.cboCate.SelectedIndexChanged += new System.EventHandler(this.cboCate_SelectedIndexChanged);
             // 
             // plusButton2
             // 
@@ -457,7 +459,7 @@
             // 
             // btnAddCate
             // 
-            this.btnAddCate.Location = new System.Drawing.Point(557, 86);
+            this.btnAddCate.Location = new System.Drawing.Point(521, 84);
             this.btnAddCate.Margin = new System.Windows.Forms.Padding(0);
             this.btnAddCate.Name = "btnAddCate";
             this.btnAddCate.Size = new System.Drawing.Size(20, 20);
@@ -467,7 +469,7 @@
             // 
             // btnAddBrand
             // 
-            this.btnAddBrand.Location = new System.Drawing.Point(557, 116);
+            this.btnAddBrand.Location = new System.Drawing.Point(521, 115);
             this.btnAddBrand.Margin = new System.Windows.Forms.Padding(0);
             this.btnAddBrand.Name = "btnAddBrand";
             this.btnAddBrand.Size = new System.Drawing.Size(20, 20);
@@ -485,12 +487,54 @@
             this.btnSearchName.ButtonClick += new System.EventHandler(this.btnSearchName_Click);
             this.btnSearchName.Click += new System.EventHandler(this.btnSearchName_Click);
             // 
+            // btnSearchCate
+            // 
+            this.btnSearchCate.Location = new System.Drawing.Point(557, 84);
+            this.btnSearchCate.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSearchCate.Name = "btnSearchCate";
+            this.btnSearchCate.Size = new System.Drawing.Size(20, 20);
+            this.btnSearchCate.TabIndex = 33;
+            this.btnSearchCate.ButtonClick += new System.EventHandler(this.btnSearchCate_Click);
+            this.btnSearchCate.Click += new System.EventHandler(this.btnSearchCate_Click);
+            // 
+            // btnSearchBrand
+            // 
+            this.btnSearchBrand.Location = new System.Drawing.Point(558, 115);
+            this.btnSearchBrand.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSearchBrand.Name = "btnSearchBrand";
+            this.btnSearchBrand.Size = new System.Drawing.Size(20, 20);
+            this.btnSearchBrand.TabIndex = 33;
+            this.btnSearchBrand.ButtonClick += new System.EventHandler(this.btnSearchBrand_Click);
+            this.btnSearchBrand.Click += new System.EventHandler(this.btnSearchBrand_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "BoxQuant", true));
+            this.textBox1.Location = new System.Drawing.Point(302, 152);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(137, 20);
+            this.textBox1.TabIndex = 34;
+            // 
+            // textBox2
+            // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "UnitQuant", true));
+            this.textBox2.Location = new System.Drawing.Point(448, 152);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(135, 20);
+            this.textBox2.TabIndex = 35;
+            // 
             // frmProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(600, 600);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnSearchBrand);
+            this.Controls.Add(this.btnSearchCate);
             this.Controls.Add(this.btnSearchName);
             this.Controls.Add(this.btnAddBrand);
             this.Controls.Add(this.btnAddCate);
@@ -575,5 +619,9 @@
         private GUI_component.PlusButton btnAddCate;
         private GUI_component.PlusButton btnAddBrand;
         private GUI_component.SearchButton btnSearchName;
+        private GUI_component.SearchButton btnSearchCate;
+        private GUI_component.SearchButton btnSearchBrand;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

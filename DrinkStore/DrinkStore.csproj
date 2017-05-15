@@ -158,6 +158,12 @@
     <Compile Include="Presentation\frmBrand.Designer.cs">
       <DependentUpon>frmBrand.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\frmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmSupplier.Designer.cs">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\frmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmBrand.resx">
       <DependentUpon>frmBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\frmSupplier.resx">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmCategory.resx">
       <DependentUpon>frmCategory.cs</DependentUpon>

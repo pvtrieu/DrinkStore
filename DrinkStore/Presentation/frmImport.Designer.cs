@@ -68,16 +68,21 @@
             this.txtCurrBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblProCat = new System.Windows.Forms.Label();
-            this.cbxCat = new System.Windows.Forms.ComboBox();
+            this.cboCate = new System.Windows.Forms.ComboBox();
+            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblBrand = new System.Windows.Forms.Label();
             this.cboBrand = new System.Windows.Forms.ComboBox();
+            this.brandBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.plusButton1 = new DrinkStore.GUI_component.PlusButton();
+            this.btnSearchProduct = new DrinkStore.GUI_component.SearchButton();
             ((System.ComponentModel.ISupportInitialize)(this.importBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.pnlData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.importTBBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDelete
@@ -97,13 +102,15 @@
             // 
             // cboProduct
             // 
+            this.cboProduct.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboProduct.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cboProduct.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.importBindingSource, "ProductID", true));
             this.cboProduct.DataSource = this.productBindingSource;
             this.cboProduct.DisplayMember = "Name";
             this.cboProduct.FormattingEnabled = true;
-            this.cboProduct.Location = new System.Drawing.Point(114, 90);
+            this.cboProduct.Location = new System.Drawing.Point(114, 122);
             this.cboProduct.Name = "cboProduct";
-            this.cboProduct.Size = new System.Drawing.Size(163, 21);
+            this.cboProduct.Size = new System.Drawing.Size(136, 21);
             this.cboProduct.TabIndex = 48;
             this.cboProduct.ValueMember = "ProductID";
             // 
@@ -300,7 +307,7 @@
             // txtCost
             // 
             this.txtCost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.importBindingSource, "WholeCost", true));
-            this.txtCost.Location = new System.Drawing.Point(418, 127);
+            this.txtCost.Location = new System.Drawing.Point(418, 88);
             this.txtCost.Name = "txtCost";
             this.txtCost.Size = new System.Drawing.Size(163, 20);
             this.txtCost.TabIndex = 40;
@@ -310,7 +317,7 @@
             this.lblCost.AutoSize = true;
             this.lblCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblCost.Location = new System.Drawing.Point(327, 126);
+            this.lblCost.Location = new System.Drawing.Point(327, 87);
             this.lblCost.Name = "lblCost";
             this.lblCost.Size = new System.Drawing.Size(85, 17);
             this.lblCost.TabIndex = 34;
@@ -321,7 +328,7 @@
             this.lblProQuant.AutoSize = true;
             this.lblProQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProQuant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProQuant.Location = new System.Drawing.Point(18, 127);
+            this.lblProQuant.Location = new System.Drawing.Point(338, 58);
             this.lblProQuant.Name = "lblProQuant";
             this.lblProQuant.Size = new System.Drawing.Size(74, 17);
             this.lblProQuant.TabIndex = 32;
@@ -332,7 +339,7 @@
             this.lblProduct.AutoSize = true;
             this.lblProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblProduct.Location = new System.Drawing.Point(18, 91);
+            this.lblProduct.Location = new System.Drawing.Point(18, 123);
             this.lblProduct.Name = "lblProduct";
             this.lblProduct.Size = new System.Drawing.Size(69, 17);
             this.lblProduct.TabIndex = 30;
@@ -368,7 +375,7 @@
             // txtQuant
             // 
             this.txtQuant.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.importBindingSource, "ImportQuant", true));
-            this.txtQuant.Location = new System.Drawing.Point(114, 125);
+            this.txtQuant.Location = new System.Drawing.Point(418, 55);
             this.txtQuant.Name = "txtQuant";
             this.txtQuant.Size = new System.Drawing.Size(163, 20);
             this.txtQuant.TabIndex = 53;
@@ -378,7 +385,7 @@
             this.lblExpired.AutoSize = true;
             this.lblExpired.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpired.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblExpired.Location = new System.Drawing.Point(18, 158);
+            this.lblExpired.Location = new System.Drawing.Point(345, 155);
             this.lblExpired.Name = "lblExpired";
             this.lblExpired.Size = new System.Drawing.Size(67, 17);
             this.lblExpired.TabIndex = 56;
@@ -387,7 +394,7 @@
             // dateExpired
             // 
             this.dateExpired.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.importBindingSource, "ExpiredDate", true));
-            this.dateExpired.Location = new System.Drawing.Point(114, 159);
+            this.dateExpired.Location = new System.Drawing.Point(418, 155);
             this.dateExpired.Name = "dateExpired";
             this.dateExpired.Size = new System.Drawing.Size(163, 20);
             this.dateExpired.TabIndex = 57;
@@ -398,7 +405,7 @@
             this.cboSupplier.DataSource = this.supplierBindingSource;
             this.cboSupplier.DisplayMember = "Name";
             this.cboSupplier.FormattingEnabled = true;
-            this.cboSupplier.Location = new System.Drawing.Point(418, 93);
+            this.cboSupplier.Location = new System.Drawing.Point(417, 119);
             this.cboSupplier.Name = "cboSupplier";
             this.cboSupplier.Size = new System.Drawing.Size(136, 21);
             this.cboSupplier.TabIndex = 59;
@@ -409,7 +416,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.label1.Location = new System.Drawing.Point(339, 91);
+            this.label1.Location = new System.Drawing.Point(338, 123);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 17);
             this.label1.TabIndex = 60;
@@ -420,7 +427,7 @@
             this.lblImportDate.AutoSize = true;
             this.lblImportDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblImportDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblImportDate.Location = new System.Drawing.Point(312, 158);
+            this.lblImportDate.Location = new System.Drawing.Point(18, 155);
             this.lblImportDate.Name = "lblImportDate";
             this.lblImportDate.Size = new System.Drawing.Size(95, 17);
             this.lblImportDate.TabIndex = 61;
@@ -431,7 +438,7 @@
             this.dateImport.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.importBindingSource, "ImportDate", true));
             this.dateImport.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.importBindingSource, "ImportDate", true));
             this.dateImport.Enabled = false;
-            this.dateImport.Location = new System.Drawing.Point(418, 159);
+            this.dateImport.Location = new System.Drawing.Point(114, 155);
             this.dateImport.Name = "dateImport";
             this.dateImport.Size = new System.Drawing.Size(163, 20);
             this.dateImport.TabIndex = 62;
@@ -470,7 +477,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.label3.Location = new System.Drawing.Point(312, 191);
+            this.label3.Location = new System.Drawing.Point(317, 191);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 17);
             this.label3.TabIndex = 65;
@@ -487,20 +494,29 @@
             this.lblProCat.TabIndex = 47;
             this.lblProCat.Text = "Category:";
             // 
-            // cbxCat
+            // cboCate
             // 
-            this.cbxCat.FormattingEnabled = true;
-            this.cbxCat.Location = new System.Drawing.Point(114, 53);
-            this.cbxCat.Name = "cbxCat";
-            this.cbxCat.Size = new System.Drawing.Size(163, 21);
-            this.cbxCat.TabIndex = 50;
+            this.cboCate.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productBindingSource, "CategoryID", true));
+            this.cboCate.DataSource = this.categoryBindingSource;
+            this.cboCate.DisplayMember = "Name";
+            this.cboCate.FormattingEnabled = true;
+            this.cboCate.Location = new System.Drawing.Point(114, 53);
+            this.cboCate.Name = "cboCate";
+            this.cboCate.Size = new System.Drawing.Size(163, 21);
+            this.cboCate.TabIndex = 50;
+            this.cboCate.ValueMember = "CategoryID";
+            this.cboCate.SelectionChangeCommitted += new System.EventHandler(this.cboCate_SelectionChangeCommitted);
+            // 
+            // categoryBindingSource
+            // 
+            this.categoryBindingSource.DataSource = typeof(DrinkStore.Entities.Category);
             // 
             // lblBrand
             // 
             this.lblBrand.AutoSize = true;
             this.lblBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBrand.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblBrand.Location = new System.Drawing.Point(350, 54);
+            this.lblBrand.Location = new System.Drawing.Point(18, 87);
             this.lblBrand.Name = "lblBrand";
             this.lblBrand.Size = new System.Drawing.Size(56, 17);
             this.lblBrand.TabIndex = 54;
@@ -508,19 +524,37 @@
             // 
             // cboBrand
             // 
+            this.cboBrand.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productBindingSource, "BrandID", true));
+            this.cboBrand.DataSource = this.brandBindingSource;
+            this.cboBrand.DisplayMember = "CompanyName";
             this.cboBrand.FormattingEnabled = true;
-            this.cboBrand.Location = new System.Drawing.Point(418, 55);
+            this.cboBrand.Location = new System.Drawing.Point(114, 87);
             this.cboBrand.Name = "cboBrand";
             this.cboBrand.Size = new System.Drawing.Size(163, 21);
             this.cboBrand.TabIndex = 58;
+            this.cboBrand.ValueMember = "BrandID";
+            this.cboBrand.SelectionChangeCommitted += new System.EventHandler(this.cboBrand_SelectionChangeCommitted);
+            // 
+            // brandBindingSource
+            // 
+            this.brandBindingSource.DataSource = typeof(DrinkStore.Entities.Brand);
             // 
             // plusButton1
             // 
-            this.plusButton1.Location = new System.Drawing.Point(561, 94);
+            this.plusButton1.Location = new System.Drawing.Point(561, 119);
             this.plusButton1.Margin = new System.Windows.Forms.Padding(0);
             this.plusButton1.Name = "plusButton1";
             this.plusButton1.Size = new System.Drawing.Size(20, 20);
             this.plusButton1.TabIndex = 68;
+            // 
+            // btnSearchProduct
+            // 
+            this.btnSearchProduct.Location = new System.Drawing.Point(257, 123);
+            this.btnSearchProduct.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSearchProduct.Name = "btnSearchProduct";
+            this.btnSearchProduct.Size = new System.Drawing.Size(20, 20);
+            this.btnSearchProduct.TabIndex = 71;
+            this.btnSearchProduct.Click += new System.EventHandler(this.btnSearchProduct_Click);
             // 
             // frmImport
             // 
@@ -528,6 +562,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(600, 600);
+            this.Controls.Add(this.btnSearchProduct);
             this.Controls.Add(this.plusButton1);
             this.Controls.Add(this.txtCurrBox);
             this.Controls.Add(this.label3);
@@ -542,7 +577,7 @@
             this.Controls.Add(this.lblExpired);
             this.Controls.Add(this.lblBrand);
             this.Controls.Add(this.txtQuant);
-            this.Controls.Add(this.cbxCat);
+            this.Controls.Add(this.cboCate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.cboProduct);
             this.Controls.Add(this.lblProCat);
@@ -566,6 +601,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.importTBBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -600,7 +637,7 @@
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.BindingSource supplierBindingSource;
         private System.Windows.Forms.Label lblProCat;
-        private System.Windows.Forms.ComboBox cbxCat;
+        private System.Windows.Forms.ComboBox cboCate;
         private System.Windows.Forms.Label lblBrand;
         private System.Windows.Forms.ComboBox cboBrand;
         private GUI_component.PlusButton plusButton1;
@@ -615,5 +652,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn retailCostDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn importDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn expiredDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource categoryBindingSource;
+        private System.Windows.Forms.BindingSource brandBindingSource;
+        private GUI_component.SearchButton btnSearchProduct;
     }
 }
