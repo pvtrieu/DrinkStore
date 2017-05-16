@@ -81,20 +81,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUS\BrandBUS.cs" />
-    <Compile Include="BUS\CategoryBUS.cs" />
-    <Compile Include="BUS\ImportBUS.cs" />
-    <Compile Include="BUS\ProductBUS.cs" />
-    <Compile Include="BUS\StaffBUS.cs" />
-    <Compile Include="BUS\SupplierBUS.cs" />
-    <Compile Include="BUS\UserBUS.cs" />
-    <Compile Include="DAO\BrandDAO.cs" />
-    <Compile Include="DAO\CategoryDAO.cs" />
-    <Compile Include="DAO\ImportDAO.cs" />
-    <Compile Include="DAO\ProductDAO.cs" />
-    <Compile Include="DAO\StaffDAO.cs" />
-    <Compile Include="DAO\SupllierDAO.cs" />
-    <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="BUS\Product\BrandBUS.cs" />
+    <Compile Include="BUS\Product\CategoryBUS.cs" />
+    <Compile Include="BUS\Import\ImportBUS.cs" />
+    <Compile Include="BUS\Order\OrderBUS.cs" />
+    <Compile Include="BUS\Order\OrderDetailBUS.cs" />
+    <Compile Include="BUS\Product\ProductBUS.cs" />
+    <Compile Include="BUS\Staff\StaffBUS.cs" />
+    <Compile Include="BUS\Import\SupplierBUS.cs" />
+    <Compile Include="BUS\Staff\UserBUS.cs" />
+    <Compile Include="DAO\Product\BrandDAO.cs" />
+    <Compile Include="DAO\Product\CategoryDAO.cs" />
+    <Compile Include="DAO\Import\ImportDAO.cs" />
+    <Compile Include="DAO\Order\OrderDAO.cs" />
+    <Compile Include="DAO\Order\OrderDetailDAO.cs" />
+    <Compile Include="DAO\Product\ProductDAO.cs" />
+    <Compile Include="DAO\Staff\StaffDAO.cs" />
+    <Compile Include="DAO\Import\SupllierDAO.cs" />
+    <Compile Include="DAO\Staff\UserDAO.cs" />
     <Compile Include="Entities\Brand.cs" />
     <Compile Include="Entities\Cashier.cs" />
     <Compile Include="Entities\Category.cs" />
@@ -152,28 +156,34 @@
     <Compile Include="GUI component\PlusButton.Designer.cs">
       <DependentUpon>PlusButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\frmBrand.cs">
+    <Compile Include="Presentation\Product\frmBrand.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\frmBrand.Designer.cs">
+    <Compile Include="Presentation\Product\frmBrand.Designer.cs">
       <DependentUpon>frmBrand.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\frmSupplier.cs">
+    <Compile Include="Presentation\Order\frmOrderDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\frmSupplier.Designer.cs">
+    <Compile Include="Presentation\Order\frmOrderDetail.Designer.cs">
+      <DependentUpon>frmOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Import\frmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Import\frmSupplier.Designer.cs">
       <DependentUpon>frmSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\frmCategory.cs">
+    <Compile Include="Presentation\Product\frmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\frmCategory.Designer.cs">
+    <Compile Include="Presentation\Product\frmCategory.Designer.cs">
       <DependentUpon>frmCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\frmImport.cs">
+    <Compile Include="Presentation\Import\frmImport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\frmImport.Designer.cs">
+    <Compile Include="Presentation\Import\frmImport.Designer.cs">
       <DependentUpon>frmImport.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\frmLogin.cs">
@@ -188,16 +198,16 @@
     <Compile Include="Presentation\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\frmOrder.cs">
+    <Compile Include="Presentation\Order\frmOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\frmOrder.Designer.cs">
+    <Compile Include="Presentation\Order\frmOrder.Designer.cs">
       <DependentUpon>frmOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\frmProduct.cs">
+    <Compile Include="Presentation\Product\frmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\frmProduct.Designer.cs">
+    <Compile Include="Presentation\Product\frmProduct.Designer.cs">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\frmStatistic.cs">
@@ -226,16 +236,19 @@
     <EmbeddedResource Include="GUI component\PlusButton.resx">
       <DependentUpon>PlusButton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\frmBrand.resx">
+    <EmbeddedResource Include="Presentation\Product\frmBrand.resx">
       <DependentUpon>frmBrand.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\frmSupplier.resx">
+    <EmbeddedResource Include="Presentation\Order\frmOrderDetail.resx">
+      <DependentUpon>frmOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Import\frmSupplier.resx">
       <DependentUpon>frmSupplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\frmCategory.resx">
+    <EmbeddedResource Include="Presentation\Product\frmCategory.resx">
       <DependentUpon>frmCategory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\frmImport.resx">
+    <EmbeddedResource Include="Presentation\Import\frmImport.resx">
       <DependentUpon>frmImport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmLogin.resx">
@@ -244,10 +257,10 @@
     <EmbeddedResource Include="Presentation\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\frmOrder.resx">
+    <EmbeddedResource Include="Presentation\Order\frmOrder.resx">
       <DependentUpon>frmOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\frmProduct.resx">
+    <EmbeddedResource Include="Presentation\Product\frmProduct.resx">
       <DependentUpon>frmProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmStatistic.resx">
@@ -306,10 +319,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\DrinkStore.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Database\DrinkStore_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DrinkStore.mdf</DependentUpon>
     </Content>
     <Content Include="readme.txt" />

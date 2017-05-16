@@ -19,13 +19,13 @@ namespace DrinkStore.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int OrderID { get; set; }
 
-        public int? BoxQuant { get; set; }
+        public int BoxQuant { get; set; }
 
-        public int? UnitQuant { get; set; }
+        public int UnitQuant { get; set; }
 
-        public decimal? Sale { get; set; }
+        public decimal Sale { get; set; }
 
-        public decimal? Profit { get; set; }
+        public decimal Profit { get; set; }
 
         public virtual Order Order { get; set; }
 
