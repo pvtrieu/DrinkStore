@@ -35,7 +35,8 @@ namespace DrinkStore.Presentation
         private void onLoad()
         {
             importTBBindingSource.DataSource = ImportBUS.getAll();
-            productBindingSource.DataSource = new Product();
+            productBindingSource.DataSource = ProductBUS.getAll();
+            importBindingSource.DataSource = new Import();
             dgvImport.ClearSelection();
         }
         private void frmImport_Load(object sender, EventArgs e)
@@ -99,6 +100,15 @@ namespace DrinkStore.Presentation
         {
             if(e.Button == MouseButtons.Right)
                 onLoad();
+        }
+
+        private void btnAddSupplier_Click(object sender, EventArgs e)
+        {
+            frmSupplier _frmSupplier = new frmSupplier();
+            if (_frmSupplier.ShowDialog() == DialogResult.Cancel)
+            {
+                supplierBindingSource.DataSource = SupplierBUS.getAll();
+            }
         }
     }
 }

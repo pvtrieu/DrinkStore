@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DrinkStore.Entities;
+using DrinkStore.BUS;
 
 namespace DrinkStore.Presentation
 {
@@ -19,42 +21,33 @@ namespace DrinkStore.Presentation
 
         private void frmOrder_Load(object sender, EventArgs e)
         {
-
+            orderTBBindingSource.DataSource = OrderBUS.getAll();
+            orderBindingSource.DataSource = new Order();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            Order order = new Order();
+            frmOrderDetail _frmDetail = new frmOrderDetail(order);
+            if (_frmDetail.ShowDialog() == DialogResult.Cancel)
+            {
+                orderTBBindingSource.DataSource = OrderBUS.getAll();
+            } 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void dgvOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            orderBindingSource.DataSource = orderTBBindingSource.Current;
+            
         }
 
-        private void lblCask_Click(object sender, EventArgs e)
+        private void btnDetail_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void txtCost_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCost_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            frmOrderDetail _frmDetail = new frmOrderDetail(orderBindingSource.Current as Order);
+            if (_frmDetail.ShowDialog() == DialogResult.Cancel)
+            {
+                orderTBBindingSource.DataSource = OrderBUS.getAll();
+            }
         }
     }
 }

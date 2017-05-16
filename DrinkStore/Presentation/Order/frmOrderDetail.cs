@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DrinkStore.Entities;
+using DrinkStore.BUS;
 
 namespace DrinkStore.Presentation
 {
     public partial class frmOrderDetail : Form
     {
-        public frmOrderDetail()
+        private Order order;
+        public frmOrderDetail(Order order)
         {
             InitializeComponent();
+            this.order = order;
         }
 
         private void frmOrderDetail_Load(object sender, EventArgs e)

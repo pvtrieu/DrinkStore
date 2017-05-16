@@ -73,7 +73,7 @@
             this.lblBrand = new System.Windows.Forms.Label();
             this.cboBrand = new System.Windows.Forms.ComboBox();
             this.brandBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.plusButton1 = new DrinkStore.GUI_component.PlusButton();
+            this.btnAddSupplier = new DrinkStore.GUI_component.PlusButton();
             this.btnSearchProduct = new DrinkStore.GUI_component.SearchButton();
             ((System.ComponentModel.ISupportInitialize)(this.importBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -539,13 +539,15 @@
             // 
             this.brandBindingSource.DataSource = typeof(DrinkStore.Entities.Brand);
             // 
-            // plusButton1
+            // btnAddSupplier
             // 
-            this.plusButton1.Location = new System.Drawing.Point(561, 119);
-            this.plusButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.plusButton1.Name = "plusButton1";
-            this.plusButton1.Size = new System.Drawing.Size(20, 20);
-            this.plusButton1.TabIndex = 68;
+            this.btnAddSupplier.Location = new System.Drawing.Point(561, 119);
+            this.btnAddSupplier.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddSupplier.Name = "btnAddSupplier";
+            this.btnAddSupplier.Size = new System.Drawing.Size(20, 20);
+            this.btnAddSupplier.TabIndex = 68;
+            this.btnAddSupplier.ButtonClick += new System.EventHandler(this.btnAddSupplier_Click);
+            this.btnAddSupplier.Click += new System.EventHandler(this.btnAddSupplier_Click);
             // 
             // btnSearchProduct
             // 
@@ -564,7 +566,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(600, 600);
             this.Controls.Add(this.btnSearchProduct);
-            this.Controls.Add(this.plusButton1);
+            this.Controls.Add(this.btnAddSupplier);
             this.Controls.Add(this.txtCurrBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCurrUnit);
@@ -642,7 +644,7 @@
         private System.Windows.Forms.ComboBox cboCate;
         private System.Windows.Forms.Label lblBrand;
         private System.Windows.Forms.ComboBox cboBrand;
-        private GUI_component.PlusButton plusButton1;
+        private GUI_component.PlusButton btnAddSupplier;
         private System.Windows.Forms.BindingSource importTBBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn importIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn productIDDataGridViewTextBoxColumn;

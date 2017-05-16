@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtSale = new System.Windows.Forms.TextBox();
-            this.dateOrder = new System.Windows.Forms.DateTimePicker();
             this.cbxProduct = new System.Windows.Forms.ComboBox();
-            this.lblDate = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
@@ -53,46 +52,46 @@
             this.lblProfit = new System.Windows.Forms.Label();
             this.closeButton1 = new DrinkStore.Presentation.CloseButton();
             this.movePanel1 = new DrinkStore.GUI_component.MovePanel();
+            this.detailBindindSource = new System.Windows.Forms.BindingSource(this.components);
+            this.detailTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.brandBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.boxQuantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unitQuantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detailBindindSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detailTBBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSale
             // 
             this.txtSale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSale.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.detailBindindSource, "Sale", true));
             this.txtSale.Location = new System.Drawing.Point(432, 205);
             this.txtSale.Name = "txtSale";
             this.txtSale.Size = new System.Drawing.Size(156, 20);
             this.txtSale.TabIndex = 68;
             // 
-            // dateOrder
-            // 
-            this.dateOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateOrder.Location = new System.Drawing.Point(432, 271);
-            this.dateOrder.Name = "dateOrder";
-            this.dateOrder.Size = new System.Drawing.Size(156, 20);
-            this.dateOrder.TabIndex = 67;
-            // 
             // cbxProduct
             // 
             this.cbxProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxProduct.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.detailBindindSource, "ProductID", true));
+            this.cbxProduct.DataSource = this.productBindingSource;
+            this.cbxProduct.DisplayMember = "Name";
             this.cbxProduct.FormattingEnabled = true;
             this.cbxProduct.Location = new System.Drawing.Point(432, 126);
             this.cbxProduct.Name = "cbxProduct";
             this.cbxProduct.Size = new System.Drawing.Size(156, 21);
             this.cbxProduct.TabIndex = 66;
-            // 
-            // lblDate
-            // 
-            this.lblDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.lblDate.Location = new System.Drawing.Point(320, 275);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(47, 17);
-            this.lblDate.TabIndex = 65;
-            this.lblDate.Text = "Date:";
+            this.cbxProduct.ValueMember = "ProductID";
             // 
             // btnDelete
             // 
@@ -142,6 +141,7 @@
             // txtBottle
             // 
             this.txtBottle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBottle.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.detailBindindSource, "UnitQuant", true));
             this.txtBottle.Location = new System.Drawing.Point(515, 168);
             this.txtBottle.Name = "txtBottle";
             this.txtBottle.Size = new System.Drawing.Size(73, 20);
@@ -162,11 +162,15 @@
             // cbxCategory
             // 
             this.cbxCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxCategory.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productBindingSource, "CategoryID", true));
+            this.cbxCategory.DataSource = this.categoryBindingSource;
+            this.cbxCategory.DisplayMember = "Name";
             this.cbxCategory.FormattingEnabled = true;
             this.cbxCategory.Location = new System.Drawing.Point(432, 58);
             this.cbxCategory.Name = "cbxCategory";
             this.cbxCategory.Size = new System.Drawing.Size(156, 21);
             this.cbxCategory.TabIndex = 60;
+            this.cbxCategory.ValueMember = "CategoryID";
             // 
             // lblProCat
             // 
@@ -205,6 +209,7 @@
             // txtCask
             // 
             this.txtCask.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCask.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.detailBindindSource, "BoxQuant", true));
             this.txtCask.Location = new System.Drawing.Point(432, 168);
             this.txtCask.Name = "txtCask";
             this.txtCask.Size = new System.Drawing.Size(73, 20);
@@ -246,9 +251,17 @@
             // 
             // dgvOrderDetail
             // 
+            this.dgvOrderDetail.AutoGenerateColumns = false;
             this.dgvOrderDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOrderDetail.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvOrderDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrderDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.productIDDataGridViewTextBoxColumn,
+            this.boxQuantDataGridViewTextBoxColumn,
+            this.unitQuantDataGridViewTextBoxColumn,
+            this.saleDataGridViewTextBoxColumn,
+            this.profitDataGridViewTextBoxColumn});
+            this.dgvOrderDetail.DataSource = this.detailTBBindingSource;
             this.dgvOrderDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvOrderDetail.Location = new System.Drawing.Point(0, 0);
             this.dgvOrderDetail.Name = "dgvOrderDetail";
@@ -270,11 +283,15 @@
             // cboBrand
             // 
             this.cboBrand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboBrand.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productBindingSource, "BrandID", true));
+            this.cboBrand.DataSource = this.brandBindingSource;
+            this.cboBrand.DisplayMember = "CompanyName";
             this.cboBrand.FormattingEnabled = true;
             this.cboBrand.Location = new System.Drawing.Point(432, 92);
             this.cboBrand.Name = "cboBrand";
             this.cboBrand.Size = new System.Drawing.Size(156, 21);
             this.cboBrand.TabIndex = 60;
+            this.cboBrand.ValueMember = "BrandID";
             // 
             // lblLogo
             // 
@@ -291,6 +308,7 @@
             // txtProfit
             // 
             this.txtProfit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtProfit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.detailBindindSource, "Profit", true));
             this.txtProfit.Location = new System.Drawing.Point(432, 239);
             this.txtProfit.Name = "txtProfit";
             this.txtProfit.Size = new System.Drawing.Size(156, 20);
@@ -326,6 +344,62 @@
             this.movePanel1.Size = new System.Drawing.Size(600, 40);
             this.movePanel1.TabIndex = 0;
             // 
+            // detailBindindSource
+            // 
+            this.detailBindindSource.DataSource = typeof(DrinkStore.Entities.OrderDetail);
+            // 
+            // detailTBBindingSource
+            // 
+            this.detailTBBindingSource.DataSource = typeof(DrinkStore.Entities.OrderDetail);
+            // 
+            // categoryBindingSource
+            // 
+            this.categoryBindingSource.DataSource = typeof(DrinkStore.Entities.Category);
+            // 
+            // brandBindingSource
+            // 
+            this.brandBindingSource.DataSource = typeof(DrinkStore.Entities.Brand);
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(DrinkStore.Entities.Product);
+            // 
+            // productIDDataGridViewTextBoxColumn
+            // 
+            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
+            this.productIDDataGridViewTextBoxColumn.DataSource = this.productBindingSource;
+            this.productIDDataGridViewTextBoxColumn.DisplayMember = "Name";
+            this.productIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.productIDDataGridViewTextBoxColumn.HeaderText = "Product";
+            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            this.productIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.productIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.productIDDataGridViewTextBoxColumn.ValueMember = "ProductID";
+            // 
+            // boxQuantDataGridViewTextBoxColumn
+            // 
+            this.boxQuantDataGridViewTextBoxColumn.DataPropertyName = "BoxQuant";
+            this.boxQuantDataGridViewTextBoxColumn.HeaderText = "Box";
+            this.boxQuantDataGridViewTextBoxColumn.Name = "boxQuantDataGridViewTextBoxColumn";
+            // 
+            // unitQuantDataGridViewTextBoxColumn
+            // 
+            this.unitQuantDataGridViewTextBoxColumn.DataPropertyName = "UnitQuant";
+            this.unitQuantDataGridViewTextBoxColumn.HeaderText = "Unit";
+            this.unitQuantDataGridViewTextBoxColumn.Name = "unitQuantDataGridViewTextBoxColumn";
+            // 
+            // saleDataGridViewTextBoxColumn
+            // 
+            this.saleDataGridViewTextBoxColumn.DataPropertyName = "Sale";
+            this.saleDataGridViewTextBoxColumn.HeaderText = "Sale";
+            this.saleDataGridViewTextBoxColumn.Name = "saleDataGridViewTextBoxColumn";
+            // 
+            // profitDataGridViewTextBoxColumn
+            // 
+            this.profitDataGridViewTextBoxColumn.DataPropertyName = "Profit";
+            this.profitDataGridViewTextBoxColumn.HeaderText = "Profit";
+            this.profitDataGridViewTextBoxColumn.Name = "profitDataGridViewTextBoxColumn";
+            // 
             // frmOrderDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,9 +411,7 @@
             this.Controls.Add(this.lblLogo);
             this.Controls.Add(this.pnlData);
             this.Controls.Add(this.txtSale);
-            this.Controls.Add(this.dateOrder);
             this.Controls.Add(this.cbxProduct);
-            this.Controls.Add(this.lblDate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnNew);
@@ -361,6 +433,11 @@
             this.Load += new System.EventHandler(this.frmOrderDetail_Load);
             this.pnlData.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detailBindindSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detailTBBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,9 +447,7 @@
 
         private GUI_component.MovePanel movePanel1;
         private System.Windows.Forms.TextBox txtSale;
-        private System.Windows.Forms.DateTimePicker dateOrder;
         private System.Windows.Forms.ComboBox cbxProduct;
-        private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnNew;
@@ -393,5 +468,15 @@
         private CloseButton closeButton1;
         private System.Windows.Forms.TextBox txtProfit;
         private System.Windows.Forms.Label lblProfit;
+        private System.Windows.Forms.BindingSource detailBindindSource;
+        private System.Windows.Forms.BindingSource productBindingSource;
+        private System.Windows.Forms.BindingSource categoryBindingSource;
+        private System.Windows.Forms.DataGridViewComboBoxColumn productIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn boxQuantDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unitQuantDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn saleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn profitDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource detailTBBindingSource;
+        private System.Windows.Forms.BindingSource brandBindingSource;
     }
 }

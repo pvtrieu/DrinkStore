@@ -40,9 +40,8 @@ namespace DrinkStore.Entities
 
             modelBuilder.Entity<Cashier>()
                 .HasMany(e => e.Imports)
-                .WithRequired(e => e.Cashier)
-                .HasForeignKey(e => e.CashierID)
-                .WillCascadeOnDelete(false);
+                .WithOptional(e => e.Cashier)
+                .HasForeignKey(e => e.CashierID);
 
             modelBuilder.Entity<Cashier>()
                 .HasMany(e => e.Orders)
@@ -139,11 +138,6 @@ namespace DrinkStore.Entities
                 .HasPrecision(18, 0);
 
             modelBuilder.Entity<Product>()
-                .HasMany(e => e.Imports)
-                .WithRequired(e => e.Product)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Product>()
                 .HasMany(e => e.OrderDetails)
                 .WithRequired(e => e.Product)
                 .WillCascadeOnDelete(false);
@@ -187,11 +181,6 @@ namespace DrinkStore.Entities
             modelBuilder.Entity<Supplier>()
                 .Property(e => e.Address)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<Supplier>()
-                .HasMany(e => e.Imports)
-                .WithRequired(e => e.Supplier)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<User>()
                 .Property(e => e.Username)

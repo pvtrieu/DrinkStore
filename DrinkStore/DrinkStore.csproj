@@ -275,6 +275,8 @@
     <None Include="Properties\DataSources\DrinkStore.Entities.Brand.datasource" />
     <None Include="Properties\DataSources\DrinkStore.Entities.Category.datasource" />
     <None Include="Properties\DataSources\DrinkStore.Entities.Import.datasource" />
+    <None Include="Properties\DataSources\DrinkStore.Entities.Order.datasource" />
+    <None Include="Properties\DataSources\DrinkStore.Entities.OrderDetail.datasource" />
     <None Include="Properties\DataSources\DrinkStore.Entities.Product.datasource" />
     <None Include="Properties\DataSources\DrinkStore.Entities.Supplier.datasource" />
     <None Include="Properties\Settings.settings">

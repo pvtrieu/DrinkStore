@@ -86,7 +86,7 @@ namespace DrinkStore.Presentation
 
         }
 
-        
+        //Convert image to byte for saving purpose
         public byte[] imageToByteArray(System.Drawing.Image imageIn)
         {
             MemoryStream ms = new MemoryStream();
@@ -94,6 +94,7 @@ namespace DrinkStore.Presentation
             return ms.ToArray();
         }
 
+        //convert byte to image for viewing
         public Image byteArrayToImage(byte[] byteArrayIn)
         {
             MemoryStream ms = new MemoryStream(byteArrayIn);
@@ -101,6 +102,7 @@ namespace DrinkStore.Presentation
             return returnImage;
         }
 
+        //Open image dialog and save image to database
         private void btnImg_Click(object sender, EventArgs e)
         {
             Product product = productBindingSource.Current as Product;
@@ -114,6 +116,7 @@ namespace DrinkStore.Presentation
             productBindingSource.DataSource = product;
         }
 
+        //Open category form
         private void btnAddCate_Click(object sender, EventArgs e)
         {
             frmCategory _frmCate = new frmCategory();
@@ -124,7 +127,7 @@ namespace DrinkStore.Presentation
         }
 
         
-
+        //Open brand form
         private void btnAddBrand_Click(object sender, EventArgs e)
         {
             frmBrand _frmBrand = new frmBrand();
@@ -142,7 +145,7 @@ namespace DrinkStore.Presentation
             if (int.TryParse(txtPBox.Text, out input))
             {
                 Category _cate = CategoryBUS.getById((int)cboCate.SelectedValue);
-                int output = (input + _cate.Unit - 1) / _cate.Unit;
+                int? output = (input + _cate.Unit - 1) / _cate.Unit;
                 txtPUnit.Text = output.ToString();
             }
         }
