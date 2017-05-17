@@ -30,13 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.txtSale = new System.Windows.Forms.TextBox();
+            this.detailBindindSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbxProduct = new System.Windows.Forms.ComboBox();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.txtBottle = new System.Windows.Forms.TextBox();
             this.lblSale = new System.Windows.Forms.Label();
             this.cbxCategory = new System.Windows.Forms.ComboBox();
+            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblProCat = new System.Windows.Forms.Label();
             this.lblUnit = new System.Windows.Forms.Label();
             this.lblBox = new System.Windows.Forms.Label();
@@ -45,30 +48,27 @@
             this.lblProduct = new System.Windows.Forms.Label();
             this.pnlData = new System.Windows.Forms.Panel();
             this.dgvOrderDetail = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cboBrand = new System.Windows.Forms.ComboBox();
-            this.lblLogo = new System.Windows.Forms.Label();
-            this.txtProfit = new System.Windows.Forms.TextBox();
-            this.lblProfit = new System.Windows.Forms.Label();
-            this.closeButton1 = new DrinkStore.Presentation.CloseButton();
-            this.movePanel1 = new DrinkStore.GUI_component.MovePanel();
-            this.detailBindindSource = new System.Windows.Forms.BindingSource(this.components);
-            this.detailTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.brandBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.boxQuantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unitQuantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.profitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detailTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboBrand = new System.Windows.Forms.ComboBox();
+            this.brandBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblLogo = new System.Windows.Forms.Label();
+            this.txtProfit = new System.Windows.Forms.TextBox();
+            this.lblProfit = new System.Windows.Forms.Label();
+            this.closeButton1 = new DrinkStore.Presentation.CloseButton();
+            this.movePanel1 = new DrinkStore.GUI_component.MovePanel();
+            ((System.ComponentModel.ISupportInitialize)(this.detailBindindSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
             this.pnlData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDetail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detailBindindSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailTBBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSale
@@ -79,6 +79,10 @@
             this.txtSale.Name = "txtSale";
             this.txtSale.Size = new System.Drawing.Size(156, 20);
             this.txtSale.TabIndex = 68;
+            // 
+            // detailBindindSource
+            // 
+            this.detailBindindSource.DataSource = typeof(DrinkStore.Entities.OrderDetail);
             // 
             // cbxProduct
             // 
@@ -92,6 +96,10 @@
             this.cbxProduct.Size = new System.Drawing.Size(156, 21);
             this.cbxProduct.TabIndex = 66;
             this.cbxProduct.ValueMember = "ProductID";
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataSource = typeof(DrinkStore.Entities.Product);
             // 
             // btnDelete
             // 
@@ -171,6 +179,10 @@
             this.cbxCategory.Size = new System.Drawing.Size(156, 21);
             this.cbxCategory.TabIndex = 60;
             this.cbxCategory.ValueMember = "CategoryID";
+            // 
+            // categoryBindingSource
+            // 
+            this.categoryBindingSource.DataSource = typeof(DrinkStore.Entities.Category);
             // 
             // lblProCat
             // 
@@ -267,6 +279,47 @@
             this.dgvOrderDetail.Name = "dgvOrderDetail";
             this.dgvOrderDetail.Size = new System.Drawing.Size(298, 278);
             this.dgvOrderDetail.TabIndex = 0;
+            this.dgvOrderDetail.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvOrderDetail_DataError);
+            // 
+            // productIDDataGridViewTextBoxColumn
+            // 
+            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
+            this.productIDDataGridViewTextBoxColumn.DataSource = this.productBindingSource;
+            this.productIDDataGridViewTextBoxColumn.DisplayMember = "Name";
+            this.productIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.productIDDataGridViewTextBoxColumn.HeaderText = "Product";
+            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            this.productIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.productIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.productIDDataGridViewTextBoxColumn.ValueMember = "ProductID";
+            // 
+            // boxQuantDataGridViewTextBoxColumn
+            // 
+            this.boxQuantDataGridViewTextBoxColumn.DataPropertyName = "BoxQuant";
+            this.boxQuantDataGridViewTextBoxColumn.HeaderText = "Box";
+            this.boxQuantDataGridViewTextBoxColumn.Name = "boxQuantDataGridViewTextBoxColumn";
+            // 
+            // unitQuantDataGridViewTextBoxColumn
+            // 
+            this.unitQuantDataGridViewTextBoxColumn.DataPropertyName = "UnitQuant";
+            this.unitQuantDataGridViewTextBoxColumn.HeaderText = "Unit";
+            this.unitQuantDataGridViewTextBoxColumn.Name = "unitQuantDataGridViewTextBoxColumn";
+            // 
+            // saleDataGridViewTextBoxColumn
+            // 
+            this.saleDataGridViewTextBoxColumn.DataPropertyName = "Sale";
+            this.saleDataGridViewTextBoxColumn.HeaderText = "Sale";
+            this.saleDataGridViewTextBoxColumn.Name = "saleDataGridViewTextBoxColumn";
+            // 
+            // profitDataGridViewTextBoxColumn
+            // 
+            this.profitDataGridViewTextBoxColumn.DataPropertyName = "Profit";
+            this.profitDataGridViewTextBoxColumn.HeaderText = "Profit";
+            this.profitDataGridViewTextBoxColumn.Name = "profitDataGridViewTextBoxColumn";
+            // 
+            // detailTBBindingSource
+            // 
+            this.detailTBBindingSource.DataSource = typeof(DrinkStore.Entities.OrderDetail);
             // 
             // label1
             // 
@@ -292,6 +345,10 @@
             this.cboBrand.Size = new System.Drawing.Size(156, 21);
             this.cboBrand.TabIndex = 60;
             this.cboBrand.ValueMember = "BrandID";
+            // 
+            // brandBindingSource
+            // 
+            this.brandBindingSource.DataSource = typeof(DrinkStore.Entities.Brand);
             // 
             // lblLogo
             // 
@@ -344,62 +401,6 @@
             this.movePanel1.Size = new System.Drawing.Size(600, 40);
             this.movePanel1.TabIndex = 0;
             // 
-            // detailBindindSource
-            // 
-            this.detailBindindSource.DataSource = typeof(DrinkStore.Entities.OrderDetail);
-            // 
-            // detailTBBindingSource
-            // 
-            this.detailTBBindingSource.DataSource = typeof(DrinkStore.Entities.OrderDetail);
-            // 
-            // categoryBindingSource
-            // 
-            this.categoryBindingSource.DataSource = typeof(DrinkStore.Entities.Category);
-            // 
-            // brandBindingSource
-            // 
-            this.brandBindingSource.DataSource = typeof(DrinkStore.Entities.Brand);
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(DrinkStore.Entities.Product);
-            // 
-            // productIDDataGridViewTextBoxColumn
-            // 
-            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID";
-            this.productIDDataGridViewTextBoxColumn.DataSource = this.productBindingSource;
-            this.productIDDataGridViewTextBoxColumn.DisplayMember = "Name";
-            this.productIDDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.productIDDataGridViewTextBoxColumn.HeaderText = "Product";
-            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
-            this.productIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.productIDDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.productIDDataGridViewTextBoxColumn.ValueMember = "ProductID";
-            // 
-            // boxQuantDataGridViewTextBoxColumn
-            // 
-            this.boxQuantDataGridViewTextBoxColumn.DataPropertyName = "BoxQuant";
-            this.boxQuantDataGridViewTextBoxColumn.HeaderText = "Box";
-            this.boxQuantDataGridViewTextBoxColumn.Name = "boxQuantDataGridViewTextBoxColumn";
-            // 
-            // unitQuantDataGridViewTextBoxColumn
-            // 
-            this.unitQuantDataGridViewTextBoxColumn.DataPropertyName = "UnitQuant";
-            this.unitQuantDataGridViewTextBoxColumn.HeaderText = "Unit";
-            this.unitQuantDataGridViewTextBoxColumn.Name = "unitQuantDataGridViewTextBoxColumn";
-            // 
-            // saleDataGridViewTextBoxColumn
-            // 
-            this.saleDataGridViewTextBoxColumn.DataPropertyName = "Sale";
-            this.saleDataGridViewTextBoxColumn.HeaderText = "Sale";
-            this.saleDataGridViewTextBoxColumn.Name = "saleDataGridViewTextBoxColumn";
-            // 
-            // profitDataGridViewTextBoxColumn
-            // 
-            this.profitDataGridViewTextBoxColumn.DataPropertyName = "Profit";
-            this.profitDataGridViewTextBoxColumn.HeaderText = "Profit";
-            this.profitDataGridViewTextBoxColumn.Name = "profitDataGridViewTextBoxColumn";
-            // 
             // frmOrderDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -431,13 +432,13 @@
             this.Name = "frmOrderDetail";
             this.Text = "frmOrderDetail";
             this.Load += new System.EventHandler(this.frmOrderDetail_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.detailBindindSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
             this.pnlData.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderDetail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.detailBindindSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailTBBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.brandBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

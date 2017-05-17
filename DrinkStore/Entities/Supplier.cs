@@ -15,6 +15,7 @@ namespace DrinkStore.Entities
             Imports = new HashSet<Import>();
         }
 
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int SupplierID { get; set; }
 
         [StringLength(100)]

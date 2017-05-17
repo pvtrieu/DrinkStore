@@ -9,11 +9,11 @@ namespace DrinkStore.DAO
 {
     class OrderDetailDAO
     {
-        public static List<OrderDetail> getAll(Order order)
+        public static List<OrderDetail> getAll(int orderID)
         {
             using (DSModel model = new DSModel())
             {
-                return model.OrderDetails.Where(x => x.Order == order).ToList();
+                return model.OrderDetails.Where(x => x.OrderID == orderID).ToList();
             }
         }
         public static void Add(OrderDetail orderDetail)

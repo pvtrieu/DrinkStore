@@ -10,7 +10,7 @@ namespace DrinkStore.Entities
         public DSModel()
             : base("name=DSModel")
         {
-        }
+        }   
 
         public virtual DbSet<Brand> Brands { get; set; }
         public virtual DbSet<Cashier> Cashiers { get; set; }

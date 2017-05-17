@@ -28,6 +28,7 @@ namespace DrinkStore.Presentation
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Order order = new Order();
+            OrderBUS.add(order);
             frmOrderDetail _frmDetail = new frmOrderDetail(order);
             if (_frmDetail.ShowDialog() == DialogResult.Cancel)
             {
@@ -43,11 +44,18 @@ namespace DrinkStore.Presentation
 
         private void btnDetail_Click(object sender, EventArgs e)
         {
+
             frmOrderDetail _frmDetail = new frmOrderDetail(orderBindingSource.Current as Order);
+            
             if (_frmDetail.ShowDialog() == DialogResult.Cancel)
             {
                 orderTBBindingSource.DataSource = OrderBUS.getAll();
             }
+        }
+
+        private void dgvOrderDetail_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
         }
     }
 }

@@ -26,5 +26,9 @@ namespace DrinkStore.Presentation
 
         }
 
+        private void dgvOrderDetail_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+        }
     }
 }

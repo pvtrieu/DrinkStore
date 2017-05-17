@@ -26,9 +26,9 @@ namespace DrinkStore.Entities
         [Column(TypeName = "image")]
         public byte[] Avatar { get; set; }
 
-        public int? UnitQuant { get; set; }
+        public int UnitQuant { get; set; }
 
-        public int? BoxQuant { get; set; }
+        public int BoxQuant { get; set; }
 
         public decimal? WholeSale { get; set; }
 

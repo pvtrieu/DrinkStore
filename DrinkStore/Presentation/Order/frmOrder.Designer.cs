@@ -298,6 +298,7 @@
             this.dgvOrderDetail.Name = "dgvOrderDetail";
             this.dgvOrderDetail.Size = new System.Drawing.Size(558, 257);
             this.dgvOrderDetail.TabIndex = 0;
+            this.dgvOrderDetail.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvOrderDetail_DataError);
             // 
             // productIDDataGridViewTextBoxColumn
             // 
